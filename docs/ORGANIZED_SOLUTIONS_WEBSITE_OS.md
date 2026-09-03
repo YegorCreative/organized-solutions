@@ -44,16 +44,17 @@ It must not feel like a prebuilt consulting template.
 
 Owner-selected production palette. Working tokens live in `app/globals.css`.
 
-- Primary blue `#3A86FF`
-- Lavender `#BDB2FF`
-- Blush `#FFD6E0`
-- Pale blush `#FFF4F4` (light canvas)
+- Charcoal ink `#1C1C1E` (text; not large page fields)
+- Warm off-white `#F7F5F1` (primary canvas)
+- Soft stone `#E4E0D8`
+- Navy-charcoal `#232A31` (strategic authority, used sparingly)
+- Slate gray `#5C6169`
+- Pale champagne `#D9C9A8`
+- Muted gold `#B08D57` (accent, approximately 5–10%)
 
-Do not treat black, near-black, charcoal, or ink as a brand environment or large page field. Readable dark text on light fields is required for contrast; it is not a visual identity.
+The site should remain luminous. Do not recreate a black/beige flip. Gold is emphasis, not a field color.
 
-Do not revert to ivory, stone, brass, moss, clay, copper, or earth tones.
-
-The four colors should interact through large fields, layering, photography, and motion — not as a childish one-color-per-section rotation.
+The experience still requires art, imagery, parallax, motion, and depth — maturity is not stasis.
 
 ### Typography
 

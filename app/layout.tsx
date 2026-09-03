@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SkipLink } from "@/components/layout/skip-link";
 import { JsonLd } from "@/components/seo/json-ld";
 import { company, seo } from "@/content/site";
-import { getSiteOrigin } from "@/lib/site-url";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -22,7 +22,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteOrigin()),
+  metadataBase: new URL(`${getSiteUrl()}/`),
   title: {
     default: seo.titleDefault,
     template: seo.titleTemplate,

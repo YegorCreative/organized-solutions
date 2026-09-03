@@ -9,25 +9,25 @@ const visuals = [
   {
     image: media.studio,
     tone: "bg-canvas text-ink",
-    kicker: "text-blue",
+    kicker: "text-muted",
     speed: "slow" as const,
   },
   {
     image: media.desk,
-    tone: "bg-lavender text-ink",
-    kicker: "text-blue",
+    tone: "bg-stone text-ink",
+    kicker: "text-muted",
     speed: "slow" as const,
   },
   {
     image: media.loft,
-    tone: "bg-blue-soft text-ink",
-    kicker: "text-blue",
+    tone: "bg-champagne text-ink",
+    kicker: "text-muted",
     speed: "mid" as const,
   },
   {
     image: media.course,
-    tone: "bg-blush text-ink",
-    kicker: "text-blue",
+    tone: "bg-stone text-ink",
+    kicker: "text-muted",
     speed: "fast" as const,
   },
 ] as const;
@@ -72,15 +72,15 @@ export function EngagementTiers() {
               {index === 2 ? (
                 <div
                   aria-hidden="true"
-                  className="parallax-fast absolute bottom-8 right-8 h-16 w-16 bg-blue"
+                  className="parallax-fast absolute bottom-8 right-8 h-16 w-16 bg-navy"
                 />
               ) : null}
               {last ? (
-                <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-blush to-transparent" />
+                <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-stone to-transparent" />
               ) : null}
             </div>
             <div className="relative px-[var(--spacing-gutter)] py-12 lg:col-span-7 lg:py-20">
-              <p className="display text-display-sm text-blue">{tier.index}</p>
+              <p className="display text-display-sm text-navy">{tier.index}</p>
               <p className={cx("kicker mt-4", visual.kicker)}>{tier.stage}</p>
               <h3 className="display mt-3 text-title">{tier.name}</h3>
               <p className="measure mt-5 text-[1.0625rem] leading-relaxed text-muted">
@@ -95,8 +95,9 @@ export function EngagementTiers() {
               {last ? (
                 <>
                   <p className="mt-8 max-w-md text-sm text-muted">
-                    The work does not have to end when the first systems are in
-                    place.
+                    Continued leadership after implementation — check-ins,
+                    course-correction, and hands-on availability as the business
+                    evolves.
                   </p>
                   <FlowPath vertical className="top-12 bottom-[-6rem] left-[var(--spacing-gutter)] hidden lg:block" />
                 </>

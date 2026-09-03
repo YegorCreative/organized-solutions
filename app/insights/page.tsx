@@ -21,7 +21,7 @@ export default function InsightsPage() {
         title={insightsPage.title}
         lede={insightsPage.lede}
       />
-      <section className="bg-blush py-section">
+      <section className="bg-stone py-section">
         <div className="shell grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker">Archive</p>

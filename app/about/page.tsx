@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        tone="blush"
+        tone="champagne"
         image={{ src: "/media/table.jpg", alt: "A round pale table by a window, an open notebook, and a blush chair" }}
         eyebrow={aboutPage.eyebrow}
         title={aboutPage.title}
@@ -42,10 +42,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-lavender py-section">
+      <section className="relative overflow-hidden bg-stone py-section">
         <div
           aria-hidden="true"
-          className="parallax-slow pointer-events-none absolute right-0 top-8 h-[60%] w-[18%] bg-blush/50"
+          className="parallax-slow pointer-events-none absolute right-0 top-8 h-[60%] w-[18%] bg-champagne/50"
         />
         <div className="shell relative grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">

@@ -1,5 +1,6 @@
 import { Complexity } from "@/components/home/complexity";
 import { Difference } from "@/components/home/difference";
+import { Faq } from "@/components/home/faq";
 import { Engagement } from "@/components/home/engagement";
 import { Hero } from "@/components/home/hero";
 import { Invitation } from "@/components/home/invitation";
@@ -21,12 +22,13 @@ export default function HomePage() {
     <>
       <Hero />
       <PromiseSection />
-      <Complexity />
-      <Recognition />
       <Solution />
       <Philosophy />
+      <Recognition />
+      <Complexity />
       <Engagement />
       <Difference />
+      <Faq />
       <Invitation />
     </>
   );

@@ -1,17 +1,17 @@
 export const home = {
   hero: {
     eyebrow: "Fractional COO services",
-    headline: "Growth can outpace the systems that once held it.",
-    lede: "There is a point where effort and instinct stop being enough. Responsibilities blur. Leadership becomes reactive. Important work falls through the cracks. The organization is working hard — and still not operating as it should.",
+    headline: "Operational leadership for what you’ve already built.",
+    lede: "You’ve built something valuable. We partner with owners and leadership teams to strengthen the operations behind it — and to help those systems keep working as the organization continues to grow.",
   },
   promise: {
     eyebrow: "Organized Solutions",
     headline: "Clarity and operational leadership — without a full-time COO hire.",
-    body: "We join organizations that have reached the ceiling of what hustle can sustain. We look closely at what is actually happening. Then we help build the structure, systems, and execution to support where the business is going next.",
+    body: "We join organizations that are ready for operational leadership equal to what they have already built. We look closely at what is actually happening. Then we help build the structure, systems, and execution to support where the business is going next.",
   },
   recognition: {
-    eyebrow: "A familiar pattern",
-    headline: "You may recognize the strain before you can name it.",
+    eyebrow: "A familiar chapter",
+    headline: "Growth creates operational questions even in capable organizations.",
     items: [
       "Growth has outpaced structure.",
       "Responsibilities are unclear.",
@@ -27,16 +27,16 @@ export const home = {
   solution: {
     eyebrow: "How we work",
     headline: "A fractional COO, explained simply.",
-    body: "We bring experienced operational leadership into the organization. We diagnose before we prescribe. We tell you the truth about what we find. And when the work calls for it, we stay — implementing alongside your team, not handing over a report and disappearing.",
+    body: "We bring experienced operational leadership into the organization. We diagnose before we prescribe. We tell you the truth about what we find. And when the work calls for it, we stay — working alongside your team, or taking substantial ownership of the operational work, depending on the engagement.",
   },
   philosophy: {
     statement: "We diagnose before we prescribe.",
-    body: "Understanding the organization, the people, the systems, the constraints, and the actual problem comes first. Advice that arrives before that work is guesswork. We do not guess.",
+    body: "Understanding the organization, the people, the systems, the constraints, and the actual situation comes first. Advice that arrives before that work is guesswork. We do not guess.",
   },
   engagement: {
     eyebrow: "How the work deepens",
     headline: "Partnership, at the depth the work requires.",
-    lede: "These are not packages on a shelf. They are increasing depth of the same relationship: help us understand, help us determine what to do, help us make it happen — and, when you want us to remain, stay with us.",
+    lede: "These are not packages on a shelf. They are increasing depth of the same relationship: assessment, a tailored roadmap, hands-on implementation — and, when you want continued leadership, ongoing advisory.",
   },
   difference: {
     eyebrow: "How we work",
@@ -64,18 +64,50 @@ export const home = {
     ],
   },
   invitation: {
-    headline: "If this is the season your organization is in, we should talk.",
+    headline: "If this is the season to strengthen the operations behind the work, we should talk.",
     body: "Tell us what you are seeing. We will listen first.",
   },
+} as const;
+
+export const faq = {
+  eyebrow: "Questions",
+  title: "A few things people ask before we begin.",
+  items: [
+    {
+      question: "How do I know which tier I need?",
+      answer:
+        "It depends on where you are. If you just want clarity on what's working, start with Tier 1. If you also want a plan to fix it, Tier 2. If you want us to help execute that plan, Tier 3. We'll help you figure out the right fit during a free consultation.",
+    },
+    {
+      question: "Can I move between tiers?",
+      answer:
+        "Yes. Many clients start with an assessment and expand into recommendation or implementation once they see the results.",
+    },
+    {
+      question: "What industries do you work with?",
+      answer:
+        "We work with a wide range of professions and company sizes — our process is customized to fit your business, not the other way around.",
+    },
+    {
+      question: "How long does an engagement last?",
+      answer:
+        "It varies by tier and business needs — some clients need a focused, short-term assessment; others work with us on an ongoing basis.",
+    },
+    {
+      question: "What makes your approach different?",
+      answer:
+        "We build sustainable, repeatable systems — not quick fixes. The goal is operations that keep working long after our engagement ends.",
+    },
+  ],
 } as const;
 
 export const servicesPage = {
   eyebrow: "Services",
   title: "Operational leadership, matched to the depth of the work.",
-  lede: "Organized Solutions provides fractional COO support for organizations that have outgrown reactive ways of working. The need is operational, not industry-specific.",
+  lede: "Organized Solutions provides fractional COO support for organizations that want experienced operational leadership without a full-time hire. The need is operational, not industry-specific.",
   what: {
     title: "What this is",
-    body: "Experienced operational leadership brought into the organization for as long as the work requires. We assess what is happening, recommend what should change, and can stay to implement alongside your team.",
+    body: "Experienced operational leadership brought into the organization for as long as the work requires. We assess what is happening, recommend what should change, and can stay to implement — alongside your team, or taking substantial ownership of the operational work, depending on the engagement.",
   },
   whatNot: {
     title: "What this is not",
@@ -87,7 +119,7 @@ export const servicesPage = {
   },
   who: {
     title: "Who this is for",
-    body: "Startups with real operational complexity. Small and growing companies. Established organizations. Family businesses. Any organization that needs fractional operational leadership because growth, strain, or change has outpaced structure.",
+    body: "Business owners and leadership teams across a wide range of professions and company types. Startups with real operational complexity. Small and growing companies. Established organizations. Family businesses. Any organization that wants experienced operational guidance — whether short-term or ongoing — without a full-time COO hire.",
   },
 } as const;
 
@@ -129,7 +161,7 @@ export const aboutPage = {
   },
   today: {
     title: "Today",
-    body: "A founder-led fractional COO practice. We work with organizations that need clarity, structure, better systems, and execution — without necessarily hiring a full-time COO.",
+    body: "A founder-led fractional COO practice. We work across industries and business sizes, tailoring the approach to each client’s industry, size, and goals — without a one-size-fits-all playbook, and without necessarily hiring a full-time COO.",
   },
   direction: {
     title: "Direction",
@@ -148,7 +180,7 @@ export const insightsPage = {
 export const contactPage = {
   eyebrow: "Contact",
   title: "Tell us what you are seeing.",
-  lede: "We will listen first. Share as much or as little as you like about the organization and the strain you are noticing. The purpose of this conversation is understanding, not a pitch.",
+  lede: "We will listen first. Share as much or as little as you like about the organization and what you want operationally. The purpose of this conversation is understanding, not a pitch.",
   form: {
     name: "Name",
     email: "Email",
@@ -156,7 +188,7 @@ export const contactPage = {
     organizationOptional: "Optional",
     seeing: "What are you seeing?",
     seeingHint:
-      "A few sentences is enough. Growth, strain, unclear roles, systems that no longer scale — whatever is true.",
+      "A few sentences is enough. Growth, a next chapter, unclear roles, systems that need to go further — whatever is true.",
     submit: "Send the note",
     sending: "Sending",
     pendingChannel:

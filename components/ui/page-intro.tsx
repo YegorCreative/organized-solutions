@@ -1,7 +1,7 @@
 import { FrameImage } from "@/components/visual/frame-image";
 import { cx } from "@/lib/cx";
 
-type Tone = "blue" | "lavender" | "blush" | "canvas";
+type Tone = "navy" | "stone" | "champagne" | "canvas";
 
 export function PageIntro({
   eyebrow,
@@ -18,15 +18,15 @@ export function PageIntro({
   image?: { src: string; alt: string };
   className?: string;
 }) {
-  const onBlue = tone === "blue";
+  const onField = tone === "navy";
 
   return (
     <header
       className={cx(
         "relative overflow-hidden",
-        tone === "blue" && "bg-blue text-on-blue",
-        tone === "lavender" && "bg-lavender text-ink",
-        tone === "blush" && "bg-blush text-ink",
+        tone === "navy" && "bg-navy text-on-field",
+        tone === "stone" && "bg-stone text-ink",
+        tone === "champagne" && "bg-champagne text-ink",
         tone === "canvas" && "bg-canvas text-ink",
         className,
       )}
@@ -43,34 +43,34 @@ export function PageIntro({
           <div
             className={cx(
               "absolute inset-0",
-              tone === "blue" &&
-                "bg-gradient-to-r from-blue-deep/90 via-blue/60 to-lavender/25",
-              tone === "lavender" &&
-                "bg-gradient-to-r from-lavender via-lavender/75 to-blue/20",
-              tone === "blush" &&
-                "bg-gradient-to-r from-blush via-blush/80 to-lavender/30",
+              tone === "navy" &&
+                "bg-gradient-to-r from-navy/88 via-navy/55 to-champagne/20",
+              tone === "stone" &&
+                "bg-gradient-to-r from-stone via-stone/80 to-stone/30",
+              tone === "champagne" &&
+                "bg-gradient-to-r from-champagne via-champagne/80 to-stone/30",
               tone === "canvas" &&
-                "bg-gradient-to-r from-canvas via-canvas/80 to-blush/35",
+                "bg-gradient-to-r from-canvas via-canvas/80 to-champagne/30",
             )}
           />
         </div>
       ) : null}
       <div
         aria-hidden="true"
-        className="parallax-fast pointer-events-none absolute top-[18%] right-[8%] h-[42%] w-[16%] bg-blush/35"
+        className="parallax-fast pointer-events-none absolute top-[18%] right-[8%] h-[42%] w-[16%] bg-champagne/40"
       />
       <div
         aria-hidden="true"
-        className="parallax-counter pointer-events-none absolute bottom-0 left-[12%] h-20 w-[28%] bg-blue/15"
+        className="parallax-counter pointer-events-none absolute bottom-0 left-[12%] h-20 w-[28%] bg-navy/10"
       />
       <div className="shell relative z-10 py-20 md:py-28">
-        <p className={cx("kicker", onBlue ? "text-blush" : "text-blue")}>
+        <p className={cx("kicker", onField ? "text-champagne" : undefined)}>
           {eyebrow}
         </p>
         <h1
           className={cx(
             "display type-drift mt-5 max-w-4xl text-display-sm",
-            onBlue ? "text-on-blue" : "text-ink",
+            onField ? "text-on-field" : "text-ink",
           )}
         >
           {title}
@@ -78,13 +78,13 @@ export function PageIntro({
         <div
           className={cx(
             "draw-rule mt-8 h-px w-40",
-            onBlue ? "bg-blush" : "bg-blue/50",
+            onField ? "bg-accent" : "bg-navy/40",
           )}
         />
         <p
           className={cx(
             "measure-wide mt-8 text-lead",
-            onBlue ? "text-on-blue" : "text-muted",
+            onField ? "text-on-field" : "text-muted",
           )}
         >
           {lede}

@@ -5,25 +5,19 @@
     sans-serif;
   --font-display: var(--font-newsreader), "Newsreader", ui-serif, Georgia, serif;
 
-  --color-blue: #3a86ff;
-  --color-lavender: #bdb2ff;
-  --color-blush: #ffd6e0;
-  --color-canvas: #fff4f4;
-
-  --color-blue-deep: #1b57d4;
-  --color-blue-soft: color-mix(in srgb, #3a86ff 26%, #fff4f4);
-  --color-lavender-soft: color-mix(in srgb, #bdb2ff 42%, #fff4f4);
-  --color-blush-deep: color-mix(in srgb, #ffd6e0 72%, #bdb2ff);
-
-  --color-ink: #15203c;
-  --color-muted: #3d4f78;
-  --color-faint: #5a6b93;
-  --color-accent: #3a86ff;
-  --color-on-blue: #fff4f4;
-  --color-on-blue-muted: color-mix(in srgb, #fff4f4 82%, #bdb2ff);
-  --color-line: color-mix(in srgb, #15203c 12%, transparent);
-  --color-line-strong: color-mix(in srgb, #15203c 24%, transparent);
-  --color-line-on-blue: color-mix(in srgb, #fff4f4 30%, transparent);
+  --color-canvas: #f7f5f1;
+  --color-stone: #e4e0d8;
+  --color-champagne: #d9c9a8;
+  --color-navy: #232a31;
+  --color-ink: #1c1c1e;
+  --color-muted: #5c6169;
+  --color-faint: color-mix(in srgb, #5c6169 72%, #e4e0d8);
+  --color-accent: #b08d57;
+  --color-on-field: #f7f5f1;
+  --color-on-field-muted: color-mix(in srgb, #f7f5f1 78%, #d9c9a8);
+  --color-line: color-mix(in srgb, #1c1c1e 12%, transparent);
+  --color-line-strong: color-mix(in srgb, #1c1c1e 24%, transparent);
+  --color-line-on-field: color-mix(in srgb, #f7f5f1 28%, transparent);
 
   --spacing-gutter: clamp(1.25rem, 5vw, 5.5rem);
   --spacing-section: clamp(4.75rem, 13vw, 10rem);
@@ -70,12 +64,12 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-lavender) 55%, var(--color-blush));
+    background: color-mix(in srgb, var(--color-champagne) 70%, var(--color-accent));
     color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-blue);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
   }
 
@@ -148,13 +142,13 @@
   }
 
   .cta-primary {
-    color: var(--color-ink);
-    background: var(--color-blue);
-    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-blue) 34%, transparent);
+    color: var(--color-on-field);
+    background: var(--color-navy);
+    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-navy) 22%, transparent);
   }
 
   .cta-primary::before {
-    background: var(--color-lavender);
+    background: var(--color-accent);
   }
 
   .cta-primary:hover,
@@ -165,11 +159,11 @@
   .cta-on-field {
     color: var(--color-ink);
     background: var(--color-canvas);
-    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-blue) 18%, transparent);
+    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-navy) 12%, transparent);
   }
 
   .cta-on-field::before {
-    background: var(--color-blush);
+    background: var(--color-champagne);
   }
 
   .cta-on-field:hover,
@@ -187,12 +181,12 @@
     inset: 0;
     pointer-events: none;
     mix-blend-mode: soft-light;
-    opacity: 0.34;
+    opacity: 0.22;
     background: linear-gradient(
       118deg,
-      color-mix(in srgb, var(--color-blue) 70%, transparent),
-      color-mix(in srgb, var(--color-lavender) 55%, transparent) 52%,
-      color-mix(in srgb, var(--color-blush) 65%, transparent)
+      color-mix(in srgb, var(--color-champagne) 55%, transparent),
+      color-mix(in srgb, var(--color-stone) 50%, transparent) 55%,
+      color-mix(in srgb, var(--color-navy) 18%, transparent)
     );
   }
 
@@ -220,12 +214,12 @@
 
   .cta-header:hover,
   .cta-header:focus-visible {
-    color: var(--color-blue);
+    color: var(--color-accent);
   }
 
-  header.text-on-blue .cta-header:hover,
-  header.text-on-blue .cta-header:focus-visible {
-    color: var(--color-blush);
+  header.text-on-field .cta-header:hover,
+  header.text-on-field .cta-header:focus-visible {
+    color: var(--color-champagne);
   }
 
   .nav-link {
@@ -260,13 +254,13 @@
     text-decoration: none;
   }
 
-  header.text-on-blue .nav-link::after {
-    background: var(--color-blush);
+  header.text-on-field .nav-link::after {
+    background: var(--color-accent);
   }
 
   .cta:hover,
   .cta:focus-visible {
-    box-shadow: 0 18px 44px color-mix(in srgb, var(--color-blue) 42%, transparent);
+    box-shadow: 0 18px 44px color-mix(in srgb, var(--color-navy) 28%, transparent);
   }
 
   .align-plane {
@@ -291,7 +285,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: color-mix(in srgb, var(--color-lavender) 28%, transparent);
+    background: color-mix(in srgb, var(--color-champagne) 32%, transparent);
   }
 }
 
@@ -642,7 +636,7 @@
 
 @keyframes align-a {
   from {
-    transform: translate3d(-14%, 12%, 0) rotate(-8deg);
+    transform: translate3d(-7%, 6%, 0) rotate(-3deg);
   }
   to {
     transform: none;
@@ -651,7 +645,7 @@
 
 @keyframes align-b {
   from {
-    transform: translate3d(16%, -10%, 0) rotate(6deg);
+    transform: translate3d(8%, -5%, 0) rotate(2.5deg);
   }
   to {
     transform: none;
@@ -660,7 +654,7 @@
 
 @keyframes align-c {
   from {
-    transform: translate3d(-8%, -14%, 0) rotate(4deg);
+    transform: translate3d(-4%, -7%, 0) rotate(2deg);
   }
   to {
     transform: none;
@@ -669,7 +663,7 @@
 
 @keyframes align-d {
   from {
-    transform: translate3d(10%, 8%, 0) rotate(-5deg);
+    transform: translate3d(5%, 4%, 0) rotate(-2deg);
   }
   to {
     transform: none;
@@ -678,28 +672,28 @@
 
 @keyframes hero-align-a {
   from {
-    transform: translate3d(-11%, 9%, 0) rotate(-7deg);
+    transform: translate3d(-6%, 5%, 0) rotate(-2.5deg);
   }
   to {
-    transform: translate3d(-3%, 3%, 0) rotate(-2deg);
+    transform: translate3d(-1.5%, 1.5%, 0) rotate(-0.8deg);
   }
 }
 
 @keyframes hero-align-b {
   from {
-    transform: translate3d(12%, -8%, 0) rotate(5deg);
+    transform: translate3d(6%, -4%, 0) rotate(2deg);
   }
   to {
-    transform: translate3d(4%, -2%, 0) rotate(1.5deg);
+    transform: translate3d(2%, -1%, 0) rotate(0.6deg);
   }
 }
 
 @keyframes hero-align-c {
   from {
-    transform: translate3d(-6%, 10%, 0);
+    transform: translate3d(-3%, 5%, 0);
   }
   to {
-    transform: translate3d(2%, 4%, 0);
+    transform: translate3d(1%, 2%, 0);
   }
 }
 

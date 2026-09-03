@@ -37,12 +37,12 @@ export function SiteHeader() {
       className={cx(
         "sticky top-0 z-[80] isolate transition-colors duration-500",
         overlay
-          ? "bg-gradient-to-b from-blue-deep/55 to-transparent text-on-blue"
+          ? "bg-gradient-to-b from-navy/50 to-transparent text-on-field"
           : "bg-canvas/90 text-ink backdrop-blur-sm",
       )}
       style={{ zIndex: 80 }}
     >
-      <div className={cx("h-[2px]", overlay ? "bg-blush" : "bg-blue")} />
+      <div className="h-[2px] bg-accent" />
       <div
         className={cx(
           "shell flex h-[4.35rem] items-center justify-between",

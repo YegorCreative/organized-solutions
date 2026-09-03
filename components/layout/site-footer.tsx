@@ -4,11 +4,11 @@ import { company, footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-lavender text-ink">
-      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[3px] bg-blue" />
+    <footer className="relative overflow-hidden bg-stone text-ink">
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[3px] bg-accent" />
       <div
         aria-hidden="true"
-        className="parallax-slow pointer-events-none absolute -left-[4%] bottom-0 h-[70%] w-[22%] bg-blush/70"
+        className="parallax-slow pointer-events-none absolute -left-[4%] bottom-0 h-[70%] w-[22%] bg-champagne/55"
       />
       <div className="shell relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>

@@ -6,12 +6,13 @@ import { cx } from "@/lib/cx";
  */
 export function MeasureMarks({
   className,
-  tone = "blue",
+  tone = "gold",
 }: {
   className?: string;
-  tone?: "blue" | "on-blue";
+  tone?: "gold" | "on-field";
 }) {
-  const stroke = tone === "on-blue" ? "var(--color-blush)" : "var(--color-blue)";
+  const stroke =
+    tone === "on-field" ? "var(--color-champagne)" : "var(--color-accent)";
 
   return (
     <svg

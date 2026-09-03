@@ -14,7 +14,7 @@ export const media = {
   },
   threshold: {
     src: "/media/threshold.jpg",
-    alt: "A lavender-veiled doorway opening onto a blush-lit room with a ceramic lamp",
+    alt: "A veiled doorway opening onto a champagne-lit room with a ceramic lamp",
   },
   thresholdClear: {
     src: "/media/threshold-clear.jpg",
@@ -26,7 +26,7 @@ export const media = {
   },
   colonnade: {
     src: "/media/colonnade.jpg",
-    alt: "A long plaster colonnade ending at a vivid blue door, blue and blush light on the columns",
+    alt: "A long plaster colonnade ending at a navy door, champagne light on the columns",
   },
   table: {
     src: "/media/table.jpg",
@@ -38,7 +38,7 @@ export const media = {
   },
   studio: {
     src: "/media/studio.jpg",
-    alt: "A pale table and a single lavender chair beside tall windows",
+    alt: "A pale table and a single stone-gray chair beside tall windows",
   },
   material: {
     src: "/media/material.jpg",
@@ -46,10 +46,10 @@ export const media = {
   },
   overlap: {
     src: "/media/overlap.jpg",
-    alt: "Overlapping plaster wall planes, slightly misaligned, in blue, lavender, and blush light",
+    alt: "Overlapping plaster wall planes in warm stone and champagne light, finding alignment",
   },
   course: {
     src: "/media/course.jpg",
-    alt: "A pale stone floor with a blue path of light continuing into the distance",
+    alt: "A pale stone floor with a muted-gold path continuing into the distance",
   },
 } as const;

@@ -7,7 +7,7 @@ export function Difference() {
     <section className="relative overflow-hidden bg-canvas py-section">
       <div className="shell grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <p className="kicker text-blue">{home.difference.eyebrow}</p>
+          <p className="kicker">{home.difference.eyebrow}</p>
           <FrameImage
             src={media.material.src}
             alt={media.material.alt}

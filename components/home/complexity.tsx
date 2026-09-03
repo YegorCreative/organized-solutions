@@ -11,7 +11,7 @@ export function Complexity() {
   return (
     <section
       className="relative min-h-[100svh] overflow-hidden bg-canvas md:min-h-[120svh]"
-      aria-label="Visual of operational complexity resolving into order"
+      aria-label="Visual of momentum finding operational alignment"
     >
       <div className="absolute inset-0">
         <FrameImage
@@ -27,18 +27,18 @@ export function Complexity() {
 
       <div
         aria-hidden="true"
-        className="parallax-counter pointer-events-none absolute top-[18%] right-[6%] h-[42%] w-[18%] bg-blue/20"
+        className="parallax-counter pointer-events-none absolute top-[18%] right-[6%] h-[42%] w-[18%] bg-navy/15"
       />
       <div
         aria-hidden="true"
-        className="parallax-fast pointer-events-none absolute bottom-[20%] left-[8%] h-24 w-[28%] bg-blush/60"
+        className="parallax-fast pointer-events-none absolute bottom-[20%] left-[8%] h-24 w-[28%] bg-champagne/55"
       />
 
       <MeasureMarks className="top-[14%] right-[var(--spacing-gutter)] w-[min(22rem,40vw)]" />
 
       <div className="shell relative z-10 flex min-h-[100svh] items-end py-16 md:min-h-[120svh]">
         <div className="max-w-xl">
-          <div className="draw-rule h-px w-40 bg-blue" />
+          <div className="draw-rule h-px w-40 bg-accent" />
         </div>
       </div>
     </section>

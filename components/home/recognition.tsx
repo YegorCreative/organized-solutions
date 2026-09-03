@@ -5,10 +5,10 @@ import { media } from "@/content/media";
 
 export function Recognition() {
   return (
-    <section className="relative overflow-hidden bg-lavender py-0 text-ink">
+    <section className="relative overflow-hidden bg-stone py-0 text-ink">
       <div
         aria-hidden="true"
-        className="parallax-mid pointer-events-none absolute -right-[6%] top-[8%] h-[50%] w-[22%] bg-blue/20"
+        className="parallax-mid pointer-events-none absolute -right-[6%] top-[8%] h-[50%] w-[22%] bg-navy/10"
       />
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[28rem] lg:min-h-[42rem]">
@@ -18,11 +18,11 @@ export function Recognition() {
             speed="mid"
             className="absolute inset-0 h-full w-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-lavender/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-lavender/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-stone/50" />
           <FlowPath className="bottom-10 left-0 w-2/3" />
         </div>
         <div className="relative px-[var(--spacing-gutter)] py-section">
-          <p className="kicker text-blue">{home.recognition.eyebrow}</p>
+          <p className="kicker">{home.recognition.eyebrow}</p>
           <h2 className="display type-drift mt-5 text-display-sm text-ink">
             {home.recognition.headline}
           </h2>

@@ -14,7 +14,7 @@ export const company = {
     "We find solutions that work for where you are and where you’re going.",
   concepts: ["Clarity", "Structure", "Durability"] as const,
   mission:
-    "To help organizations uncover what is holding them back and build practical, sustainable operational systems that support stronger businesses, stronger leaders, and lasting growth.",
+    "To help organizations strengthen the operations behind the work they have already built, and to put in place practical, sustainable systems that support stronger businesses, stronger leaders, and lasting growth.",
 } as const;
 
 /**
@@ -44,7 +44,7 @@ export const seo = {
   titleDefault: "Organized Solutions — Fractional COO services",
   titleTemplate: "%s — Organized Solutions",
   description:
-    "Fractional COO services and operational leadership. We help organizations diagnose what’s holding them back and build systems that keep working.",
+    "Fractional COO services and operational leadership. We partner with organizations to strengthen the systems behind the work — and to keep those systems running.",
 } as const;
 
 export const tiers = [
@@ -75,10 +75,11 @@ export const tiers = [
   {
     index: "04",
     stage: "Sustain",
-    name: "Ongoing Operational Partnership",
+    name: "Ongoing Advisory",
     summary:
-      "We can remain involved after the first work is in motion, so the systems keep working as the organization continues to change.",
-    bestFor: "Leaders who want operational partnership to continue, not only to begin.",
+      "Continued fractional COO support after implementation — regular check-ins, course-correction, and hands-on availability as your business evolves.",
+    bestFor:
+      "Businesses that want sustained operational leadership without a full-time hire.",
   },
 ] as const;
 
@@ -101,6 +102,6 @@ export const values = [
   },
   {
     name: "Partnership through execution",
-    body: "Organized Solutions can remain involved through implementation instead of disappearing after identifying problems.",
+    body: "Organized Solutions can remain involved through implementation, working with your team or taking substantial ownership of the operational work, depending on the engagement.",
   },
 ] as const;

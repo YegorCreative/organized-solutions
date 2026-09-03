@@ -74,7 +74,7 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
         type="button"
         className={cx(
           "inline-flex min-h-11 min-w-11 items-center justify-end text-sm",
-          onField ? "text-on-blue" : "text-ink",
+          onField ? "text-on-field" : "text-ink",
         )}
         aria-expanded={open}
         aria-controls={panelId}
@@ -94,17 +94,17 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
         >
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue/25 via-lavender/50 to-blush"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-stone via-canvas to-champagne"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute top-[22%] right-[8%] h-[40%] w-[28%] bg-blue/25"
+            className="pointer-events-none absolute top-[22%] right-[8%] h-[40%] w-[28%] bg-navy/10"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-[12%] left-[10%] h-20 w-[36%] bg-blush/70"
+            className="pointer-events-none absolute bottom-[12%] left-[10%] h-20 w-[36%] bg-champagne/70"
           />
-          <div className="relative z-10 h-[2px] bg-blue" />
+          <div className="relative z-10 h-[2px] bg-accent" />
           <div className="shell relative z-10 flex h-[4.35rem] items-center justify-between border-b border-line">
             <Wordmark />
             <button
@@ -126,7 +126,7 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
                 style={{ animationDelay: `${index * 70}ms` }}
                 onClick={() => setOpen(false)}
               >
-                <span className="display text-sm text-blue">
+                <span className="display text-sm text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {item.label}
@@ -138,7 +138,7 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
               style={{ animationDelay: `${navigation.length * 70}ms` }}
               onClick={() => setOpen(false)}
             >
-              <span className="display text-sm text-blue">
+              <span className="display text-sm text-accent">
                 {String(navigation.length + 1).padStart(2, "0")}
               </span>
               Contact

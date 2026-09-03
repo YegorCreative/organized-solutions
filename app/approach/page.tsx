@@ -15,7 +15,7 @@ export default function ApproachPage() {
   return (
     <>
       <PageIntro
-        tone="lavender"
+        tone="stone"
         image={{ src: "/media/desk.jpg", alt: "Papers, a silver ruler, and a cup on a pale worktable" }}
         eyebrow={approachPage.eyebrow}
         title={approachPage.title}
@@ -30,10 +30,10 @@ export default function ApproachPage() {
               className="relative grid gap-6 border-b border-line py-12 md:grid-cols-12 md:py-16"
             >
               <span
-                className="absolute top-0 bottom-0 left-[1.15rem] hidden w-px origin-top bg-blue/35 path-extend-y md:block"
+                className="absolute top-0 bottom-0 left-[1.15rem] hidden w-px origin-top bg-navy/35 path-extend-y md:block"
                 aria-hidden="true"
               />
-              <p className="display relative text-display-sm text-accent md:col-span-2">
+              <p className="display relative text-display-sm text-navy md:col-span-2">
                 {step.index}
               </p>
               <div className="md:col-span-8 md:col-start-5">
@@ -48,7 +48,7 @@ export default function ApproachPage() {
         </div>
       </section>
 
-      <section className="bg-blush py-section">
+      <section className="bg-champagne py-section">
         <div className="shell">
           <p className="kicker">Values</p>
           <h2 className="display mt-5 max-w-3xl text-display-sm text-ink">

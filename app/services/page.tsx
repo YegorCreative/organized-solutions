@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Services",
   description:
-    "Fractional COO services: operational assessment, recommendation, and implementation for organizations that have outgrown reactive ways of working.",
+    "Fractional COO services: operational assessment, recommendation, and implementation for organizations that want experienced operational leadership without a full-time hire.",
   path: "/services",
 });
 
@@ -15,14 +15,14 @@ export default function ServicesPage() {
   return (
     <>
       <PageIntro
-        tone="blue"
+        tone="navy"
         image={{ src: "/media/colonnade.jpg", alt: "A long plaster colonnade ending at a vivid blue door" }}
         eyebrow={servicesPage.eyebrow}
         title={servicesPage.title}
         lede={servicesPage.lede}
       />
 
-      <section className="bg-blush py-section-tight">
+      <section className="bg-stone py-section-tight">
         <div className="shell grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <h2 className="display text-title text-ink">
@@ -58,7 +58,7 @@ export default function ServicesPage() {
         <EngagementTiers />
       </section>
 
-      <section className="bg-lavender py-section">
+      <section className="bg-champagne py-section">
         <div className="shell grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="display text-title text-ink">

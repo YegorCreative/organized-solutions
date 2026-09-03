@@ -15,7 +15,7 @@ export default function ContactPage() {
   return (
     <>
       <PageIntro
-        tone="blush"
+        tone="champagne"
         image={{ src: "/media/table.jpg", alt: "A round pale table by a window, an open notebook, and a blush chair" }}
         eyebrow={contactPage.eyebrow}
         title={contactPage.title}
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-canvas py-section-tight pb-section">
         <div
           aria-hidden="true"
-          className="parallax-counter pointer-events-none absolute top-10 right-[6%] h-32 w-[20%] bg-blush/60"
+          className="parallax-counter pointer-events-none absolute top-10 right-[6%] h-32 w-[20%] bg-stone"
         />
         <div className="shell relative grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">

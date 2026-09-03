@@ -14,14 +14,14 @@ export function Mark({
       aria-hidden="true"
       className={cx(
         "inline-block size-[0.85rem] shrink-0 border relative",
-        onField ? "border-on-blue" : "border-ink",
+        onField ? "border-on-field" : "border-ink",
         className,
       )}
     >
       <span
         className={cx(
           "absolute inset-x-[2px] bottom-[3px] h-px",
-          onField ? "bg-blush" : "bg-blue",
+          "bg-accent",
         )}
       />
     </span>
@@ -40,7 +40,7 @@ export function Wordmark({
       href="/"
       className={cx(
         "inline-flex items-center gap-2.5 no-underline",
-        onField ? "text-on-blue" : "text-ink",
+        onField ? "text-on-field" : "text-ink",
         className,
       )}
     >

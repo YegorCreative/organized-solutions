@@ -8,7 +8,7 @@ export function Solution() {
     <section className="relative overflow-hidden bg-canvas py-section">
       <div className="shell grid items-start gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <p className="kicker text-blue">{home.solution.eyebrow}</p>
+          <p className="kicker">{home.solution.eyebrow}</p>
           <h2 className="display mt-5 max-w-2xl text-display-sm text-ink">
             {home.solution.headline}
           </h2>
@@ -26,7 +26,7 @@ export function Solution() {
           <p className="kicker mb-8">Operating methodology</p>
           <ol className="relative">
             <span
-              className="absolute top-4 bottom-6 left-[0.7rem] w-px origin-top bg-blue/40 path-extend-y"
+              className="absolute top-4 bottom-6 left-[0.7rem] w-px origin-top bg-navy/40 path-extend-y"
               aria-hidden="true"
             />
             {company.operatingIdea.map((step, index) => (
@@ -34,7 +34,7 @@ export function Solution() {
                 key={step}
                 className="relative flex items-baseline justify-between gap-6 py-6 pl-14"
               >
-                <span className="absolute left-0 top-7 grid size-6 place-items-center bg-blue text-[0.65rem] text-ink">
+                <span className="absolute left-0 top-7 grid size-6 place-items-center bg-navy text-[0.65rem] text-on-field">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="display text-title text-ink">{step}</span>

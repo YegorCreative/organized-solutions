@@ -16,7 +16,7 @@ export function FlowPath({
       <span
         aria-hidden="true"
         className={cx(
-          "pointer-events-none absolute w-px origin-top bg-blue path-extend-y",
+          "pointer-events-none absolute w-px origin-top bg-navy path-extend-y",
           className,
         )}
       />
@@ -27,7 +27,7 @@ export function FlowPath({
     <span
       aria-hidden="true"
       className={cx(
-        "pointer-events-none absolute h-px origin-left bg-blue path-extend",
+        "pointer-events-none absolute h-px origin-left bg-navy path-extend",
         className,
       )}
     />

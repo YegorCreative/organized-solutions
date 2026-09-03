@@ -80,9 +80,9 @@ export function SystemField({
     return () => window.removeEventListener("mousemove", onMove);
   }, [mouse]);
 
-  const stroke = tone === "ink" ? "rgba(255,244,244,0.42)" : "rgba(21,32,60,0.28)";
-  const accent = "rgba(58,134,255,0.92)";
-  const node = tone === "ink" ? "#fff4f4" : "#15203c";
+  const stroke = tone === "ink" ? "rgba(247,245,241,0.42)" : "rgba(28,28,30,0.28)";
+  const accent = "rgba(176,141,87,0.92)";
+  const node = tone === "ink" ? "#f7f5f1" : "#1c1c1e";
   const chaos = Math.max(0, 1 - order);
   const grid = 0.22 + order * 0.7;
 
