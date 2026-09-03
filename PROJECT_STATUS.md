@@ -1,6 +1,6 @@
 # Project status
 
-**Phase:** First production website pass  
+**Phase:** Visual and experience elevation (second pass)  
 **Date:** 2026-09-02  
 **Hosting:** GitHub Pages (static export)
 
@@ -10,9 +10,11 @@ This file is for future contributors. Read `docs/ORGANIZED_SOLUTIONS_WEBSITE_OS.
 
 ## Current phase
 
-The first real website pass is in place: visual system, site chrome, homepage narrative, secondary page foundations, and a static GitHub Pages deployment path.
+The first production pass deployed successfully but was judged too basic: timid palette use, no art, no meaningful motion, weak CTAs.
 
-The next milestone should be a design/product review of the rendered site — not an independent second redesign.
+This second pass elevates art direction, color rhythm, the system-field graphic language, parallax, CTA design, and section identity — without breaking static GitHub Pages, accessibility, or the no-fabrication rule.
+
+The next milestone is owner review of the live site. Do not begin another independent redesign until that review.
 
 ---
 
@@ -120,6 +122,8 @@ GitHub Pages cannot run a server-side form. An external static-compatible provid
 ---
 
 ## Validation
+
+Second-pass visual elevation reviewed at 390 / 768 / 1280 / 1440, including motion, CTA hover, mobile menu, reduced-motion, and static export.
 
 Run locally on 2026-09-02:
 

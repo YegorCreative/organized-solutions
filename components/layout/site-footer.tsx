@@ -1,17 +1,21 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/brand/wordmark";
+import { Lattice } from "@/components/visual/lattice";
 import { company, footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line">
-      <div className="shell grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
+    <footer className="grain relative overflow-hidden border-t border-line-on-ink bg-ink text-on-ink">
+      <div className="pointer-events-none absolute inset-0 opacity-60">
+        <Lattice tone="ink" />
+      </div>
+      <div className="shell relative z-10 grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>
-          <Wordmark />
-          <p className="mt-5 measure text-[1.05rem] text-muted">
+          <Wordmark onInk />
+          <p className="mt-5 measure text-[1.05rem] text-on-ink-muted">
             {company.tagline}
           </p>
-          <p className="mt-3 measure text-sm text-faint">
+          <p className="mt-3 measure text-sm text-on-ink-muted">
             {company.supportingMessage}
           </p>
         </div>
@@ -23,15 +27,17 @@ export function SiteFooter() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[0.9375rem] text-ink no-underline hover:text-muted"
+              className="nav-link w-fit text-[0.9375rem] text-on-ink"
             >
               {item.label}
             </Link>
           ))}
         </nav>
       </div>
-      <div className="shell flex flex-col gap-3 border-t border-line py-6 text-sm text-faint sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} {company.name}</p>
+      <div className="shell relative z-10 flex flex-col gap-3 border-t border-line-on-ink py-6 text-sm text-on-ink-muted sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          © {new Date().getFullYear()} {company.name}
+        </p>
         <p className="max-w-xl sm:text-right">{company.underlyingPromise}</p>
       </div>
     </footer>

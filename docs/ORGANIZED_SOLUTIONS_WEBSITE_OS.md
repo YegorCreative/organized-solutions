@@ -334,6 +334,28 @@ Do not create:
 
 Do not mistake excessive decoration for sophistication.
 
+### Restraint is not emptiness
+
+Owner direction after the first production pass: “confidence through restraint” must not be interpreted as beige minimalism.
+
+- Restraint does not mean empty.
+- Premium does not mean static.
+- Sophisticated does not mean beige text on a page.
+
+The site should feel art-directed: editorial sophistication, architectural composition, modern digital interaction, subtle materiality, visual storytelling, and intentional movement.
+
+Use the palette. Create contrast between ivory, stone, and ink environments. Brass must actually contribute to identity.
+
+### Signature visual language
+
+Complexity becoming structure.
+
+A field of nodes and connections begins scattered and resolves into alignment. This system-field graphic is the Organized Solutions visual signature — not generic tech-network art, gears, or clip-infographics.
+
+Motion (scroll-linked parallax, line drawing, system resolution, CTA/arrow interaction) is part of the brand experience. Respect `prefers-reduced-motion`. Do not add a heavy animation library unless the owner approves it.
+
+Primary CTA language: brass-capped outline, fill from the left, directional arrow. Working copy remains “Start a conversation.”
+
 ---
 
 ## Technical direction
@@ -402,6 +424,8 @@ Do not invent an email address. Do not pretend a note was sent if delivery is no
 | Primary CTA component | `components/brand/primary-cta.tsx` |
 | Header / mobile nav / footer | `components/layout/` |
 | Homepage narrative | `components/home/` + `app/page.tsx` |
+| System-field graphic | `components/visual/system-field.tsx` |
+| Motion / parallax | `components/motion/` + CSS in `app/globals.css` |
 | Site URL for SEO | `NEXT_PUBLIC_SITE_URL` |
 | GitHub Pages subpath | `NEXT_PUBLIC_BASE_PATH` |
 | Contact delivery (isolated) | `lib/contact/` |

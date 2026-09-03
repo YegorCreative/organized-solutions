@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Arrow } from "@/components/brand/arrow";
 import { contactPage } from "@/content/copy";
 import { isContactDeliveryConfigured } from "@/lib/contact/config";
 import {
@@ -126,9 +127,10 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={pending}
-        className="mt-10 inline-flex min-h-12 items-center bg-ink px-7 py-3.5 text-[0.9375rem] text-canvas transition-colors duration-200 hover:bg-ink-raised disabled:opacity-60"
+        className="cta cta-primary mt-10 disabled:opacity-60"
       >
-        {pending ? contactPage.form.sending : contactPage.form.submit}
+        <span>{pending ? contactPage.form.sending : contactPage.form.submit}</span>
+        <Arrow className="cta-arrow" />
       </button>
     </form>
   );

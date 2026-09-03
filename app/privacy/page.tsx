@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         title={privacyPage.title}
         lede={privacyPage.lede}
       />
-      <section className="border-t border-line pb-section">
+      <section className="bg-canvas pb-section">
         <div className="shell">
           <p className="kicker py-8">Updated {privacyPage.updated}</p>
           {privacyPage.sections.map((section) => (

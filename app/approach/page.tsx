@@ -20,26 +20,33 @@ export default function ApproachPage() {
         lede={approachPage.lede}
       />
 
-      <section className="border-t border-line">
+      <section className="bg-canvas">
         <div className="shell">
-          {approachPage.steps.map((step) => (
+          {approachPage.steps.map((step, index) => (
             <article
               key={step.name}
-              className="grid gap-6 border-b border-line py-12 md:grid-cols-12 md:py-16"
+              className="relative grid gap-6 border-b border-line py-12 md:grid-cols-12 md:py-16"
             >
-              <p className="display text-display-sm text-accent md:col-span-2">
+              <span
+                className="absolute top-0 bottom-0 left-[1.15rem] hidden w-px bg-line md:block"
+                aria-hidden="true"
+              />
+              <p className="display relative text-display-sm text-accent md:col-span-2">
                 {step.index}
               </p>
               <div className="md:col-span-8 md:col-start-5">
                 <h2 className="display text-title text-ink">{step.name}</h2>
                 <p className="measure mt-5 text-lead text-muted">{step.body}</p>
               </div>
+              {index === approachPage.steps.length - 1 ? null : (
+                <span className="sr-only">then</span>
+              )}
             </article>
           ))}
         </div>
       </section>
 
-      <section className="py-section">
+      <section className="bg-stone py-section">
         <div className="shell">
           <p className="kicker">Values</p>
           <h2 className="display mt-5 max-w-3xl text-display-sm text-ink">
@@ -49,7 +56,7 @@ export default function ApproachPage() {
             {values.map((value) => (
               <article
                 key={value.name}
-                className="grid gap-4 border-b border-line py-10 md:grid-cols-12 md:py-12"
+                className="group grid gap-4 border-b border-line py-10 md:grid-cols-12 md:py-12"
               >
                 <h3 className="display text-title text-ink md:col-span-4">
                   {value.name}

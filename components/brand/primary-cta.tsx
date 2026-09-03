@@ -1,17 +1,9 @@
 import Link from "next/link";
+import { Arrow } from "@/components/brand/arrow";
 import { cta } from "@/content/site";
 import { cx } from "@/lib/cx";
 
 type Variant = "header" | "primary" | "on-ink";
-
-const styles: Record<Variant, string> = {
-  header:
-    "text-[0.9375rem] text-ink no-underline pb-px border-b border-transparent hover:border-accent transition-[border-color] duration-200",
-  primary:
-    "inline-flex items-center justify-center bg-ink text-canvas no-underline px-7 py-3.5 text-[0.9375rem] tracking-[0.02em] hover:bg-ink-raised transition-colors duration-200",
-  "on-ink":
-    "inline-flex items-center justify-center bg-canvas text-ink no-underline px-7 py-3.5 text-[0.9375rem] tracking-[0.02em] hover:bg-stone transition-colors duration-200",
-};
 
 export function PrimaryCta({
   variant = "primary",
@@ -20,9 +12,26 @@ export function PrimaryCta({
   variant?: Variant;
   className?: string;
 }) {
+  if (variant === "header") {
+    return (
+      <Link href={cta.href} className={cx("cta-header", className)}>
+        <span>{cta.label}</span>
+        <Arrow className="cta-arrow" />
+      </Link>
+    );
+  }
+
   return (
-    <Link href={cta.href} className={cx(styles[variant], className)}>
-      {cta.label}
+    <Link
+      href={cta.href}
+      className={cx(
+        "cta",
+        variant === "on-ink" ? "cta-on-ink" : "cta-primary",
+        className,
+      )}
+    >
+      <span>{cta.label}</span>
+      <Arrow className="cta-arrow" />
     </Link>
   );
 }

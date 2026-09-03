@@ -19,7 +19,7 @@ export default function ContactPage() {
         title={contactPage.title}
         lede={contactPage.lede}
       />
-      <section className="border-t border-line py-section-tight pb-section">
+      <section className="bg-canvas py-section-tight pb-section">
         <div className="shell grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <ContactForm />

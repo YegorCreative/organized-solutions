@@ -3,8 +3,8 @@ import { home } from "@/content/copy";
 
 export function Engagement() {
   return (
-    <section className="border-t border-line pt-section">
-      <div className="shell mb-16 max-w-3xl">
+    <section className="bg-stone pt-section">
+      <div className="shell mb-8 max-w-3xl lg:mb-4">
         <p className="kicker">{home.engagement.eyebrow}</p>
         <h2 className="display mt-5 text-display-sm text-ink">
           {home.engagement.headline}

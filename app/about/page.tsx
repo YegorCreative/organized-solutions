@@ -22,7 +22,7 @@ export default function AboutPage() {
         lede={aboutPage.lede}
       />
 
-      <section className="border-t border-line">
+      <section className="bg-canvas">
         <div className="shell">
           {chapters.map((chapter) => (
             <article
@@ -40,7 +40,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-section">
+      <section className="bg-stone py-section">
         <div className="shell grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker">Mission</p>

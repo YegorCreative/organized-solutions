@@ -1,28 +1,68 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { PrimaryCta } from "@/components/brand/primary-cta";
 import { Wordmark } from "@/components/brand/wordmark";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { navigation } from "@/content/site";
+import { cx } from "@/lib/cx";
+
+function normalize(path: string) {
+  if (path === "/") {
+    return "/";
+  }
+  return path.replace(/\/$/, "");
+}
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const overlay = !scrolled;
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-canvas">
+    <header
+      className={cx(
+        "sticky top-0 z-[80] isolate transition-colors duration-500",
+        overlay ? "bg-transparent text-on-ink" : "bg-canvas text-ink",
+      )}
+    >
       <div className="h-[2px] bg-accent" />
-      <div className="shell flex h-[4.25rem] items-center justify-between border-b border-line">
-        <Wordmark />
+      <div
+        className={cx(
+          "shell flex h-[4.35rem] items-center justify-between",
+          overlay ? "border-b border-transparent" : "border-b border-line",
+        )}
+      >
+        <Wordmark onInk={overlay} />
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[0.9375rem] text-ink no-underline transition-colors duration-200 hover:text-muted"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const current = normalize(pathname) === normalize(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={current ? "page" : undefined}
+                className="nav-link text-[0.9375rem]"
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <PrimaryCta variant="header" />
         </nav>
-        <MobileNav />
+        <MobileNav onInk={overlay} />
       </div>
     </header>
   );
