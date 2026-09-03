@@ -1,5 +1,4 @@
 import { PageIntro } from "@/components/ui/page-intro";
-import { SystemField } from "@/components/visual/system-field";
 import { insightsPage } from "@/content/copy";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -14,15 +13,13 @@ export default function InsightsPage() {
   return (
     <>
       <PageIntro
+        tone="canvas"
         eyebrow={insightsPage.eyebrow}
         title={insightsPage.title}
         lede={insightsPage.lede}
       />
-      <section className="relative overflow-hidden bg-stone py-section">
-        <div className="pointer-events-none absolute inset-0 opacity-40">
-          <SystemField progress={1} tone="paper" />
-        </div>
-        <div className="shell relative z-10">
+      <section className="bg-stone py-section">
+        <div className="shell">
           <div className="border-t border-b border-line py-16 md:py-24">
             <p className="kicker">Archive</p>
             <p className="display mt-6 max-w-3xl text-display-sm text-ink">

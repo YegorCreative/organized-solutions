@@ -164,23 +164,34 @@ The website itself should begin creating the feeling of the after state.
 
 ---
 
-## Engagement model
+## Two four-stage systems (keep them distinct)
 
-The three tiers are central.
+**Operating methodology** describes how Organized Solutions works:
+
+Understand → Diagnose → Recommend → Implement
+
+**Engagement model** describes how deeply a client may engage:
+
+1. Understand — Assessment
+2. Plan — Assessment + Recommendation
+3. Execute — Assessment + Recommendation + Implementation
+4. Sustain — Ongoing Operational Partnership *(working language)*
+
+Do not merge these. Do not imply they are the same framework.
+
+## Engagement model
 
 **Do not present these as SaaS pricing cards.**
 
 They represent increasing depth of partnership.
 
-1. Understand — Assessment
-2. Plan — Assessment + Recommendation
-3. Execute — Assessment + Recommendation + Implementation
-
 Do not use Bronze / Silver / Gold metaphors.
 
-Do not make Tier 3 look like a “most popular” SaaS subscription.
+Do not make Tier 3 or Tier 4 look like a “most popular” SaaS subscription, a maintenance package, or an upsell.
 
-Copy for the three tiers lives in `content/site.ts`.
+Tier 4 communicates continuity. Do not invent deliverables, pricing, cadence, retainers, or guarantees for it.
+
+Copy for the four stages lives in `content/site.ts`.
 
 ### Differentiators
 
@@ -346,15 +357,21 @@ The site should feel art-directed: editorial sophistication, architectural compo
 
 Use the palette. Create contrast between ivory, stone, and ink environments. Brass must actually contribute to identity.
 
-### Signature visual language
+### One brand, multiple visual moments
 
-Complexity becoming structure.
+Do not create one graphic and repeat it across the site.
 
-A field of nodes and connections begins scattered and resolves into alignment. This system-field graphic is the Organized Solutions visual signature — not generic tech-network art, gears, or clip-infographics.
+The brand is held by typography, color, spacing, material treatment, motion behavior, and composition — not by wallpaper.
 
-Motion (scroll-linked parallax, line drawing, system resolution, CTA/arrow interaction) is part of the brand experience. Respect `prefers-reduced-motion`. Do not add a heavy animation library unless the owner approves it.
+Network / node / connected-line graphics read as technology infrastructure (AI, cybersecurity, data). They are **not** the Organized Solutions identity and must not dominate customer-facing pages.
+
+Art should change with the story. Not every section needs an illustration, parallax, or a dark field.
+
+Motion remains part of the experience. Respect `prefers-reduced-motion`. Do not add a heavy animation library unless the owner approves it.
 
 Primary CTA language: brass-capped outline, fill from the left, directional arrow. Working copy remains “Start a conversation.”
+
+Photography: reserve architectural planes for approved observational photography. Do not fill them with stock.
 
 ---
 
@@ -424,8 +441,8 @@ Do not invent an email address. Do not pretend a note was sent if delivery is no
 | Primary CTA component | `components/brand/primary-cta.tsx` |
 | Header / mobile nav / footer | `components/layout/` |
 | Homepage narrative | `components/home/` + `app/page.tsx` |
-| System-field graphic | `components/visual/system-field.tsx` |
-| Motion / parallax | `components/motion/` + CSS in `app/globals.css` |
+| Photography-ready planes | `components/visual/photo-well.tsx` |
+| Motion / parallax | CSS in `app/globals.css` |
 | Site URL for SEO | `NEXT_PUBLIC_SITE_URL` |
 | GitHub Pages subpath | `NEXT_PUBLIC_BASE_PATH` |
 | Contact delivery (isolated) | `lib/contact/` |

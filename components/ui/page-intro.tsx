@@ -1,37 +1,56 @@
-import { Lattice } from "@/components/visual/lattice";
-import { SystemField } from "@/components/visual/system-field";
 import { cx } from "@/lib/cx";
+
+type Tone = "ink" | "stone" | "canvas";
 
 export function PageIntro({
   eyebrow,
   title,
   lede,
+  tone = "canvas",
   className,
 }: {
   eyebrow: string;
   title: string;
   lede: string;
+  tone?: Tone;
   className?: string;
 }) {
+  const dark = tone === "ink";
+
   return (
     <header
       className={cx(
-        "grain relative -mt-[4.5rem] overflow-hidden bg-ink pt-[4.5rem] text-on-ink",
+        "relative overflow-hidden pt-section-tight pb-section-tight",
+        tone === "ink" && "bg-ink text-on-ink",
+        tone === "stone" && "bg-stone text-ink",
+        tone === "canvas" && "bg-canvas text-ink",
         className,
       )}
     >
-      <div className="pointer-events-none absolute inset-0 opacity-50">
-        <Lattice tone="ink" />
-      </div>
-      <div className="pointer-events-none absolute inset-[-6%] opacity-80">
-        <SystemField progress={0.84} tone="ink" />
-      </div>
-      <div className="shell relative z-10 py-20 md:py-28">
-        <p className="kicker text-accent">{eyebrow}</p>
-        <h1 className="display mt-5 max-w-4xl text-display-sm text-on-ink">
+      <div className="shell">
+        <p className={cx("kicker", dark && "text-accent-soft")}>{eyebrow}</p>
+        <h1
+          className={cx(
+            "display mt-5 max-w-4xl text-display-sm",
+            dark ? "text-on-ink" : "text-ink",
+          )}
+        >
           {title}
         </h1>
-        <p className="measure-wide mt-6 text-lead text-on-ink-muted">{lede}</p>
+        <div
+          className={cx(
+            "draw-rule mt-8 h-px w-40",
+            dark ? "bg-accent" : "bg-ink/20",
+          )}
+        />
+        <p
+          className={cx(
+            "measure-wide mt-8 text-lead",
+            dark ? "text-on-ink-muted" : "text-muted",
+          )}
+        >
+          {lede}
+        </p>
       </div>
     </header>
   );

@@ -138,6 +138,10 @@
     transform: translateX(0.35rem);
   }
 
+  .cta:active {
+    transform: translateY(1px);
+  }
+
   .cta-primary {
     color: var(--color-ink);
     box-shadow: inset 2px 0 0 var(--color-accent);
@@ -234,7 +238,17 @@
     animation: draw 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
+  .draw-rule {
+    transform-origin: left;
+    transform: scaleX(0.12);
+  }
+
   @supports (animation-timeline: view()) {
+    .draw-rule {
+      animation: grow-x linear both;
+      animation-timeline: view();
+      animation-range: cover 15% cover 70%;
+    }
     .parallax-slow {
       animation: shift linear both;
       animation-timeline: view();
@@ -267,7 +281,8 @@
   .parallax-slow,
   .parallax-mid,
   .parallax-counter,
-  .draw-line {
+  .draw-line,
+  .draw-rule {
     animation: none !important;
     transform: none !important;
   }
@@ -307,6 +322,15 @@
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes grow-x {
+  from {
+    transform: scaleX(0.12);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 

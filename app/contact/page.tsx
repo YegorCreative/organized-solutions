@@ -15,6 +15,7 @@ export default function ContactPage() {
   return (
     <>
       <PageIntro
+        tone="stone"
         eyebrow={contactPage.eyebrow}
         title={contactPage.title}
         lede={contactPage.lede}

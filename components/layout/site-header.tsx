@@ -19,7 +19,8 @@ function normalize(path: string) {
 export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const overlay = !scrolled;
+  const home = normalize(pathname) === "/";
+  const overlay = home && !scrolled;
 
   useEffect(() => {
     function onScroll() {
@@ -37,6 +38,7 @@ export function SiteHeader() {
         "sticky top-0 z-[80] isolate transition-colors duration-500",
         overlay ? "bg-transparent text-on-ink" : "bg-canvas text-ink",
       )}
+      style={{ zIndex: 80 }}
     >
       <div className="h-[2px] bg-accent" />
       <div

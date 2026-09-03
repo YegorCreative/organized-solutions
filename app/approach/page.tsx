@@ -15,6 +15,7 @@ export default function ApproachPage() {
   return (
     <>
       <PageIntro
+        tone="stone"
         eyebrow={approachPage.eyebrow}
         title={approachPage.title}
         lede={approachPage.lede}

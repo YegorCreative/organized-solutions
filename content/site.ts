@@ -72,6 +72,14 @@ export const tiers = [
       "The complete package — we assess, recommend, and roll up our sleeves to implement alongside your team.",
     bestFor: "Businesses ready for hands-on execution and support.",
   },
+  {
+    index: "04",
+    stage: "Sustain",
+    name: "Ongoing Operational Partnership",
+    summary:
+      "We can remain involved after the first work is in motion, so the systems keep working as the organization continues to change.",
+    bestFor: "Leaders who want operational partnership to continue, not only to begin.",
+  },
 ] as const;
 
 export const values = [

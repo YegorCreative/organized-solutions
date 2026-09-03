@@ -25,7 +25,7 @@ export const home = {
     close: "These are not character problems. They are operational ones.",
   },
   solution: {
-    eyebrow: "The work",
+    eyebrow: "How we work",
     headline: "A fractional COO, explained simply.",
     body: "We bring experienced operational leadership into the organization. We diagnose before we prescribe. We tell you the truth about what we find. And when the work calls for it, we stay — implementing alongside your team, not handing over a report and disappearing.",
   },
@@ -35,8 +35,8 @@ export const home = {
   },
   engagement: {
     eyebrow: "How the work deepens",
-    headline: "Three ways to partner.",
-    lede: "These are not packages on a shelf. They are increasing depth of the same work: understand, plan, and — when you are ready — execute.",
+    headline: "Partnership, at the depth the work requires.",
+    lede: "These are not packages on a shelf. They are increasing depth of the same relationship: help us understand, help us determine what to do, help us make it happen — and, when you want us to remain, stay with us.",
   },
   difference: {
     eyebrow: "How we work",

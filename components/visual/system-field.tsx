@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * Retired from customer-facing use: node/network graphics read as
+ * technology infrastructure, not operational leadership. Kept in the
+ * codebase pending owner direction. Do not reintroduce as wallpaper.
+ */
 import { useEffect, useMemo, useState } from "react";
 import { cx } from "@/lib/cx";
 import { prefersReducedMotion, smoothstep } from "@/lib/motion";

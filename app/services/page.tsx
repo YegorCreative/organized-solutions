@@ -1,7 +1,6 @@
 import { EngagementTiers } from "@/components/engagement/tiers";
 import { PrimaryCta } from "@/components/brand/primary-cta";
 import { PageIntro } from "@/components/ui/page-intro";
-import { SystemField } from "@/components/visual/system-field";
 import { servicesPage } from "@/content/copy";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -16,6 +15,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageIntro
+        tone="ink"
         eyebrow={servicesPage.eyebrow}
         title={servicesPage.title}
         lede={servicesPage.lede}
@@ -47,20 +47,18 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-stone pt-section-tight">
+      <section className="bg-canvas pt-section-tight">
         <div className="shell mb-8 max-w-3xl">
-          <h2 className="display text-display-sm text-ink">
+          <p className="kicker">Engagement</p>
+          <h2 className="display mt-4 text-display-sm text-ink">
             Increasing depth of partnership.
           </h2>
         </div>
         <EngagementTiers />
       </section>
 
-      <section className="relative overflow-hidden bg-canvas py-section">
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 opacity-40">
-          <SystemField progress={0.9} tone="paper" />
-        </div>
-        <div className="shell relative z-10 grid gap-8 lg:grid-cols-12">
+      <section className="bg-stone py-section">
+        <div className="shell grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="display text-title text-ink">
               {servicesPage.who.title}

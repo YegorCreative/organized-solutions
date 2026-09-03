@@ -1,6 +1,6 @@
 # Project status
 
-**Phase:** Visual and experience elevation (second pass)  
+**Phase:** Professional visual refinement (OS v1.1)  
 **Date:** 2026-09-02  
 **Hosting:** GitHub Pages (static export)
 
@@ -10,9 +10,7 @@ This file is for future contributors. Read `docs/ORGANIZED_SOLUTIONS_WEBSITE_OS.
 
 ## Current phase
 
-The first production pass deployed successfully but was judged too basic: timid palette use, no art, no meaningful motion, weak CTAs.
-
-This second pass elevates art direction, color rhythm, the system-field graphic language, parallax, CTA design, and section identity — without breaking static GitHub Pages, accessibility, or the no-fabrication rule.
+The second visual pass overused a network/node graphic and made the site read as technology infrastructure. This refinement pass removes that wallpaper, restores section variety, and updates engagement to four stages (including working-language Sustain) while keeping cinematic contrast, motion, and static GitHub Pages.
 
 The next milestone is owner review of the live site. Do not begin another independent redesign until that review.
 

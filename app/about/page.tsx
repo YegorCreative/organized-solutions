@@ -17,6 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
+        tone="canvas"
         eyebrow={aboutPage.eyebrow}
         title={aboutPage.title}
         lede={aboutPage.lede}

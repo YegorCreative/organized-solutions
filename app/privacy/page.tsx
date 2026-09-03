@@ -13,6 +13,7 @@ export default function PrivacyPage() {
   return (
     <>
       <PageIntro
+        tone="canvas"
         eyebrow={privacyPage.eyebrow}
         title={privacyPage.title}
         lede={privacyPage.lede}
