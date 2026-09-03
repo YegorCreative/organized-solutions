@@ -1,25 +1,30 @@
+import { FrameImage } from "@/components/visual/frame-image";
 import { home } from "@/content/copy";
+import { media } from "@/content/media";
 
 export function Difference() {
   return (
-    <section className="bg-canvas py-section">
-      <div className="shell">
-        <p className="kicker">{home.difference.eyebrow}</p>
-        <div className="mt-10 border-t border-line">
+    <section className="relative overflow-hidden bg-canvas py-section">
+      <div className="shell grid gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-4">
+          <p className="kicker text-moss-soft">{home.difference.eyebrow}</p>
+          <FrameImage
+            src={media.material.src}
+            alt={media.material.alt}
+            speed="slow"
+            className="mt-8 aspect-square w-full max-w-sm"
+          />
+        </div>
+        <div className="lg:col-span-7 lg:col-start-6">
           {home.difference.items.map((item) => (
             <article
               key={item.title}
-              className="group grid gap-4 border-b border-line py-10 md:grid-cols-12 md:gap-8 md:py-12"
+              className="group grid gap-3 border-b border-line py-8 first:border-t md:grid-cols-12 md:py-10"
             >
               <h3 className="display text-title text-ink md:col-span-4">
-                <span className="inline-block origin-left transition-transform duration-500 group-hover:translate-x-1">
-                  {item.title}
-                </span>
+                {item.title}
               </h3>
-              <p className="relative text-lead text-muted md:col-span-7 md:col-start-6">
-                <span className="absolute -left-8 top-3 hidden h-px w-5 origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100 lg:block" />
-                {item.body}
-              </p>
+              <p className="text-lead text-muted md:col-span-8">{item.body}</p>
             </article>
           ))}
         </div>

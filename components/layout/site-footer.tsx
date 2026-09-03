@@ -4,7 +4,7 @@ import { company, footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line-on-ink bg-ink text-on-ink">
+    <footer className="bg-moss text-on-ink">
       <div className="shell grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>
           <Wordmark onInk />

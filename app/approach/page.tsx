@@ -15,7 +15,8 @@ export default function ApproachPage() {
   return (
     <>
       <PageIntro
-        tone="stone"
+        tone="moss"
+        image={{ src: "/media/desk.jpg", alt: "Papers, a brass ruler, and a cup on a wooden worktable" }}
         eyebrow={approachPage.eyebrow}
         title={approachPage.title}
         lede={approachPage.lede}

@@ -90,7 +90,7 @@ export function MobileNav({ onInk = false }: { onInk?: boolean }) {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation"
-          className="grain fixed inset-0 z-[80] flex flex-col bg-ink text-on-ink"
+          className="fixed inset-0 z-[80] flex flex-col bg-moss text-on-ink"
         >
           <div className="h-[2px] bg-accent" />
           <div className="shell relative z-10 flex h-[4.35rem] items-center justify-between border-b border-line-on-ink">

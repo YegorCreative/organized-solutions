@@ -1,75 +1,82 @@
+import { FrameImage } from "@/components/visual/frame-image";
+import { media } from "@/content/media";
 import { tiers } from "@/content/site";
 import { cx } from "@/lib/cx";
 
+const visuals = [
+  { image: media.studio, tone: "bg-canvas text-ink", kicker: "text-moss-soft" },
+  { image: media.desk, tone: "bg-stone text-ink", kicker: "text-clay" },
+  { image: media.loft, tone: "bg-slate text-on-ink", kicker: "text-copper" },
+  { image: media.table, tone: "bg-clay text-on-ink", kicker: "text-clay-soft" },
+] as const;
+
 export function EngagementTiers() {
   return (
-    <div className="relative">
-      <div className="shell">
-        <div className="relative">
-          <span
-            className="absolute top-3 -bottom-10 left-[0.7rem] hidden w-px bg-accent/80 md:block"
-            aria-hidden="true"
-          />
+    <div>
+      {tiers.map((tier, index) => {
+        const visual = visuals[index];
+        const last = index === tiers.length - 1;
+        const dark = index >= 2;
 
-          {tiers.map((tier, index) => {
-            const last = index === tiers.length - 1;
-            const execute = index === 2;
-
-            return (
-              <article
-                key={tier.index}
+        return (
+          <article
+            key={tier.index}
+            className={cx(
+              "relative grid overflow-hidden lg:grid-cols-12",
+              visual.tone,
+            )}
+          >
+            <div
+              className={cx(
+                "relative min-h-[16rem] lg:col-span-5 lg:min-h-[28rem]",
+                index % 2 === 1 && "lg:order-2",
+              )}
+            >
+              <FrameImage
+                src={visual.image.src}
+                alt={visual.image.alt}
+                speed={index === 2 ? "mid" : "slow"}
+                className="absolute inset-0 h-full w-full"
+              />
+              {last ? (
+                <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-clay to-transparent" />
+              ) : null}
+            </div>
+            <div className="px-[var(--spacing-gutter)] py-12 lg:col-span-7 lg:py-20">
+              <p className={cx("display text-display-sm", dark ? "text-copper" : "text-accent")}>
+                {tier.index}
+              </p>
+              <p className={cx("kicker mt-4", visual.kicker)}>{tier.stage}</p>
+              <h3 className="display mt-3 text-title">{tier.name}</h3>
+              <p
                 className={cx(
-                  "relative grid gap-6 py-12 md:grid-cols-12 md:gap-8 md:py-16",
-                  execute && "bg-ink px-[var(--spacing-gutter)] text-on-ink md:-mx-[var(--spacing-gutter)] md:px-[var(--spacing-gutter)]",
-                  last && "pb-4",
+                  "measure mt-5 text-[1.0625rem] leading-relaxed",
+                  dark ? "text-on-ink-muted" : "text-muted",
                 )}
               >
-                <div className="md:col-span-3">
-                  <p
-                    className={cx(
-                      "display text-display-sm",
-                      execute ? "text-accent-soft" : "text-accent",
-                    )}
-                  >
-                    {tier.index}
-                  </p>
-                  <p className={cx("kicker mt-4", execute && "text-on-ink-muted")}>
-                    {tier.stage}
-                  </p>
-                </div>
-                <div className="md:col-span-8 md:col-start-5">
-                  <h3 className="display text-title">{tier.name}</h3>
-                  <p
-                    className={cx(
-                      "measure mt-5 text-[1.0625rem] leading-relaxed",
-                      execute ? "text-on-ink-muted" : "text-muted",
-                    )}
-                  >
-                    {tier.summary}
-                  </p>
-                  <p
-                    className={cx(
-                      "mt-8 max-w-md text-sm leading-relaxed",
-                      execute ? "text-on-ink-muted" : "text-faint",
-                    )}
-                  >
-                    <span className={cx("kicker mb-2 block", execute && "text-on-ink-muted")}>
-                      Best for
-                    </span>
-                    {tier.bestFor}
-                  </p>
-                  {last ? (
-                    <p className="mt-10 max-w-md text-sm text-faint">
-                      The work does not have to end when the first systems are in
-                      place.
-                    </p>
-                  ) : null}
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </div>
+                {tier.summary}
+              </p>
+              <p
+                className={cx(
+                  "mt-8 max-w-md text-sm leading-relaxed",
+                  dark ? "text-on-ink-muted" : "text-faint",
+                )}
+              >
+                <span className={cx("kicker mb-2 block", visual.kicker)}>
+                  Best for
+                </span>
+                {tier.bestFor}
+              </p>
+              {last ? (
+                <p className="mt-8 max-w-md text-sm text-clay-soft">
+                  The work does not have to end when the first systems are in
+                  place.
+                </p>
+              ) : null}
+            </div>
+          </article>
+        );
+      })}
     </div>
   );
 }

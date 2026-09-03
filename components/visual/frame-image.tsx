@@ -1,0 +1,40 @@
+import Image from "next/image";
+import { cx } from "@/lib/cx";
+
+type Speed = "slow" | "mid" | "counter" | "none";
+
+export function FrameImage({
+  src,
+  alt,
+  speed = "mid",
+  className,
+  imgClassName,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  speed?: Speed;
+  className?: string;
+  imgClassName?: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className={cx("relative overflow-hidden", className)}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        sizes="(max-width: 768px) 100vw, 70vw"
+        className={cx(
+          "object-cover",
+          speed === "slow" && "parallax-media-slow",
+          speed === "mid" && "parallax-media-mid",
+          speed === "counter" && "parallax-media-counter",
+          speed === "none" && "scale-[1.04]",
+          imgClassName,
+        )}
+      />
+    </div>
+  );
+}

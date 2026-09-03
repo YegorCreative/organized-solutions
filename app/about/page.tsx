@@ -17,7 +17,8 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        tone="canvas"
+        tone="clay"
+        image={{ src: "/media/table.jpg", alt: "A round oak table by a window, an open notebook, and an empty chair" }}
         eyebrow={aboutPage.eyebrow}
         title={aboutPage.title}
         lede={aboutPage.lede}

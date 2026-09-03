@@ -15,6 +15,12 @@
   --color-faint: #7f796f;
   --color-accent: #b08f5c;
   --color-accent-soft: #c4a574;
+  --color-moss: #3f5348;
+  --color-moss-soft: #6b7f70;
+  --color-clay: #8f5a45;
+  --color-clay-soft: #c4a090;
+  --color-slate: #3d4853;
+  --color-copper: #c4895c;
   --color-on-ink: #f3eee4;
   --color-on-ink-muted: #c2b8a8;
   --color-line: color-mix(in srgb, #161410 14%, transparent);
@@ -143,13 +149,13 @@
   }
 
   .cta-primary {
-    color: var(--color-ink);
-    box-shadow: inset 2px 0 0 var(--color-accent);
-    border: 1px solid var(--color-ink);
+    color: var(--color-on-ink);
+    background: var(--color-ink);
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--color-ink) 18%, transparent);
   }
 
   .cta-primary::before {
-    background: var(--color-ink);
+    background: var(--color-moss);
   }
 
   .cta-primary:hover,
@@ -158,13 +164,12 @@
   }
 
   .cta-on-ink {
-    color: var(--color-on-ink);
-    box-shadow: inset 2px 0 0 var(--color-accent);
-    border: 1px solid color-mix(in srgb, var(--color-on-ink) 70%, transparent);
+    color: var(--color-ink);
+    background: var(--color-canvas);
   }
 
   .cta-on-ink::before {
-    background: var(--color-on-ink);
+    background: var(--color-copper);
   }
 
   .cta-on-ink:hover,
@@ -269,6 +274,33 @@
       animation-range: cover 0% cover 100%;
       --shift: -8%;
     }
+
+    .parallax-media-slow {
+      animation: media-shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 7%;
+    }
+
+    .parallax-media-mid {
+      animation: media-shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 12%;
+    }
+
+    .parallax-media-counter {
+      animation: media-shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: -9%;
+    }
+
+    .mask-uncover {
+      animation: uncover linear both;
+      animation-timeline: view();
+      animation-range: cover 18% cover 78%;
+    }
   }
 }
 
@@ -281,10 +313,15 @@
   .parallax-slow,
   .parallax-mid,
   .parallax-counter,
+  .parallax-media-slow,
+  .parallax-media-mid,
+  .parallax-media-counter,
   .draw-line,
-  .draw-rule {
+  .draw-rule,
+  .mask-uncover {
     animation: none !important;
     transform: none !important;
+    clip-path: none !important;
   }
 
   .cta::before,
@@ -331,6 +368,24 @@
   }
   to {
     transform: scaleX(1);
+  }
+}
+
+@keyframes media-shift {
+  from {
+    transform: translate3d(0, calc(var(--shift) * -1), 0) scale(1.16);
+  }
+  to {
+    transform: translate3d(0, var(--shift), 0) scale(1.16);
+  }
+}
+
+@keyframes uncover {
+  from {
+    clip-path: inset(0 78% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
 

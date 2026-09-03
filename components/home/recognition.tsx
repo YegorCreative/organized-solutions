@@ -1,36 +1,39 @@
+import { FrameImage } from "@/components/visual/frame-image";
 import { home } from "@/content/copy";
+import { media } from "@/content/media";
 
 export function Recognition() {
   return (
-    <section className="relative overflow-hidden bg-stone py-section">
-      <div className="shell">
-        <div className="grid gap-8 lg:grid-cols-12">
-          <div className="lg:col-span-7 lg:pt-4">
-            <p className="kicker">{home.recognition.eyebrow}</p>
-            <h2 className="display mt-5 text-display-sm text-ink">
-              {home.recognition.headline}
-            </h2>
-          </div>
-          <p className="measure text-lead text-muted lg:col-span-4 lg:col-start-9 lg:self-end">
+    <section className="relative overflow-hidden bg-clay py-0 text-on-ink">
+      <div className="grid lg:grid-cols-2">
+        <div className="relative min-h-[28rem] lg:min-h-[42rem]">
+          <FrameImage
+            src={media.colonnade.src}
+            alt={media.colonnade.alt}
+            speed="mid"
+            className="absolute inset-0 h-full w-full"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-clay/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-clay/40" />
+        </div>
+        <div className="px-[var(--spacing-gutter)] py-section">
+          <p className="kicker text-clay-soft">{home.recognition.eyebrow}</p>
+          <h2 className="display mt-5 text-display-sm text-on-ink">
+            {home.recognition.headline}
+          </h2>
+          <ul className="mt-10 space-y-4">
+            {home.recognition.items.map((item) => (
+              <li
+                key={item}
+                className="border-b border-white/15 pb-4 text-[1.12rem] leading-snug text-on-ink"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-10 max-w-md text-lead text-clay-soft">
             {home.recognition.close}
           </p>
         </div>
-
-        <ul className="mt-14 border-t border-line">
-          {home.recognition.items.map((item, index) => (
-            <li
-              key={item}
-              className="group grid items-baseline gap-4 border-b border-line py-6 sm:grid-cols-12"
-            >
-              <span className="display text-sm text-accent sm:col-span-1">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="display text-title text-ink sm:col-span-10 sm:col-start-3">
-                {item}
-              </p>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 # Project status
 
-**Phase:** Professional visual refinement (OS v1.1)  
-**Date:** 2026-09-02  
+**Phase:** Creative redesign — color, imagery, motion (OS v1.1)  
+**Date:** 2026-09-03  
 **Hosting:** GitHub Pages (static export)
 
 This file is for future contributors. Read `docs/ORGANIZED_SOLUTIONS_WEBSITE_OS.md` for brand and product direction.
@@ -10,7 +10,7 @@ This file is for future contributors. Read `docs/ORGANIZED_SOLUTIONS_WEBSITE_OS.
 
 ## Current phase
 
-The second visual pass overused a network/node graphic and made the site read as technology infrastructure. This refinement pass removes that wallpaper, restores section variety, and updates engagement to four stages (including working-language Sustain) while keeping cinematic contrast, motion, and static GitHub Pages.
+The previous refinement removed the network graphic but left a typeset page. This pass adds original environmental imagery, an expanded mineral color story (moss, clay, slate, copper), layered parallax, and distinct visual moments — still static GitHub Pages, still no fabricated people or clients.
 
 The next milestone is owner review of the live site. Do not begin another independent redesign until that review.
 

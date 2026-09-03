@@ -15,7 +15,8 @@ export default function ContactPage() {
   return (
     <>
       <PageIntro
-        tone="stone"
+        tone="clay"
+        image={{ src: "/media/table.jpg", alt: "A round oak table by a window, an open notebook, and an empty chair" }}
         eyebrow={contactPage.eyebrow}
         title={contactPage.title}
         lede={contactPage.lede}
