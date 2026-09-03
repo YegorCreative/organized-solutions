@@ -15,8 +15,8 @@ export default function ApproachPage() {
   return (
     <>
       <PageIntro
-        tone="moss"
-        image={{ src: "/media/desk.jpg", alt: "Papers, a brass ruler, and a cup on a wooden worktable" }}
+        tone="lavender"
+        image={{ src: "/media/desk.jpg", alt: "Papers, a silver ruler, and a cup on a pale worktable" }}
         eyebrow={approachPage.eyebrow}
         title={approachPage.title}
         lede={approachPage.lede}
@@ -48,7 +48,7 @@ export default function ApproachPage() {
         </div>
       </section>
 
-      <section className="bg-stone py-section">
+      <section className="bg-blush py-section">
         <div className="shell">
           <p className="kicker">Values</p>
           <h2 className="display mt-5 max-w-3xl text-display-sm text-ink">

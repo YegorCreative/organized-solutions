@@ -4,10 +4,10 @@ import { tiers } from "@/content/site";
 import { cx } from "@/lib/cx";
 
 const visuals = [
-  { image: media.studio, tone: "bg-canvas text-ink", kicker: "text-moss-soft" },
-  { image: media.desk, tone: "bg-stone text-ink", kicker: "text-clay" },
-  { image: media.loft, tone: "bg-slate text-on-ink", kicker: "text-copper" },
-  { image: media.table, tone: "bg-clay text-on-ink", kicker: "text-clay-soft" },
+  { image: media.studio, tone: "bg-canvas text-ink", kicker: "text-blue" },
+  { image: media.desk, tone: "bg-lavender text-ink", kicker: "text-blue" },
+  { image: media.loft, tone: "bg-blue-soft text-ink", kicker: "text-blue" },
+  { image: media.table, tone: "bg-blush text-ink", kicker: "text-blue" },
 ] as const;
 
 export function EngagementTiers() {
@@ -16,7 +16,6 @@ export function EngagementTiers() {
       {tiers.map((tier, index) => {
         const visual = visuals[index];
         const last = index === tiers.length - 1;
-        const dark = index >= 2;
 
         return (
           <article
@@ -39,36 +38,26 @@ export function EngagementTiers() {
                 className="absolute inset-0 h-full w-full"
               />
               {last ? (
-                <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-clay to-transparent" />
+                <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-blush to-transparent" />
               ) : null}
             </div>
             <div className="px-[var(--spacing-gutter)] py-12 lg:col-span-7 lg:py-20">
-              <p className={cx("display text-display-sm", dark ? "text-copper" : "text-accent")}>
+              <p className="display text-display-sm text-blue">
                 {tier.index}
               </p>
               <p className={cx("kicker mt-4", visual.kicker)}>{tier.stage}</p>
               <h3 className="display mt-3 text-title">{tier.name}</h3>
-              <p
-                className={cx(
-                  "measure mt-5 text-[1.0625rem] leading-relaxed",
-                  dark ? "text-on-ink-muted" : "text-muted",
-                )}
-              >
+              <p className="measure mt-5 text-[1.0625rem] leading-relaxed text-muted">
                 {tier.summary}
               </p>
-              <p
-                className={cx(
-                  "mt-8 max-w-md text-sm leading-relaxed",
-                  dark ? "text-on-ink-muted" : "text-faint",
-                )}
-              >
+              <p className="mt-8 max-w-md text-sm leading-relaxed text-faint">
                 <span className={cx("kicker mb-2 block", visual.kicker)}>
                   Best for
                 </span>
                 {tier.bestFor}
               </p>
               {last ? (
-                <p className="mt-8 max-w-md text-sm text-clay-soft">
+                <p className="mt-8 max-w-md text-sm text-muted">
                   The work does not have to end when the first systems are in
                   place.
                 </p>

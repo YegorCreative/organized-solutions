@@ -3,7 +3,7 @@ import { Arrow } from "@/components/brand/arrow";
 import { cta } from "@/content/site";
 import { cx } from "@/lib/cx";
 
-type Variant = "header" | "primary" | "on-ink";
+type Variant = "header" | "primary" | "on-field";
 
 export function PrimaryCta({
   variant = "primary",
@@ -26,7 +26,7 @@ export function PrimaryCta({
       href={cta.href}
       className={cx(
         "cta",
-        variant === "on-ink" ? "cta-on-ink" : "cta-primary",
+        variant === "on-field" ? "cta-on-field" : "cta-primary",
         className,
       )}
     >

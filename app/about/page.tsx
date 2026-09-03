@@ -17,8 +17,8 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        tone="clay"
-        image={{ src: "/media/table.jpg", alt: "A round oak table by a window, an open notebook, and an empty chair" }}
+        tone="blush"
+        image={{ src: "/media/table.jpg", alt: "A round pale table by a window, an open notebook, and a blush chair" }}
         eyebrow={aboutPage.eyebrow}
         title={aboutPage.title}
         lede={aboutPage.lede}
@@ -42,7 +42,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-stone py-section">
+      <section className="bg-lavender py-section">
         <div className="shell grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker">Mission</p>

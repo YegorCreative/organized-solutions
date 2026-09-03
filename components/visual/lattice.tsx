@@ -7,7 +7,7 @@ export function Lattice({
   className?: string;
   tone?: "ink" | "paper";
 }) {
-  const stroke = tone === "ink" ? "rgba(239,233,221,0.09)" : "rgba(25,23,20,0.08)";
+  const stroke = tone === "ink" ? "rgba(255,244,244,0.16)" : "rgba(21,32,60,0.10)";
 
   return (
     <svg

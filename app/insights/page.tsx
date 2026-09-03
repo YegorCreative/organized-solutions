@@ -16,12 +16,12 @@ export default function InsightsPage() {
     <>
       <PageIntro
         tone="canvas"
-        image={{ src: "/media/library.jpg", alt: "A quiet reading corner with oak shelves and a leather chair" }}
+        image={{ src: "/media/library.jpg", alt: "A quiet reading corner with pale shelves and a linen chair" }}
         eyebrow={insightsPage.eyebrow}
         title={insightsPage.title}
         lede={insightsPage.lede}
       />
-      <section className="bg-stone py-section">
+      <section className="bg-blush py-section">
         <div className="shell grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker">Archive</p>

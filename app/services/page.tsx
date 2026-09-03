@@ -15,14 +15,14 @@ export default function ServicesPage() {
   return (
     <>
       <PageIntro
-        tone="slate"
-        image={{ src: "/media/studio.jpg", alt: "A pale oak table and a sage chair beside tall windows" }}
+        tone="blue"
+        image={{ src: "/media/studio.jpg", alt: "A pale table and a single lavender chair beside tall windows" }}
         eyebrow={servicesPage.eyebrow}
         title={servicesPage.title}
         lede={servicesPage.lede}
       />
 
-      <section className="bg-stone py-section-tight">
+      <section className="bg-blush py-section-tight">
         <div className="shell grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <h2 className="display text-title text-ink">
@@ -58,7 +58,7 @@ export default function ServicesPage() {
         <EngagementTiers />
       </section>
 
-      <section className="bg-stone py-section">
+      <section className="bg-lavender py-section">
         <div className="shell grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="display text-title text-ink">

@@ -42,26 +42,18 @@ It must not feel like a prebuilt consulting template.
 
 ### Color
 
-Owner preference: **neutrals + subtle gold.**
+Owner-selected production palette. Working tokens live in `app/globals.css`.
 
-Working production palette lives in `app/globals.css` as semantic tokens.
+- Primary blue `#3A86FF`
+- Lavender `#BDB2FF`
+- Blush `#FFD6E0`
+- Pale blush `#FFF4F4` (light canvas)
 
-Direction:
+Do not treat black, near-black, charcoal, or ink as a brand environment or large page field. Readable dark text on light fields is required for contrast; it is not a visual identity.
 
-- Warm ivory
-- Soft stone
-- Sophisticated charcoal
-- Warm gray
-- Restrained champagne / brushed-gold accent
-- A deeper grounding neutral where useful
+Do not revert to ivory, stone, brass, moss, clay, copper, or earth tones.
 
-Gold is an **accent**.
-
-Think: architectural brass, champagne metal, refined material detail.
-
-Not: shiny luxury gold, yellow-gold, casino aesthetic, black-and-gold luxury cliché, gold gradients, excessive gold borders.
-
-Avoid bright colors, including bright orange.
+The four colors should interact through large fields, layering, photography, and motion — not as a childish one-color-per-section rotation.
 
 ### Typography
 
@@ -355,7 +347,7 @@ Owner direction after the first production pass: “confidence through restraint
 
 The site should feel art-directed: editorial sophistication, architectural composition, modern digital interaction, subtle materiality, visual storytelling, and intentional movement.
 
-Use the palette. Create contrast between ivory, stone, and ink environments. Brass must actually contribute to identity.
+Use the owner palette. Create contrast between pale blush, blush, lavender, and blue environments. Blue must actually contribute to identity — not only to links.
 
 ### One brand, multiple visual moments
 
@@ -369,7 +361,7 @@ Art should change with the story. Not every section needs an illustration, paral
 
 Motion remains part of the experience. Respect `prefers-reduced-motion`. Do not add a heavy animation library unless the owner approves it.
 
-Primary CTA language: brass-capped outline, fill from the left, directional arrow. Working copy remains “Start a conversation.”
+Primary CTA language: blue fill, lavender hover wipe from the left, directional arrow. Working copy remains “Start a conversation.”
 
 Photography: reserve architectural planes for approved observational photography. Do not fill them with stock.
 

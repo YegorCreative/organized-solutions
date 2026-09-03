@@ -10,7 +10,7 @@ This file is for future contributors. Read `docs/ORGANIZED_SOLUTIONS_WEBSITE_OS.
 
 ## Current phase
 
-The previous refinement removed the network graphic but left a typeset page. This pass adds original environmental imagery, an expanded mineral color story (moss, clay, slate, copper), layered parallax, and distinct visual moments — still static GitHub Pages, still no fabricated people or clients.
+The owner selected a four-color palette (blue `#3A86FF`, lavender `#BDB2FF`, blush `#FFD6E0`, pale blush `#FFF4F4`) and rejected black/earthy brand environments. This pass keeps the image-led, parallax, and motion work and rebuilds the color identity around that palette.
 
 The next milestone is owner review of the live site. Do not begin another independent redesign until that review.
 
@@ -58,11 +58,11 @@ There was no application architecture to preserve.
 
 Semantic tokens in `app/globals.css`:
 
-- Warm ivory canvas
-- Soft stone
-- Sophisticated charcoal / ink
-- Warm gray
-- Restrained architectural brass accent
+- Primary blue `#3A86FF`
+- Lavender `#BDB2FF`
+- Blush `#FFD6E0`
+- Pale blush canvas `#FFF4F4`
+- Navy text `#15203C` (type only, not large fields)
 - Newsreader (display) + Source Sans 3 (body/UI)
 
 ### Site chrome

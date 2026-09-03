@@ -5,27 +5,25 @@
     sans-serif;
   --font-display: var(--font-newsreader), "Newsreader", ui-serif, Georgia, serif;
 
-  --color-canvas: #f3eee4;
-  --color-canvas-raised: #faf6ee;
-  --color-stone: #e2dacb;
-  --color-stone-deep: #cfc4b0;
-  --color-ink: #161410;
-  --color-ink-raised: #2a2620;
-  --color-muted: #5c574f;
-  --color-faint: #7f796f;
-  --color-accent: #b08f5c;
-  --color-accent-soft: #c4a574;
-  --color-moss: #3f5348;
-  --color-moss-soft: #6b7f70;
-  --color-clay: #8f5a45;
-  --color-clay-soft: #c4a090;
-  --color-slate: #3d4853;
-  --color-copper: #c4895c;
-  --color-on-ink: #f3eee4;
-  --color-on-ink-muted: #c2b8a8;
-  --color-line: color-mix(in srgb, #161410 14%, transparent);
-  --color-line-strong: color-mix(in srgb, #161410 28%, transparent);
-  --color-line-on-ink: color-mix(in srgb, #f3eee4 16%, transparent);
+  --color-blue: #3a86ff;
+  --color-lavender: #bdb2ff;
+  --color-blush: #ffd6e0;
+  --color-canvas: #fff4f4;
+
+  --color-blue-deep: #1b57d4;
+  --color-blue-soft: color-mix(in srgb, #3a86ff 26%, #fff4f4);
+  --color-lavender-soft: color-mix(in srgb, #bdb2ff 42%, #fff4f4);
+  --color-blush-deep: color-mix(in srgb, #ffd6e0 72%, #bdb2ff);
+
+  --color-ink: #15203c;
+  --color-muted: #3d4f78;
+  --color-faint: #5a6b93;
+  --color-accent: #3a86ff;
+  --color-on-blue: #fff4f4;
+  --color-on-blue-muted: color-mix(in srgb, #fff4f4 82%, #bdb2ff);
+  --color-line: color-mix(in srgb, #15203c 12%, transparent);
+  --color-line-strong: color-mix(in srgb, #15203c 24%, transparent);
+  --color-line-on-blue: color-mix(in srgb, #fff4f4 30%, transparent);
 
   --spacing-gutter: clamp(1.25rem, 5vw, 5.5rem);
   --spacing-section: clamp(4.75rem, 13vw, 10rem);
@@ -53,7 +51,7 @@
 
 @layer base {
   html {
-    background: var(--color-ink);
+    background: var(--color-canvas);
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -71,12 +69,12 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-accent) 38%, var(--color-canvas));
+    background: color-mix(in srgb, var(--color-lavender) 55%, var(--color-blush));
     color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-blue);
     outline-offset: 3px;
   }
 
@@ -149,32 +147,52 @@
   }
 
   .cta-primary {
-    color: var(--color-on-ink);
-    background: var(--color-ink);
-    box-shadow: 0 10px 30px color-mix(in srgb, var(--color-ink) 18%, transparent);
+    color: var(--color-ink);
+    background: var(--color-blue);
+    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-blue) 34%, transparent);
   }
 
   .cta-primary::before {
-    background: var(--color-moss);
+    background: var(--color-lavender);
   }
 
   .cta-primary:hover,
   .cta-primary:focus-visible {
-    color: var(--color-on-ink);
+    color: var(--color-ink);
   }
 
-  .cta-on-ink {
+  .cta-on-field {
     color: var(--color-ink);
     background: var(--color-canvas);
+    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-blue) 18%, transparent);
   }
 
-  .cta-on-ink::before {
-    background: var(--color-copper);
+  .cta-on-field::before {
+    background: var(--color-blush);
   }
 
-  .cta-on-ink:hover,
-  .cta-on-ink:focus-visible {
+  .cta-on-field:hover,
+  .cta-on-field:focus-visible {
     color: var(--color-ink);
+  }
+
+  .photo-grade {
+    isolation: isolate;
+  }
+
+  .photo-grade::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+    opacity: 0.34;
+    background: linear-gradient(
+      118deg,
+      color-mix(in srgb, var(--color-blue) 70%, transparent),
+      color-mix(in srgb, var(--color-lavender) 55%, transparent) 52%,
+      color-mix(in srgb, var(--color-blush) 65%, transparent)
+    );
   }
 
   .cta-header {
@@ -225,6 +243,10 @@
     align-items: baseline;
     gap: 1.25rem;
     text-decoration: none;
+  }
+
+  header.text-on-blue .nav-link::after {
+    background: var(--color-blush);
   }
 }
 
@@ -301,6 +323,16 @@
       animation-timeline: view();
       animation-range: cover 18% cover 78%;
     }
+
+    .parallax-color {
+      animation: color-plane linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+
+  .plane-drift {
+    animation: plane-drift 22s ease-in-out infinite alternate;
   }
 }
 
@@ -316,6 +348,8 @@
   .parallax-media-slow,
   .parallax-media-mid,
   .parallax-media-counter,
+  .parallax-color,
+  .plane-drift,
   .draw-line,
   .draw-rule,
   .mask-uncover {
@@ -386,6 +420,24 @@
   }
   to {
     clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes color-plane {
+  from {
+    transform: translate3d(-5%, -8%, 0) scale(1.04);
+  }
+  to {
+    transform: translate3d(6%, 10%, 0) scale(1.12);
+  }
+}
+
+@keyframes plane-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(6%, -8%, 0) scale(1.1);
   }
 }
 

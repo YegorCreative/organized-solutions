@@ -2,38 +2,49 @@ import Link from "next/link";
 import { company } from "@/content/site";
 import { cx } from "@/lib/cx";
 
-export function Mark({ className }: { className?: string }) {
+export function Mark({
+  className,
+  onField = false,
+}: {
+  className?: string;
+  onField?: boolean;
+}) {
   return (
     <span
       aria-hidden="true"
       className={cx(
-        "inline-block size-[0.85rem] shrink-0 border border-ink",
-        "relative",
+        "inline-block size-[0.85rem] shrink-0 border relative",
+        onField ? "border-on-blue" : "border-ink",
         className,
       )}
     >
-      <span className="absolute inset-x-[2px] bottom-[3px] h-px bg-accent" />
+      <span
+        className={cx(
+          "absolute inset-x-[2px] bottom-[3px] h-px",
+          onField ? "bg-blush" : "bg-blue",
+        )}
+      />
     </span>
   );
 }
 
 export function Wordmark({
   className,
-  onInk = false,
+  onField = false,
 }: {
   className?: string;
-  onInk?: boolean;
+  onField?: boolean;
 }) {
   return (
     <Link
       href="/"
       className={cx(
         "inline-flex items-center gap-2.5 no-underline",
-        onInk ? "text-on-ink" : "text-ink",
+        onField ? "text-on-blue" : "text-ink",
         className,
       )}
     >
-      <Mark className={onInk ? "border-on-ink" : undefined} />
+      <Mark onField={onField} />
       <span className="text-[0.95rem] font-medium tracking-[0.01em]">
         {company.name}
       </span>

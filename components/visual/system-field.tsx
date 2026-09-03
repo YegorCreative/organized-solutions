@@ -80,9 +80,9 @@ export function SystemField({
     return () => window.removeEventListener("mousemove", onMove);
   }, [mouse]);
 
-  const stroke = tone === "ink" ? "rgba(239,233,221,0.42)" : "rgba(25,23,20,0.28)";
-  const brass = "rgba(176,143,92,0.92)";
-  const node = tone === "ink" ? "#efe9dd" : "#191714";
+  const stroke = tone === "ink" ? "rgba(255,244,244,0.42)" : "rgba(21,32,60,0.28)";
+  const accent = "rgba(58,134,255,0.92)";
+  const node = tone === "ink" ? "#fff4f4" : "#15203c";
   const chaos = Math.max(0, 1 - order);
   const grid = 0.22 + order * 0.7;
 
@@ -153,7 +153,7 @@ export function SystemField({
         <polyline
           points={spine.map((p) => `${p.x},${p.y}`).join(" ")}
           fill="none"
-          stroke={brass}
+          stroke={accent}
           strokeWidth="0.7"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -168,7 +168,7 @@ export function SystemField({
           cx={point.x}
           cy={point.y}
           r={point.hub ? 0.95 : 0.48}
-          fill={point.hub ? brass : node}
+          fill={point.hub ? accent : node}
           opacity={point.hub ? 0.95 : 0.55 + order * 0.4}
         />
       ))}

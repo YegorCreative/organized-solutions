@@ -6,42 +6,42 @@
 export const media = {
   atrium: {
     src: "/media/atrium.jpg",
-    alt: "Sunlit limestone stair hall with a brass rail and long bands of afternoon light",
+    alt: "A pale limestone stair hall with cool blue daylight and a satin rail",
   },
   loft: {
     src: "/media/loft.jpg",
-    alt: "A long oak table in a high-windowed loft, empty chairs, late-day light",
+    alt: "A long pale table in a high-windowed loft, blush chairs, blue sky in the windows",
   },
   threshold: {
     src: "/media/threshold.jpg",
-    alt: "A dark doorway opening onto a sunlit room with a brass lamp",
+    alt: "A lavender-veiled doorway opening onto a blush-lit room with a ceramic lamp",
   },
   thresholdClear: {
     src: "/media/threshold-clear.jpg",
-    alt: "The same sunlit room seen clearly, brass lamp on a small table",
+    alt: "The same blush-walled room seen clearly, white lamp and bands of cool light",
   },
   desk: {
     src: "/media/desk.jpg",
-    alt: "Papers, a brass ruler, and a cup on a wooden worktable",
+    alt: "Papers, a silver ruler, and a cup on a pale worktable in cool daylight",
   },
   colonnade: {
     src: "/media/colonnade.jpg",
-    alt: "A long plaster colonnade ending at a brass-edged green door",
+    alt: "A long plaster colonnade ending at a vivid blue door, blue and blush light on the columns",
   },
   table: {
     src: "/media/table.jpg",
-    alt: "A round oak table by a window, an open notebook, tea, and an empty chair",
+    alt: "A round pale table by a window, an open notebook, tea, and a blush chair",
   },
   library: {
     src: "/media/library.jpg",
-    alt: "A quiet reading corner with oak shelves, a lamp, and a leather chair",
+    alt: "A quiet reading corner with pale shelves, linen chair, and cool daylight",
   },
   studio: {
     src: "/media/studio.jpg",
-    alt: "A pale oak table and a single sage chair beside tall windows",
+    alt: "A pale table and a single lavender chair beside tall windows",
   },
   material: {
     src: "/media/material.jpg",
-    alt: "Close study of limestone and a copper architectural detail",
+    alt: "Close study of pale limestone and a blue-to-lavender architectural inlay",
   },
 } as const;

@@ -4,14 +4,19 @@ import { company, footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-moss text-on-ink">
-      <div className="shell grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
+    <footer className="relative overflow-hidden bg-lavender text-ink">
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[3px] bg-blue" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-[8%] bottom-[-30%] h-64 w-64 rounded-full bg-blush/80 blur-2xl"
+      />
+      <div className="shell relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>
-          <Wordmark onInk />
-          <p className="mt-5 measure text-[1.05rem] text-on-ink-muted">
+          <Wordmark />
+          <p className="mt-5 measure text-[1.05rem] text-muted">
             {company.tagline}
           </p>
-          <p className="mt-3 measure text-sm text-on-ink-muted">
+          <p className="mt-3 measure text-sm text-muted">
             {company.supportingMessage}
           </p>
         </div>
@@ -23,14 +28,14 @@ export function SiteFooter() {
             <Link
               key={item.href}
               href={item.href}
-              className="nav-link w-fit text-[0.9375rem] text-on-ink"
+              className="nav-link w-fit text-[0.9375rem] text-ink"
             >
               {item.label}
             </Link>
           ))}
         </nav>
       </div>
-      <div className="shell flex flex-col gap-3 border-t border-line-on-ink py-6 text-sm text-on-ink-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="shell relative flex flex-col gap-3 border-t border-line py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {company.name}
         </p>

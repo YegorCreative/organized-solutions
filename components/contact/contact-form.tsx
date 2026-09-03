@@ -106,7 +106,7 @@ export function ContactForm() {
             fieldErrors.seeing ? "seeing-hint seeing-error" : "seeing-hint"
           }
           aria-invalid={Boolean(fieldErrors.seeing)}
-          className="mt-4 w-full resize-y border-0 border-b border-line bg-transparent px-0 py-3 text-[1.0625rem] text-ink outline-none focus:border-ink"
+          className="mt-4 w-full resize-y border-0 border-b border-line bg-transparent px-0 py-3 text-[1.0625rem] text-ink outline-none focus:border-blue"
           onChange={(event) =>
             setValues((current) => ({ ...current, seeing: event.target.value }))
           }
@@ -173,7 +173,7 @@ function Field({
         autoComplete={autoComplete}
         aria-invalid={Boolean(error)}
         aria-describedby={error ? `${id}-error` : undefined}
-        className="mt-3 w-full border-0 border-b border-line bg-transparent px-0 py-3 text-[1.0625rem] text-ink outline-none focus:border-ink"
+        className="mt-3 w-full border-0 border-b border-line bg-transparent px-0 py-3 text-[1.0625rem] text-ink outline-none focus:border-blue"
         onChange={(event) => onChange(event.target.value)}
       />
       {error ? (

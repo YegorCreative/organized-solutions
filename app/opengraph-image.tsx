@@ -10,7 +10,7 @@ export default function OpenGraphImage() {
     (
       <div
         style={{
-          background: "#F2EDE3",
+          background: "#FFF4F4",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -24,14 +24,14 @@ export default function OpenGraphImage() {
             display: "flex",
             height: "2px",
             width: "100%",
-            background: "#9B7E4E",
+            background: "#3A86FF",
           }}
         />
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
               fontSize: 64,
-              color: "#191714",
+              color: "#15203C",
               letterSpacing: "-0.03em",
               lineHeight: 1.05,
             }}
@@ -42,13 +42,13 @@ export default function OpenGraphImage() {
             style={{
               marginTop: 20,
               fontSize: 28,
-              color: "#5C574F",
+              color: "#3D4F78",
             }}
           >
             Sustainable systems. Real results.
           </div>
         </div>
-        <div style={{ fontSize: 22, color: "#5C574F" }}>
+        <div style={{ fontSize: 22, color: "#3D4F78" }}>
           Fractional COO services
         </div>
       </div>

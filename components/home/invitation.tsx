@@ -6,7 +6,11 @@ import { media } from "@/content/media";
 
 export function Invitation() {
   return (
-    <section className="relative isolate overflow-hidden bg-clay text-on-ink">
+    <section className="relative isolate overflow-hidden bg-blush text-ink">
+      <div
+        aria-hidden="true"
+        className="plane-drift pointer-events-none absolute -right-[8%] -top-[10%] h-72 w-72 rounded-full bg-lavender/50 blur-3xl"
+      />
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[22rem] lg:min-h-[36rem]">
           <FrameImage
@@ -15,22 +19,23 @@ export function Invitation() {
             speed="slow"
             className="absolute inset-0 h-full w-full"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-blush/40" />
         </div>
         <div className="px-[var(--spacing-gutter)] py-section">
-          <h2 className="display max-w-xl text-display-sm text-on-ink">
+          <h2 className="display max-w-xl text-display-sm text-ink">
             {home.invitation.headline}
           </h2>
-          <p className="measure mt-6 text-lead text-on-ink">
+          <p className="measure mt-6 text-lead text-muted">
             {home.invitation.body}
           </p>
           <div className="mt-10">
-            <PrimaryCta variant="on-ink" />
+            <PrimaryCta />
           </div>
           <ul className="mt-12 max-w-md">
             {company.promises.map((promise) => (
               <li
                 key={promise}
-                className="border-t border-white/20 py-4 text-[1.05rem] text-on-ink last:border-b"
+                className="border-t border-ink/15 py-4 text-[1.05rem] text-ink last:border-b"
               >
                 {promise}
               </li>

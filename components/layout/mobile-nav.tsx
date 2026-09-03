@@ -7,7 +7,7 @@ import { Wordmark } from "@/components/brand/wordmark";
 import { cta, navigation } from "@/content/site";
 import { cx } from "@/lib/cx";
 
-export function MobileNav({ onInk = false }: { onInk?: boolean }) {
+export function MobileNav({ onField = false }: { onField?: boolean }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const openButtonRef = useRef<HTMLButtonElement>(null);
@@ -74,7 +74,7 @@ export function MobileNav({ onInk = false }: { onInk?: boolean }) {
         type="button"
         className={cx(
           "inline-flex min-h-11 min-w-11 items-center justify-end text-sm",
-          onInk ? "text-on-ink" : "text-ink",
+          onField ? "text-on-blue" : "text-ink",
         )}
         aria-expanded={open}
         aria-controls={panelId}
@@ -90,15 +90,23 @@ export function MobileNav({ onInk = false }: { onInk?: boolean }) {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation"
-          className="fixed inset-0 z-[80] flex flex-col bg-moss text-on-ink"
+          className="fixed inset-0 z-[80] flex flex-col overflow-hidden bg-canvas text-ink"
         >
-          <div className="h-[2px] bg-accent" />
-          <div className="shell relative z-10 flex h-[4.35rem] items-center justify-between border-b border-line-on-ink">
-            <Wordmark onInk />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue/25 via-lavender/50 to-blush"
+          />
+          <div
+            aria-hidden="true"
+            className="plane-drift pointer-events-none absolute -right-[20%] top-[20%] h-80 w-80 rounded-full bg-blue/30 blur-3xl"
+          />
+          <div className="relative z-10 h-[2px] bg-blue" />
+          <div className="shell relative z-10 flex h-[4.35rem] items-center justify-between border-b border-line">
+            <Wordmark />
             <button
               ref={closeButtonRef}
               type="button"
-              className="inline-flex min-h-11 min-w-11 items-center justify-end text-sm text-on-ink"
+              className="inline-flex min-h-11 min-w-11 items-center justify-end text-sm text-ink"
               onClick={() => setOpen(false)}
             >
               Close
@@ -110,11 +118,11 @@ export function MobileNav({ onInk = false }: { onInk?: boolean }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="menu-link reveal display text-display-sm text-on-ink"
+                className="menu-link reveal display text-display-sm text-ink"
                 style={{ animationDelay: `${index * 70}ms` }}
                 onClick={() => setOpen(false)}
               >
-                <span className="display text-sm text-accent">
+                <span className="display text-sm text-blue">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {item.label}
@@ -122,19 +130,19 @@ export function MobileNav({ onInk = false }: { onInk?: boolean }) {
             ))}
             <Link
               href={cta.href}
-              className="menu-link reveal display text-display-sm text-on-ink"
+              className="menu-link reveal display text-display-sm text-ink"
               style={{ animationDelay: `${navigation.length * 70}ms` }}
               onClick={() => setOpen(false)}
             >
-              <span className="display text-sm text-accent">
+              <span className="display text-sm text-blue">
                 {String(navigation.length + 1).padStart(2, "0")}
               </span>
               Contact
             </Link>
           </nav>
 
-          <div className="shell relative z-10 border-t border-line-on-ink py-8">
-            <PrimaryCta variant="on-ink" />
+          <div className="shell relative z-10 border-t border-line py-8">
+            <PrimaryCta />
           </div>
         </div>
       ) : null}

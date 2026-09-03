@@ -20,7 +20,7 @@ export function FrameImage({
   priority?: boolean;
 }) {
   return (
-    <div className={cx("relative overflow-hidden", className)}>
+    <div className={cx("photo-grade relative overflow-hidden", className)}>
       <Image
         src={withBasePath(src)}
         alt={alt}

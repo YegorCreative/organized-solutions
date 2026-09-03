@@ -36,18 +36,20 @@ export function SiteHeader() {
     <header
       className={cx(
         "sticky top-0 z-[80] isolate transition-colors duration-500",
-        overlay ? "bg-transparent text-on-ink" : "bg-canvas text-ink",
+        overlay
+          ? "bg-gradient-to-b from-blue-deep/55 to-transparent text-on-blue"
+          : "bg-canvas/90 text-ink backdrop-blur-sm",
       )}
       style={{ zIndex: 80 }}
     >
-      <div className="h-[2px] bg-accent" />
+      <div className={cx("h-[2px]", overlay ? "bg-blush" : "bg-blue")} />
       <div
         className={cx(
           "shell flex h-[4.35rem] items-center justify-between",
           overlay ? "border-b border-transparent" : "border-b border-line",
         )}
       >
-        <Wordmark onInk={overlay} />
+        <Wordmark onField={overlay} />
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
           {navigation.map((item) => {
             const current = normalize(pathname) === normalize(item.href);
@@ -64,7 +66,7 @@ export function SiteHeader() {
           })}
           <PrimaryCta variant="header" />
         </nav>
-        <MobileNav onInk={overlay} />
+        <MobileNav onField={overlay} />
       </div>
     </header>
   );
