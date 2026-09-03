@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-source-sans), "Source Sans 3", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: var(--font-newsreader), "Newsreader", ui-serif, Georgia, serif;
+
+  --color-canvas: #f2ede3;
+  --color-canvas-raised: #faf6ee;
+  --color-stone: #e4ddd0;
+  --color-stone-deep: #cfc6b6;
+  --color-ink: #191714;
+  --color-ink-raised: #2a2722;
+  --color-muted: #5c574f;
+  --color-faint: #7f796f;
+  --color-accent: #9b7e4e;
+  --color-accent-soft: #b08f5c;
+  --color-on-ink: #efe9dd;
+  --color-on-ink-muted: #b7afa2;
+  --color-line: color-mix(in srgb, #191714 14%, transparent);
+  --color-line-strong: color-mix(in srgb, #191714 28%, transparent);
+  --color-line-on-ink: color-mix(in srgb, #efe9dd 16%, transparent);
+
+  --spacing-gutter: clamp(1.25rem, 5vw, 5.5rem);
+  --spacing-section: clamp(4.5rem, 12vw, 9.5rem);
+  --spacing-section-tight: clamp(3rem, 8vw, 6.5rem);
+
+  --text-display: clamp(2.65rem, 7.2vw, 6.15rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-display-sm: clamp(1.85rem, 4.4vw, 3.5rem);
+  --text-display-sm--line-height: 1.12;
+  --text-display-sm--letter-spacing: -0.025em;
+
+  --text-title: clamp(1.5rem, 2.6vw, 2.15rem);
+  --text-title--line-height: 1.2;
+  --text-title--letter-spacing: -0.02em;
+
+  --text-lead: clamp(1.125rem, 1.5vw, 1.3125rem);
+  --text-lead--line-height: 1.65;
+
+  --max-width-shell: 92rem;
+  --max-width-measure: 38rem;
+  --max-width-measure-wide: 46rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 4.75rem;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 28%, var(--color-canvas));
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+    border-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@utility shell {
+  width: 100%;
+  max-width: var(--max-width-shell);
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter);
+}
+
+@utility measure {
+  max-width: var(--max-width-measure);
+}
+
+@utility measure-wide {
+  max-width: var(--max-width-measure-wide);
+}
+
+@utility kicker {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@utility hairline {
+  height: 1px;
+  background: var(--color-line);
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+@utility reveal {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.85rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
