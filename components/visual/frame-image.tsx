@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cx } from "@/lib/cx";
+import { withBasePath } from "@/lib/site-url";
 
 type Speed = "slow" | "mid" | "counter" | "none";
 
@@ -21,7 +22,7 @@ export function FrameImage({
   return (
     <div className={cx("relative overflow-hidden", className)}>
       <Image
-        src={src}
+        src={withBasePath(src)}
         alt={alt}
         fill
         priority={priority}

@@ -58,9 +58,9 @@ Do not commit secrets.
 
 Production is **GitHub Pages**.
 
-`.github/workflows/pages.yml` installs dependencies, runs lint and typecheck, statically exports the site, and publishes `out/` to Pages on every push to `main`.
+`.github/workflows/nextjs.yml` installs dependencies, runs lint and typecheck, statically exports the site to `out/`, and publishes that artifact to GitHub Pages on every push to `main`.
 
-Before the first live deploy, enable Pages in the repository: **Settings → Pages → Source: GitHub Actions**.
+Pages **must** use **Source: GitHub Actions**. If it is set to “Deploy from a branch”, GitHub Jekyll-renders `README.md` instead of the Next.js site.
 
 If the site is served from `https://<user>.github.io/organized-solutions/`, the workflow sets `NEXT_PUBLIC_BASE_PATH` to `/organized-solutions`. A custom domain uses an empty base path.
 

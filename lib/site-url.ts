@@ -8,6 +8,14 @@ export function getBasePath() {
   return withLeadingSlash.replace(/\/$/, "");
 }
 
+export function withBasePath(path: string) {
+  const base = getBasePath();
+  if (!base || !path.startsWith("/") || path.startsWith("//")) {
+    return path;
+  }
+  return `${base}${path}`;
+}
+
 export function getSiteUrl() {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (configured) {
