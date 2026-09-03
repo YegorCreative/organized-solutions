@@ -107,7 +107,7 @@ export function MobileNav() {
             <span className="gold-edge gold-edge-top" />
           </div>
           <div className="gold-rule relative z-10" />
-          <div className="shell relative z-10 flex h-[4.75rem] items-center justify-between border-b border-line">
+          <div className="shell relative z-10 flex h-[4.85rem] items-center justify-between border-b border-line">
             <BrandLogo size="nav" />
             <button
               ref={closeButtonRef}

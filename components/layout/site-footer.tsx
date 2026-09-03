@@ -4,15 +4,9 @@ import { company, footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-stone text-ink">
-      <div aria-hidden="true" className="gold-rule absolute inset-x-0 top-0 h-[3px]" />
-      <div
-        aria-hidden="true"
-        className="parallax-slow pointer-events-none absolute right-0 bottom-0 hidden h-[42%] w-[8%] bg-champagne/45 md:block"
-      >
-        <span className="gold-edge gold-edge-left" />
-      </div>
-      <div className="shell relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
+    <footer className="relative bg-stone text-ink">
+      <div aria-hidden="true" className="gold-rule relative z-10 h-[3px]" />
+      <div className="content-front shell grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>
           <BrandLogo size="footer" />
           <p className="mt-5 measure text-[1.05rem] text-muted">
@@ -43,7 +37,7 @@ export function SiteFooter() {
           ))}
         </nav>
       </div>
-      <div className="shell relative flex flex-col gap-3 border-t border-line py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="content-front shell flex flex-col gap-3 border-t border-line py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {company.name}
         </p>

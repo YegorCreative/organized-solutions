@@ -39,13 +39,13 @@
   --spacing-section: clamp(4.75rem, 13vw, 10rem);
   --spacing-section-tight: clamp(3.25rem, 8vw, 6.5rem);
 
-  --text-display: clamp(2.6rem, 6.6vw, 5.9rem);
-  --text-display--line-height: 0.98;
-  --text-display--letter-spacing: -0.035em;
+  --text-display: clamp(2.35rem, 6.2vw, 5.4rem);
+  --text-display--line-height: 1.06;
+  --text-display--letter-spacing: -0.03em;
 
-  --text-display-sm: clamp(2rem, 4.8vw, 3.85rem);
-  --text-display-sm--line-height: 1.08;
-  --text-display-sm--letter-spacing: -0.03em;
+  --text-display-sm: clamp(1.85rem, 4.4vw, 3.5rem);
+  --text-display-sm--line-height: 1.16;
+  --text-display-sm--letter-spacing: -0.025em;
 
   --text-title: clamp(1.5rem, 2.6vw, 2.2rem);
   --text-title--line-height: 1.18;
@@ -66,7 +66,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 5.25rem;
     overflow-x: clip;
   }
 
@@ -283,6 +283,19 @@
     box-shadow:
       inset 2px 0 0 var(--color-gold-lit),
       0 18px 44px color-mix(in srgb, var(--color-navy) 28%, transparent);
+  }
+
+  .art-back {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .content-front {
+    position: relative;
+    z-index: 10;
   }
 
   .align-plane {

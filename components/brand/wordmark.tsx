@@ -12,8 +12,8 @@ type Size = "nav" | "footer" | "feature";
  * cannot expand to its intrinsic width and overflow the header.
  */
 const sizeClass: Record<Size, string> = {
-  nav: "h-[2.85rem] w-[5.42rem] md:h-[3.2rem] md:w-[6.08rem]",
-  footer: "h-[3.6rem] w-[6.84rem] md:h-[4.35rem] md:w-[8.26rem]",
+  nav: "h-[3rem] w-[5.7rem] md:h-[3.35rem] md:w-[6.36rem]",
+  footer: "h-[3.85rem] w-[7.32rem] md:h-[4.6rem] md:w-[8.74rem]",
   feature: "h-[5.25rem] w-[10rem] md:h-[6.75rem] md:w-[12.82rem]",
 };
 

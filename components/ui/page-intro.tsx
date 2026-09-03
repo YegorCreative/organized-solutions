@@ -24,7 +24,7 @@ export function PageIntro({
   return (
     <header
       className={cx(
-        "relative overflow-hidden",
+        "relative",
         tone === "navy" && "bg-navy-deep text-on-field",
         tone === "stone" && "bg-stone text-ink",
         tone === "champagne" && "bg-champagne text-ink",
@@ -32,48 +32,44 @@ export function PageIntro({
         className,
       )}
     >
-      {image ? (
-        <div className="absolute inset-0">
-          <FrameImage
-            src={image.src}
-            alt={image.alt}
-            speed="mid"
-            className="h-full w-full"
-            priority
-          />
-          <div
-            className={cx(
-              "absolute inset-0",
-              tone === "navy" &&
-                "bg-gradient-to-r from-navy-deep/90 via-navy/55 to-champagne/20",
-              tone === "stone" &&
-                "bg-gradient-to-r from-stone via-stone/80 to-stone/30",
-              tone === "champagne" &&
-                "bg-gradient-to-r from-champagne via-champagne/80 to-stone/30",
-              tone === "canvas" &&
-                "bg-gradient-to-r from-canvas via-canvas/80 to-champagne/30",
-            )}
-          />
+      <div className="art-back">
+        {image ? (
+          <>
+            <FrameImage
+              src={image.src}
+              alt={image.alt}
+              speed="mid"
+              className="h-full w-full"
+              priority
+            />
+            <div
+              className={cx(
+                "absolute inset-0",
+                tone === "navy" &&
+                  "bg-gradient-to-r from-navy-deep/90 via-navy/55 to-champagne/20",
+                tone === "stone" &&
+                  "bg-gradient-to-r from-stone via-stone/80 to-stone/30",
+                tone === "champagne" &&
+                  "bg-gradient-to-r from-champagne via-champagne/80 to-stone/30",
+                tone === "canvas" &&
+                  "bg-gradient-to-r from-canvas via-canvas/80 to-champagne/30",
+              )}
+            />
+          </>
+        ) : null}
+        <DepthPlanes variant="intro" />
+        <div className="parallax-fast absolute top-[18%] right-[8%] h-[42%] w-[16%] bg-champagne/40">
+          <span className="gold-edge gold-edge-left" />
         </div>
-      ) : null}
-      <DepthPlanes variant="intro" />
-      <div
-        aria-hidden="true"
-        className="parallax-fast pointer-events-none absolute top-[18%] right-[8%] h-[42%] w-[16%] bg-champagne/40"
-      >
-        <span className="gold-edge gold-edge-left" />
+        <div className="parallax-counter absolute bottom-0 left-[12%] h-20 w-[28%] bg-navy/10" />
       </div>
-      <div
-        aria-hidden="true"
-        className="parallax-counter pointer-events-none absolute bottom-0 left-[12%] h-20 w-[28%] bg-navy/10"
-      />
-      <div className="shell relative z-10 py-20 md:py-28">
+      <div className="content-front shell py-20 md:py-28">
         <p className={cx("kicker", onField ? "text-champagne" : undefined)}>
           {eyebrow}
         </p>
         <h1
           className={cx(
-            "display type-drift mt-5 max-w-4xl text-display-sm",
+            "display mt-5 max-w-4xl text-display-sm",
             onField ? "text-on-field" : "text-ink",
           )}
         >

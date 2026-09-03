@@ -23,7 +23,7 @@ export function AlignmentPlanes({
         className={cx(
           "align-plane bg-navy/20",
           hero
-            ? "hero-align-a top-[12%] left-[4%] hidden h-[42%] w-[22%] lg:block"
+            ? "hero-align-a top-[20%] right-[18%] hidden h-[36%] w-[20%] lg:block"
             : "align-a top-[10%] left-[6%] h-[46%] w-[34%]",
         )}
       >
@@ -43,7 +43,7 @@ export function AlignmentPlanes({
         className={cx(
           "align-plane bg-champagne/55",
           hero
-            ? "hero-align-c bottom-[14%] right-[36%] hidden h-[24%] w-[16%] lg:block"
+            ? "hero-align-c bottom-[12%] right-[10%] hidden h-[26%] w-[18%] lg:block"
             : "align-c bottom-[12%] left-[22%] h-[22%] w-[40%]",
         )}
       >

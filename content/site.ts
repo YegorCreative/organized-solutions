@@ -4,8 +4,8 @@ export const company = {
   tagline: "Sustainable systems. Real results.",
   supportingMessage:
     "We help businesses across every industry build operations that run smoothly — and keep running.",
-  positioning: "We diagnose before we prescribe.",
-  operatingIdea: ["Understand", "Diagnose", "Recommend", "Implement"] as const,
+  positioning: "We assess before we recommend.",
+  operatingIdea: ["Understand", "Assess", "Recommend", "Implement"] as const,
   promises: [
     "Clarity you can trust.",
     "Solutions built to last.",
@@ -87,7 +87,7 @@ export const tiers = [
 export const values = [
   {
     name: "Understand before acting",
-    body: "Diagnose before prescribing. Understand the organization, people, systems, constraints, goals, and actual problem before recommending change.",
+    body: "Assess before recommending. Understand the organization, people, systems, constraints, goals, and actual problem before recommending change.",
   },
   {
     name: "Excellence without exception",

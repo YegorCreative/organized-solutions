@@ -2,14 +2,14 @@ import { faq } from "@/content/copy";
 
 export function Faq() {
   return (
-    <section className="relative overflow-hidden bg-stone py-section">
-      <div
-        aria-hidden="true"
-        className="parallax-slow pointer-events-none absolute right-0 top-10 h-[50%] w-[16%] bg-champagne/45"
-      >
-        <span className="gold-edge gold-edge-left" />
+    <section className="relative bg-stone py-section">
+      <div className="art-back">
+        <div className="parallax-slow absolute right-0 top-10 h-[55%] w-[20%] bg-champagne/50">
+          <span className="gold-edge gold-edge-left" />
+        </div>
+        <div className="parallax-counter absolute bottom-0 left-[8%] h-16 w-[28%] bg-navy-deep/10" />
       </div>
-      <div className="shell relative max-w-4xl">
+      <div className="content-front shell relative max-w-4xl">
         <p className="kicker">{faq.eyebrow}</p>
         <h2 className="display mt-5 text-display-sm text-ink">{faq.title}</h2>
         <dl className="mt-12 border-t border-line">

@@ -25,7 +25,7 @@ export default function InsightsPage() {
         <div className="shell grid items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker">Archive</p>
-            <p className="display type-drift mt-6 max-w-3xl text-display-sm text-ink">
+            <p className="display mt-6 max-w-3xl text-display-sm text-ink">
               {insightsPage.empty}
             </p>
           </div>

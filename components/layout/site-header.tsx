@@ -45,7 +45,7 @@ export function SiteHeader() {
       <div className="gold-rule" />
       <div
         className={cx(
-          "shell flex h-[4.75rem] items-center justify-between",
+          "shell flex h-[4.85rem] items-center justify-between gap-6",
           overHero ? "border-b border-transparent" : "border-b border-line",
         )}
       >

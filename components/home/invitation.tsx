@@ -7,27 +7,29 @@ import { media } from "@/content/media";
 
 export function Invitation() {
   return (
-    <section className="relative isolate overflow-hidden bg-champagne text-ink">
-      <FlowPath tone="gold" className="top-0 left-0 w-full" />
-      <div
-        aria-hidden="true"
-        className="parallax-slow pointer-events-none absolute -right-[10%] top-[8%] h-[55%] w-[30%] bg-stone/70"
-      >
-        <span className="gold-edge gold-edge-left hidden lg:block" />
+    <section className="relative isolate bg-champagne text-ink">
+      <div className="art-back">
+        <FlowPath tone="gold" className="top-0 left-0 w-full" />
+        <div className="parallax-slow absolute right-0 bottom-0 hidden h-[32%] w-[6%] bg-stone/70 lg:block">
+          <span className="gold-edge gold-edge-left" />
+        </div>
       </div>
-      <div className="grid lg:grid-cols-2">
-        <div className="relative min-h-[22rem] lg:min-h-[36rem]">
+      <div className="content-front grid lg:grid-cols-2">
+        <div className="relative min-h-[22rem] overflow-hidden lg:min-h-[40rem]">
           <FrameImage
             src={media.table.src}
             alt={media.table.alt}
             speed="slow"
             className="absolute inset-0 h-full w-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-champagne/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-champagne/35" />
           <span className="gold-edge gold-edge-right hidden lg:block" />
+          <div className="absolute bottom-0 left-0 h-1/3 w-[18%] bg-navy-deep/25">
+            <span className="gold-edge gold-edge-right" />
+          </div>
         </div>
         <div className="relative px-[var(--spacing-gutter)] py-section">
-          <h2 className="display type-drift max-w-xl text-display-sm text-ink">
+          <h2 className="display max-w-xl text-display-sm text-ink">
             {home.invitation.headline}
           </h2>
           <p className="measure mt-6 text-lead text-muted">

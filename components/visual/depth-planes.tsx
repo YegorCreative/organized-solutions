@@ -25,16 +25,16 @@ export function DepthPlanes({
           className,
         )}
       >
-        <span className="hero-align-a align-plane top-[18%] left-[-4%] hidden h-[58%] w-[28%] bg-navy-deep/45 lg:block">
-          <span className="gold-edge gold-edge-right" />
+        <span className="hero-align-a align-plane top-[14%] right-[8%] hidden h-[52%] w-[26%] bg-navy-deep/40 lg:block">
+          <span className="gold-edge gold-edge-left" />
         </span>
-        <span className="hero-align-b align-plane top-[10%] right-[8%] h-[36%] w-[24%] bg-stone/35">
+        <span className="hero-align-b align-plane top-[22%] right-[2%] h-[34%] w-[22%] bg-stone/40">
           <span className="gold-edge gold-edge-left hidden lg:block" />
         </span>
-        <span className="hero-align-c align-plane bottom-[12%] left-[28%] hidden h-[22%] w-[18%] bg-champagne/40 lg:block">
+        <span className="hero-align-c align-plane bottom-[8%] right-[8%] hidden h-[30%] w-[16%] bg-champagne/40 lg:block">
           <span className="gold-edge gold-edge-top" />
         </span>
-        <span className="parallax-fast gold-sheen absolute top-[22%] right-[46%] hidden h-[40%] w-[2px] lg:block" />
+        <span className="parallax-fast gold-sheen absolute top-[16%] right-[48%] hidden h-[52%] w-[3px] lg:block" />
       </div>
     );
   }

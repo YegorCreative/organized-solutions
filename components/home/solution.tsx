@@ -5,8 +5,13 @@ import { media } from "@/content/media";
 
 export function Solution() {
   return (
-    <section className="relative overflow-hidden bg-canvas py-section">
-      <div className="shell grid items-start gap-14 lg:grid-cols-12">
+    <section className="relative bg-canvas py-section">
+      <div className="art-back">
+        <div className="parallax-slow absolute bottom-0 right-0 hidden h-[40%] w-[12%] bg-stone lg:block">
+          <span className="gold-edge gold-edge-left" />
+        </div>
+      </div>
+      <div className="content-front shell grid items-start gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <p className="kicker">{home.solution.eyebrow}</p>
           <h2 className="display mt-5 max-w-2xl text-display-sm text-ink">

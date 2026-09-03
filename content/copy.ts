@@ -1,13 +1,14 @@
 export const home = {
   hero: {
     eyebrow: "Fractional COO services",
-    headline: "Operational leadership for what you’ve already built.",
-    lede: "You’ve built something valuable. We partner with owners and leadership teams to strengthen the operations behind it — and to help those systems keep working as the organization continues to grow.",
+    headline: "The operational problems growth creates.",
+    accent: "We help solve them.",
+    lede: "You’ve built something valuable. Growth naturally brings new operational challenges — even in capable organizations. We partner with owners and leadership teams to solve them, working alongside your team or taking substantial ownership of the work, and to elevate what comes next.",
   },
   promise: {
     eyebrow: "Organized Solutions",
     headline: "Clarity and operational leadership — without a full-time COO hire.",
-    body: "We join organizations that are ready for operational leadership equal to what they have already built. We look closely at what is actually happening. Then we help build the structure, systems, and execution to support where the business is going next.",
+    body: "We join organizations that are ready for experienced operational leadership. We look closely at what is actually happening. Then we help build the structure, systems, and execution to support where the business is going next.",
   },
   recognition: {
     eyebrow: "A familiar chapter",
@@ -22,21 +23,26 @@ export const home = {
       "Leadership itself has become the bottleneck.",
       "Growth increasingly feels chaotic.",
     ],
+    bridge:
+      "These situations can emerge as capable organizations grow. They are signals that the operational structure may need to evolve with the business — and that is where experienced operational leadership can help.",
     close: "These are not character problems. They are operational ones.",
   },
   solution: {
     eyebrow: "How we work",
     headline: "A fractional COO, explained simply.",
-    body: "We bring experienced operational leadership into the organization. We diagnose before we prescribe. We tell you the truth about what we find. And when the work calls for it, we stay — working alongside your team, or taking substantial ownership of the operational work, depending on the engagement.",
+    body: "We bring experienced operational leadership into the organization. We assess before we recommend. We tell you the truth about what we find. And when the work calls for it, we stay — working alongside your team, or taking substantial ownership of the operational work, depending on the engagement.",
   },
   philosophy: {
-    statement: "We diagnose before we prescribe.",
+    kicker: "Listen first",
+    statement: "We assess before we recommend.",
+    lead: "We assess",
+    accent: "before we recommend.",
     body: "Understanding the organization, the people, the systems, the constraints, and the actual situation comes first. Advice that arrives before that work is guesswork. We do not guess.",
   },
   engagement: {
     eyebrow: "How the work deepens",
     headline: "Partnership, at the depth the work requires.",
-    lede: "These are not packages on a shelf. They are increasing depth of the same relationship: assessment, a tailored roadmap, hands-on implementation — and, when you want continued leadership, ongoing advisory.",
+    lede: "You choose the level of support that fits. These are not a required sequence, and you are not pushed through all four. Begin with assessment, add a roadmap, bring us into implementation, or continue with ongoing advisory — and expand if the work calls for it. The work inside the selected engagement is tailored to your industry, size, goals, and circumstances.",
   },
   difference: {
     eyebrow: "How we work",
@@ -47,7 +53,7 @@ export const home = {
       },
       {
         title: "Discretion",
-        body: "Operational work is intimate. We treat it that way.",
+        body: "Operational work often involves sensitive internal information. We treat it with care and discretion.",
       },
       {
         title: "Partnership through execution",
@@ -76,7 +82,7 @@ export const faq = {
     {
       question: "How do I know which tier I need?",
       answer:
-        "It depends on where you are. If you just want clarity on what's working, start with Tier 1. If you also want a plan to fix it, Tier 2. If you want us to help execute that plan, Tier 3. We'll help you figure out the right fit during a free consultation.",
+        "It depends on where you are. Tier 1 is assessment — clarity on what’s working. Tier 2 adds a tailored roadmap. Tier 3 includes hands-on implementation. Tier 4 is continued fractional COO support after implementation. We’ll help determine the right fit.",
     },
     {
       question: "Can I move between tiers?",
@@ -125,7 +131,7 @@ export const servicesPage = {
 
 export const approachPage = {
   eyebrow: "Approach",
-  title: "Understand. Diagnose. Recommend. Implement.",
+  title: "Understand. Assess. Recommend. Implement.",
   lede: "The sequence is the work. We do not reverse it.",
   steps: [
     {
@@ -135,13 +141,13 @@ export const approachPage = {
     },
     {
       index: "02",
-      name: "Diagnose",
-      body: "We separate symptoms from causes. Operational strain often shows up as urgency, missed work, or exhausted leadership. The underlying issue is usually structural. Diagnosis is how we find it.",
+      name: "Assess",
+      body: "We separate symptoms from causes. Operational strain often shows up as urgency, missed work, or exhausted leadership. The underlying issue is usually structural. Assessment is how we find it.",
     },
     {
       index: "03",
       name: "Recommend",
-      body: "Recommendations follow understanding. They are specific to where the organization is today and where it intends to go. We do not prescribe a formula and ask the business to reshape itself around it.",
+      body: "Recommendations follow understanding. They are specific to where the organization is today and where it intends to go. We do not apply a formula and ask the business to reshape itself around it.",
     },
     {
       index: "04",

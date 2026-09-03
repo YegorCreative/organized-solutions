@@ -13,7 +13,7 @@ import { media } from "@/content/media";
 export function Complexity() {
   return (
     <section
-      className="relative min-h-[100svh] overflow-hidden bg-navy-deep md:min-h-[120svh]"
+      className="relative min-h-[72svh] overflow-hidden bg-navy-deep md:min-h-[88svh]"
       aria-label="Visual of momentum finding operational alignment"
     >
       <div className="absolute inset-0">
@@ -45,7 +45,7 @@ export function Complexity() {
 
       <MeasureMarks className="top-[14%] right-[var(--spacing-gutter)] w-[min(22rem,40vw)]" />
 
-      <div className="shell relative z-10 flex min-h-[100svh] items-end py-16 md:min-h-[120svh]">
+      <div className="shell relative z-10 flex min-h-[72svh] items-end py-16 md:min-h-[88svh]">
         <div className="max-w-xl">
           <div className="draw-rule h-px w-40 bg-accent" />
         </div>

@@ -4,16 +4,27 @@ import { media } from "@/content/media";
 
 export function Difference() {
   return (
-    <section className="relative overflow-hidden bg-canvas py-section">
-      <div className="shell grid gap-12 lg:grid-cols-12">
+    <section className="relative bg-canvas py-section">
+      <div className="art-back">
+        <div className="parallax-slow absolute top-[12%] right-0 hidden h-[48%] w-[14%] bg-navy-deep/10 lg:block">
+          <span className="gold-edge gold-edge-left" />
+        </div>
+      </div>
+      <div className="content-front shell grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <p className="kicker">{home.difference.eyebrow}</p>
-          <FrameImage
-            src={media.material.src}
-            alt={media.material.alt}
-            speed="slow"
-            className="mt-8 aspect-square w-full max-w-sm"
-          />
+          <div className="relative mt-8 max-w-sm">
+            <FrameImage
+              src={media.material.src}
+              alt={media.material.alt}
+              speed="slow"
+              className="aspect-square w-full"
+            />
+            <div className="absolute -bottom-5 -right-5 hidden h-20 w-20 bg-navy-deep lg:block">
+              <span className="gold-edge gold-edge-left" />
+              <span className="gold-edge gold-edge-top" />
+            </div>
+          </div>
         </div>
         <div className="lg:col-span-7 lg:col-start-6">
           {home.difference.items.map((item) => (

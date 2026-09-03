@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata({
   title: "Approach",
   description:
-    "Understand, diagnose, recommend, implement. Organized Solutions diagnoses before prescribing, then can stay through execution.",
+    "Understand, assess, recommend, implement. Organized Solutions assesses before recommending, then can stay through execution.",
   path: "/approach",
 });
 
