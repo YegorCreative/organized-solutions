@@ -28,15 +28,12 @@ export function FrameImage({
         priority={priority}
         sizes="(max-width: 768px) 100vw, 70vw"
         className={cx(
-          "object-cover",
-          speed === "deep" && "parallax-media-deep",
-          speed === "slow" && "parallax-media-slow",
-          speed === "mid" && "parallax-media-mid",
-          speed === "fast" && "parallax-media-fast",
-          speed === "counter" && "parallax-media-counter",
-          speed === "none" && "scale-[1.04]",
+          "object-cover will-change-transform",
+          speed === "none" && "scale-[1.06]",
           imgClassName,
         )}
+        data-parallax={speed === "none" ? undefined : speed}
+        data-parallax-scale={speed === "none" ? undefined : "1.32"}
       />
     </div>
   );

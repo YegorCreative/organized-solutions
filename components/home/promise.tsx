@@ -7,7 +7,10 @@ export function PromiseSection() {
   return (
     <section className="relative -mt-12 bg-canvas pt-24 pb-section">
       <div className="art-back">
-        <div className="parallax-slow absolute -right-[4%] top-8 hidden h-[70%] w-[18%] bg-stone lg:block">
+        <div
+          data-parallax="slow"
+          className="absolute -right-[4%] top-8 hidden h-[70%] w-[18%] bg-stone lg:block"
+        >
           <span className="gold-edge gold-edge-left" />
         </div>
       </div>
@@ -19,13 +22,17 @@ export function PromiseSection() {
             speed="slow"
             className="aspect-[4/5] w-full"
           />
-          <div className="absolute -bottom-6 -right-6 hidden h-28 w-28 bg-navy lg:block">
+          <div
+            data-parallax="fast"
+            className="absolute -bottom-6 -right-6 hidden h-28 w-28 bg-navy lg:block"
+          >
             <span className="gold-edge gold-edge-left" />
             <span className="gold-edge gold-edge-top" />
           </div>
           <div
             aria-hidden="true"
-            className="parallax-counter absolute -top-8 -left-8 hidden h-20 w-20 bg-champagne lg:block"
+            data-parallax="counter"
+            className="absolute -top-8 -left-8 hidden h-20 w-20 bg-champagne lg:block"
           />
         </div>
         <div className="relative lg:col-span-6 lg:col-start-7">

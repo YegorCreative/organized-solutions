@@ -6,7 +6,10 @@ export function Difference() {
   return (
     <section className="relative bg-canvas py-section">
       <div className="art-back">
-        <div className="parallax-slow absolute top-[12%] right-0 hidden h-[48%] w-[14%] bg-navy-deep/10 lg:block">
+        <div
+          data-parallax="slow"
+          className="absolute top-[12%] right-0 hidden h-[48%] w-[14%] bg-navy-deep/10 lg:block"
+        >
           <span className="gold-edge gold-edge-left" />
         </div>
       </div>
@@ -20,7 +23,10 @@ export function Difference() {
               speed="slow"
               className="aspect-square w-full"
             />
-            <div className="absolute -bottom-5 -right-5 hidden h-20 w-20 bg-navy-deep lg:block">
+            <div
+              data-parallax="fast"
+              className="absolute -bottom-5 -right-5 hidden h-20 w-20 bg-navy-deep lg:block"
+            >
               <span className="gold-edge gold-edge-left" />
               <span className="gold-edge gold-edge-top" />
             </div>

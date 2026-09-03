@@ -7,10 +7,18 @@ export function Recognition() {
   return (
     <section className="relative bg-stone text-ink">
       <div className="art-back">
-        <div className="parallax-mid absolute left-0 top-[12%] hidden h-[42%] w-[10%] bg-navy-deep/20 lg:block">
+        <div
+          data-parallax="slow"
+          className="absolute left-0 top-[12%] hidden h-[42%] w-[10%] bg-navy-deep/20 lg:block"
+        >
           <span className="gold-edge gold-edge-right" />
         </div>
       </div>
+      <div
+        data-parallax="fast"
+        aria-hidden="true"
+        className="gold-sheen pointer-events-none absolute bottom-[-4.5rem] left-[var(--spacing-gutter)] z-20 hidden h-[9rem] w-[3px] lg:block"
+      />
       <div className="content-front grid lg:grid-cols-2">
         <div className="relative min-h-[22rem] overflow-hidden lg:min-h-[38rem]">
           <FrameImage

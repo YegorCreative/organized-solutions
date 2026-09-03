@@ -7,26 +7,37 @@ import { media } from "@/content/media";
 
 export function Invitation() {
   return (
-    <section className="relative isolate bg-champagne text-ink">
+    <section className="relative isolate overflow-hidden bg-champagne text-ink">
       <div className="art-back">
         <FlowPath tone="gold" className="top-0 left-0 w-full" />
-        <div className="parallax-slow absolute right-0 bottom-0 hidden h-[32%] w-[6%] bg-stone/70 lg:block">
+        <div
+          data-parallax="slow"
+          className="absolute right-0 bottom-0 hidden h-[40%] w-[8%] bg-stone/65 lg:block"
+        >
           <span className="gold-edge gold-edge-left" />
         </div>
       </div>
       <div className="content-front grid lg:grid-cols-2">
-        <div className="relative min-h-[22rem] overflow-hidden lg:min-h-[40rem]">
+        <div className="relative min-h-[24rem] overflow-hidden lg:min-h-[44rem]">
           <FrameImage
             src={media.table.src}
             alt={media.table.alt}
-            speed="slow"
+            speed="deep"
             className="absolute inset-0 h-full w-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-champagne/35" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-champagne/30" />
           <span className="gold-edge gold-edge-right hidden lg:block" />
-          <div className="absolute bottom-0 left-0 h-1/3 w-[18%] bg-navy-deep/25">
+          <div
+            data-parallax="counter"
+            data-parallax-range="130"
+            className="depth-shadow absolute bottom-[-8%] left-0 h-[48%] w-[22%] bg-navy-deep/40"
+          >
             <span className="gold-edge gold-edge-right" />
           </div>
+          <div
+            data-parallax="fast"
+            className="gold-sheen absolute top-[12%] left-[22%] hidden h-[70%] w-[3px] lg:block"
+          />
         </div>
         <div className="relative px-[var(--spacing-gutter)] py-section">
           <h2 className="display max-w-xl text-display-sm text-ink">

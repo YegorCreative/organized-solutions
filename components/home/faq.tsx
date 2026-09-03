@@ -4,10 +4,16 @@ export function Faq() {
   return (
     <section className="relative bg-stone py-section">
       <div className="art-back">
-        <div className="parallax-slow absolute right-0 top-10 h-[55%] w-[20%] bg-champagne/50">
+        <div
+          data-parallax="slow"
+          className="absolute right-0 top-10 h-[55%] w-[20%] bg-champagne/50"
+        >
           <span className="gold-edge gold-edge-left" />
         </div>
-        <div className="parallax-counter absolute bottom-0 left-[8%] h-16 w-[28%] bg-navy-deep/10" />
+        <div
+          data-parallax="counter"
+          className="absolute bottom-0 left-[8%] h-16 w-[28%] bg-navy-deep/10"
+        />
       </div>
       <div className="content-front shell relative max-w-4xl">
         <p className="kicker">{faq.eyebrow}</p>

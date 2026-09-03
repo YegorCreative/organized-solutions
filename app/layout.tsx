@@ -3,6 +3,7 @@ import { Newsreader, Source_Sans_3 } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SkipLink } from "@/components/layout/skip-link";
+import { ParallaxRoot } from "@/components/motion/parallax-root";
 import { JsonLd } from "@/components/seo/json-ld";
 import { company, seo } from "@/content/site";
 import { getSiteUrl } from "@/lib/site-url";
@@ -68,6 +69,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-screen flex-col bg-canvas font-sans text-ink antialiased">
         <JsonLd />
+        <ParallaxRoot />
         <SkipLink />
         <SiteHeader />
         <main id="main" className="flex-1">

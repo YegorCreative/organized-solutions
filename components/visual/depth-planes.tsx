@@ -48,10 +48,16 @@ export function DepthPlanes({
           className,
         )}
       >
-        <span className="align-plane parallax-slow top-[12%] right-[6%] h-[48%] w-[18%] bg-navy/12">
+        <span
+          data-parallax="slow"
+          className="align-plane top-[12%] right-[6%] h-[48%] w-[18%] bg-navy/12"
+        >
           <span className="gold-edge gold-edge-left" />
         </span>
-        <span className="align-plane parallax-counter bottom-0 left-[10%] h-16 w-[30%] bg-champagne/50" />
+        <span
+          data-parallax="counter"
+          className="align-plane bottom-0 left-[10%] h-16 w-[30%] bg-champagne/50"
+        />
       </div>
     );
   }

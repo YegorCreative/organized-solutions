@@ -1,4 +1,3 @@
-import { FlowPath } from "@/components/visual/flow-path";
 import { FrameImage } from "@/components/visual/frame-image";
 import { MeasureMarks } from "@/components/visual/measure-marks";
 import { media } from "@/content/media";
@@ -39,10 +38,10 @@ const visuals = [
 export function EngagementTiers() {
   return (
     <div className="relative">
-      <FlowPath
-        vertical
-        tone="gold"
-        className="top-0 bottom-[-5rem] left-[var(--spacing-gutter)] hidden w-px lg:block"
+      <div
+        data-parallax="hold"
+        aria-hidden="true"
+        className="gold-sheen pointer-events-none absolute top-0 bottom-[-6rem] left-[var(--spacing-gutter)] z-20 hidden w-[3px] lg:block"
       />
       {tiers.map((tier, index) => {
         const visual = visuals[index];
@@ -74,16 +73,18 @@ export function EngagementTiers() {
               />
               {index === 0 ? (
                 <div
+                  data-parallax="x"
                   aria-hidden="true"
-                  className="parallax-x absolute inset-y-0 left-0 w-1/3 bg-canvas/45"
+                  className="absolute inset-y-0 left-0 w-1/3 bg-canvas/45"
                 />
               ) : null}
               {index === 1 ? (
                 <>
                   <MeasureMarks className="bottom-8 left-6 w-[70%]" />
                   <div
+                    data-parallax="slow"
                     aria-hidden="true"
-                    className="parallax-slow absolute top-8 right-0 h-24 w-[40%] bg-champagne/40"
+                    className="absolute top-8 right-0 h-28 w-[44%] bg-champagne/45"
                   >
                     <span className="gold-edge gold-edge-left" />
                   </div>
@@ -91,8 +92,9 @@ export function EngagementTiers() {
               ) : null}
               {index === 2 ? (
                 <div
+                  data-parallax="fast"
                   aria-hidden="true"
-                  className="parallax-fast absolute bottom-8 right-8 h-24 w-24 bg-navy-deep"
+                  className="depth-shadow absolute bottom-8 right-8 h-28 w-28 bg-navy-deep"
                 >
                   <span className="gold-edge gold-edge-left" />
                   <span className="gold-edge gold-edge-top" />
@@ -102,8 +104,9 @@ export function EngagementTiers() {
                 <>
                   <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-navy-deep to-transparent" />
                   <div
+                    data-parallax="counter"
                     aria-hidden="true"
-                    className="parallax-mid absolute bottom-0 left-0 h-1/2 w-[22%] bg-champagne/35"
+                    className="absolute bottom-[-12%] left-0 h-[58%] w-[26%] bg-champagne/40"
                   >
                     <span className="gold-edge gold-edge-right" />
                   </div>
@@ -148,10 +151,10 @@ export function EngagementTiers() {
                 {tier.bestFor}
               </p>
               {last ? (
-                <FlowPath
-                  vertical
-                  tone="gold"
-                  className="top-12 bottom-[-7rem] left-[var(--spacing-gutter)] hidden lg:block"
+                <div
+                  data-parallax="hold"
+                  aria-hidden="true"
+                  className="gold-sheen absolute top-12 bottom-[-8rem] left-[var(--spacing-gutter)] hidden w-[3px] lg:block"
                 />
               ) : null}
             </div>
