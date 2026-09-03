@@ -30,7 +30,7 @@ export default function ApproachPage() {
               className="relative grid gap-6 border-b border-line py-12 md:grid-cols-12 md:py-16"
             >
               <span
-                className="absolute top-0 bottom-0 left-[1.15rem] hidden w-px bg-line md:block"
+                className="absolute top-0 bottom-0 left-[1.15rem] hidden w-px origin-top bg-blue/35 path-extend-y md:block"
                 aria-hidden="true"
               />
               <p className="display relative text-display-sm text-accent md:col-span-2">

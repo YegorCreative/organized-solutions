@@ -42,8 +42,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-lavender py-section">
-        <div className="shell grid gap-12 lg:grid-cols-12">
+      <section className="relative overflow-hidden bg-lavender py-section">
+        <div
+          aria-hidden="true"
+          className="parallax-slow pointer-events-none absolute right-0 top-8 h-[60%] w-[18%] bg-blush/50"
+        />
+        <div className="shell relative grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker">Mission</p>
             <p className="display mt-5 max-w-3xl text-display-sm text-ink">

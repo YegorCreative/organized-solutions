@@ -44,4 +44,12 @@ export const media = {
     src: "/media/material.jpg",
     alt: "Close study of pale limestone and a blue-to-lavender architectural inlay",
   },
+  overlap: {
+    src: "/media/overlap.jpg",
+    alt: "Overlapping plaster wall planes, slightly misaligned, in blue, lavender, and blush light",
+  },
+  course: {
+    src: "/media/course.jpg",
+    alt: "A pale stone floor with a blue path of light continuing into the distance",
+  },
 } as const;

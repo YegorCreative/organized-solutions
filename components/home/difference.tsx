@@ -21,7 +21,7 @@ export function Difference() {
               key={item.title}
               className="group grid gap-3 border-b border-line py-8 first:border-t md:grid-cols-12 md:py-10"
             >
-              <h3 className="display text-title text-ink md:col-span-4">
+              <h3 className="display text-title text-ink transition-transform duration-500 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0 md:col-span-4">
                 {item.title}
               </h3>
               <p className="text-lead text-muted md:col-span-8">{item.body}</p>

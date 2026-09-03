@@ -57,6 +57,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-padding-top: 4.75rem;
+    overflow-x: clip;
   }
 
   body {
@@ -210,7 +211,21 @@
 
   .cta-header:hover .cta-arrow,
   .cta-header:focus-visible .cta-arrow {
-    transform: translateX(0.28rem);
+    transform: translateX(0.4rem);
+  }
+
+  .cta-header {
+    transition: color 0.35s ease;
+  }
+
+  .cta-header:hover,
+  .cta-header:focus-visible {
+    color: var(--color-blue);
+  }
+
+  header.text-on-blue .cta-header:hover,
+  header.text-on-blue .cta-header:focus-visible {
+    color: var(--color-blush);
   }
 
   .nav-link {
@@ -248,6 +263,36 @@
   header.text-on-blue .nav-link::after {
     background: var(--color-blush);
   }
+
+  .cta:hover,
+  .cta:focus-visible {
+    box-shadow: 0 18px 44px color-mix(in srgb, var(--color-blue) 42%, transparent);
+  }
+
+  .align-plane {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+  }
+
+  .measure-rail {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .flow-stroke {
+    fill: none;
+    stroke: var(--color-blue);
+    stroke-width: 1.15;
+    stroke-linecap: square;
+  }
+
+  .veil {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: color-mix(in srgb, var(--color-lavender) 28%, transparent);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -280,48 +325,88 @@
       animation: shift linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
-      --shift: 9%;
+      --shift: 14%;
     }
 
     .parallax-mid {
       animation: shift linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
-      --shift: 16%;
+      --shift: 24%;
+    }
+
+    .parallax-fast {
+      animation: shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 34%;
     }
 
     .parallax-counter {
       animation: shift linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
-      --shift: -8%;
+      --shift: -16%;
+    }
+
+    .parallax-x {
+      animation: shift-x linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 12%;
+    }
+
+    .parallax-media-deep {
+      animation: media-shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 16%;
     }
 
     .parallax-media-slow {
       animation: media-shift linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
-      --shift: 7%;
+      --shift: 10%;
     }
 
     .parallax-media-mid {
       animation: media-shift linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
-      --shift: 12%;
+      --shift: 18%;
+    }
+
+    .parallax-media-fast {
+      animation: media-shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 26%;
     }
 
     .parallax-media-counter {
       animation: media-shift linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
-      --shift: -9%;
+      --shift: -14%;
     }
 
     .mask-uncover {
       animation: uncover linear both;
       animation-timeline: view();
-      animation-range: cover 18% cover 78%;
+      animation-range: cover 8% cover 82%;
+    }
+
+    .mask-uncover-center {
+      animation: uncover-center linear both;
+      animation-timeline: view();
+      animation-range: cover 12% cover 78%;
+    }
+
+    .mask-type {
+      animation: uncover-type linear both;
+      animation-timeline: view();
+      animation-range: cover 20% cover 62%;
     }
 
     .parallax-color {
@@ -329,10 +414,89 @@
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
     }
+
+    .type-drift {
+      animation: shift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      --shift: 3.5%;
+    }
+
+    .align-a {
+      animation: align-a linear both;
+      animation-timeline: view();
+      animation-range: cover 8% cover 78%;
+    }
+
+    .align-b {
+      animation: align-b linear both;
+      animation-timeline: view();
+      animation-range: cover 8% cover 78%;
+    }
+
+    .align-c {
+      animation: align-c linear both;
+      animation-timeline: view();
+      animation-range: cover 8% cover 78%;
+    }
+
+    .align-d {
+      animation: align-d linear both;
+      animation-timeline: view();
+      animation-range: cover 8% cover 78%;
+    }
+
+    .hero-align-a {
+      animation: hero-align-a linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+
+    .hero-align-b {
+      animation: hero-align-b linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+
+    .hero-align-c {
+      animation: hero-align-c linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+
+    .veil-lift {
+      animation: veil-lift linear both;
+      animation-timeline: view();
+      animation-range: cover 10% cover 80%;
+    }
+
+    .path-extend {
+      transform-origin: left;
+      animation: path-extend linear both;
+      animation-timeline: view();
+      animation-range: cover 5% cover 95%;
+    }
+
+    .path-extend-y {
+      transform-origin: top;
+      animation: path-extend-y linear both;
+      animation-timeline: view();
+      animation-range: cover 5% cover 95%;
+    }
   }
 
-  .plane-drift {
-    animation: plane-drift 22s ease-in-out infinite alternate;
+  @media (max-width: 767px) {
+    .parallax-slow { --shift: 8%; }
+    .parallax-mid { --shift: 12%; }
+    .parallax-fast { --shift: 16%; }
+    .parallax-counter { --shift: -8%; }
+    .parallax-x { --shift: 6%; }
+    .parallax-media-deep { --shift: 8%; }
+    .parallax-media-slow { --shift: 5%; }
+    .parallax-media-mid { --shift: 9%; }
+    .parallax-media-fast { --shift: 12%; }
+    .parallax-media-counter { --shift: -7%; }
+    .type-drift { --shift: 2%; }
   }
 }
 
@@ -344,18 +508,35 @@
   .reveal,
   .parallax-slow,
   .parallax-mid,
+  .parallax-fast,
   .parallax-counter,
+  .parallax-x,
+  .parallax-media-deep,
   .parallax-media-slow,
   .parallax-media-mid,
+  .parallax-media-fast,
   .parallax-media-counter,
   .parallax-color,
-  .plane-drift,
+  .type-drift,
+  .align-a,
+  .align-b,
+  .align-c,
+  .align-d,
+  .hero-align-a,
+  .hero-align-b,
+  .hero-align-c,
+  .veil-lift,
+  .path-extend,
+  .path-extend-y,
   .draw-line,
   .draw-rule,
-  .mask-uncover {
+  .mask-uncover,
+  .mask-uncover-center,
+  .mask-type {
     animation: none !important;
     transform: none !important;
     clip-path: none !important;
+    opacity: 1 !important;
   }
 
   .cta::before,
@@ -425,19 +606,127 @@
 
 @keyframes color-plane {
   from {
-    transform: translate3d(-5%, -8%, 0) scale(1.04);
+    transform: translate3d(-8%, -12%, 0) scale(1.06);
   }
   to {
-    transform: translate3d(6%, 10%, 0) scale(1.12);
+    transform: translate3d(10%, 14%, 0) scale(1.16);
   }
 }
 
-@keyframes plane-drift {
+@keyframes shift-x {
   from {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(calc(var(--shift) * -1), 0, 0);
   }
   to {
-    transform: translate3d(6%, -8%, 0) scale(1.1);
+    transform: translate3d(var(--shift), 0, 0);
+  }
+}
+
+@keyframes uncover-center {
+  from {
+    clip-path: inset(12% 42% 12% 42%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes uncover-type {
+  from {
+    clip-path: inset(0 0 92% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes align-a {
+  from {
+    transform: translate3d(-14%, 12%, 0) rotate(-8deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes align-b {
+  from {
+    transform: translate3d(16%, -10%, 0) rotate(6deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes align-c {
+  from {
+    transform: translate3d(-8%, -14%, 0) rotate(4deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes align-d {
+  from {
+    transform: translate3d(10%, 8%, 0) rotate(-5deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes hero-align-a {
+  from {
+    transform: translate3d(-11%, 9%, 0) rotate(-7deg);
+  }
+  to {
+    transform: translate3d(-3%, 3%, 0) rotate(-2deg);
+  }
+}
+
+@keyframes hero-align-b {
+  from {
+    transform: translate3d(12%, -8%, 0) rotate(5deg);
+  }
+  to {
+    transform: translate3d(4%, -2%, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes hero-align-c {
+  from {
+    transform: translate3d(-6%, 10%, 0);
+  }
+  to {
+    transform: translate3d(2%, 4%, 0);
+  }
+}
+
+@keyframes veil-lift {
+  from {
+    opacity: 0.72;
+  }
+  to {
+    opacity: 0.08;
+  }
+}
+
+@keyframes path-extend {
+  from {
+    transform: scaleX(0.18);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes path-extend-y {
+  from {
+    transform: scaleY(0.18);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 

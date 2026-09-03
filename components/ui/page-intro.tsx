@@ -36,7 +36,7 @@ export function PageIntro({
           <FrameImage
             src={image.src}
             alt={image.alt}
-            speed="slow"
+            speed="mid"
             className="h-full w-full"
             priority
           />
@@ -57,7 +57,11 @@ export function PageIntro({
       ) : null}
       <div
         aria-hidden="true"
-        className="parallax-color pointer-events-none absolute -right-[8%] top-[10%] h-48 w-48 rounded-full bg-blush/40 blur-3xl"
+        className="parallax-fast pointer-events-none absolute top-[18%] right-[8%] h-[42%] w-[16%] bg-blush/35"
+      />
+      <div
+        aria-hidden="true"
+        className="parallax-counter pointer-events-none absolute bottom-0 left-[12%] h-20 w-[28%] bg-blue/15"
       />
       <div className="shell relative z-10 py-20 md:py-28">
         <p className={cx("kicker", onBlue ? "text-blush" : "text-blue")}>
@@ -65,7 +69,7 @@ export function PageIntro({
         </p>
         <h1
           className={cx(
-            "display mt-5 max-w-4xl text-display-sm",
+            "display type-drift mt-5 max-w-4xl text-display-sm",
             onBlue ? "text-on-blue" : "text-ink",
           )}
         >

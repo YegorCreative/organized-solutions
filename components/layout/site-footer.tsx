@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[3px] bg-blue" />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-[8%] bottom-[-30%] h-64 w-64 rounded-full bg-blush/80 blur-2xl"
+        className="parallax-slow pointer-events-none absolute -left-[4%] bottom-0 h-[70%] w-[22%] bg-blush/70"
       />
       <div className="shell relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>

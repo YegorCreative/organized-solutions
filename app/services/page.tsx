@@ -16,7 +16,7 @@ export default function ServicesPage() {
     <>
       <PageIntro
         tone="blue"
-        image={{ src: "/media/studio.jpg", alt: "A pale table and a single lavender chair beside tall windows" }}
+        image={{ src: "/media/colonnade.jpg", alt: "A long plaster colonnade ending at a vivid blue door" }}
         eyebrow={servicesPage.eyebrow}
         title={servicesPage.title}
         lede={servicesPage.lede}

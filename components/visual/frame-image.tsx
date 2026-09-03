@@ -2,7 +2,7 @@ import Image from "next/image";
 import { cx } from "@/lib/cx";
 import { withBasePath } from "@/lib/site-url";
 
-type Speed = "slow" | "mid" | "counter" | "none";
+type Speed = "deep" | "slow" | "mid" | "fast" | "counter" | "none";
 
 export function FrameImage({
   src,
@@ -29,8 +29,10 @@ export function FrameImage({
         sizes="(max-width: 768px) 100vw, 70vw"
         className={cx(
           "object-cover",
+          speed === "deep" && "parallax-media-deep",
           speed === "slow" && "parallax-media-slow",
           speed === "mid" && "parallax-media-mid",
+          speed === "fast" && "parallax-media-fast",
           speed === "counter" && "parallax-media-counter",
           speed === "none" && "scale-[1.04]",
           imgClassName,

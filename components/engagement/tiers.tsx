@@ -1,18 +1,40 @@
+import { FlowPath } from "@/components/visual/flow-path";
 import { FrameImage } from "@/components/visual/frame-image";
+import { MeasureMarks } from "@/components/visual/measure-marks";
 import { media } from "@/content/media";
 import { tiers } from "@/content/site";
 import { cx } from "@/lib/cx";
 
 const visuals = [
-  { image: media.studio, tone: "bg-canvas text-ink", kicker: "text-blue" },
-  { image: media.desk, tone: "bg-lavender text-ink", kicker: "text-blue" },
-  { image: media.loft, tone: "bg-blue-soft text-ink", kicker: "text-blue" },
-  { image: media.table, tone: "bg-blush text-ink", kicker: "text-blue" },
+  {
+    image: media.studio,
+    tone: "bg-canvas text-ink",
+    kicker: "text-blue",
+    speed: "slow" as const,
+  },
+  {
+    image: media.desk,
+    tone: "bg-lavender text-ink",
+    kicker: "text-blue",
+    speed: "slow" as const,
+  },
+  {
+    image: media.loft,
+    tone: "bg-blue-soft text-ink",
+    kicker: "text-blue",
+    speed: "mid" as const,
+  },
+  {
+    image: media.course,
+    tone: "bg-blush text-ink",
+    kicker: "text-blue",
+    speed: "fast" as const,
+  },
 ] as const;
 
 export function EngagementTiers() {
   return (
-    <div>
+    <div className="relative">
       {tiers.map((tier, index) => {
         const visual = visuals[index];
         const last = index === tiers.length - 1;
@@ -22,6 +44,7 @@ export function EngagementTiers() {
             key={tier.index}
             className={cx(
               "relative grid overflow-hidden lg:grid-cols-12",
+              last && "overflow-visible",
               visual.tone,
             )}
           >
@@ -34,17 +57,30 @@ export function EngagementTiers() {
               <FrameImage
                 src={visual.image.src}
                 alt={visual.image.alt}
-                speed={index === 2 ? "mid" : "slow"}
+                speed={visual.speed}
                 className="absolute inset-0 h-full w-full"
               />
+              {index === 0 ? (
+                <div
+                  aria-hidden="true"
+                  className="parallax-x absolute inset-y-0 left-0 w-1/4 bg-canvas/50"
+                />
+              ) : null}
+              {index === 1 ? (
+                <MeasureMarks className="bottom-8 left-6 w-[70%]" />
+              ) : null}
+              {index === 2 ? (
+                <div
+                  aria-hidden="true"
+                  className="parallax-fast absolute bottom-8 right-8 h-16 w-16 bg-blue"
+                />
+              ) : null}
               {last ? (
                 <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-blush to-transparent" />
               ) : null}
             </div>
-            <div className="px-[var(--spacing-gutter)] py-12 lg:col-span-7 lg:py-20">
-              <p className="display text-display-sm text-blue">
-                {tier.index}
-              </p>
+            <div className="relative px-[var(--spacing-gutter)] py-12 lg:col-span-7 lg:py-20">
+              <p className="display text-display-sm text-blue">{tier.index}</p>
               <p className={cx("kicker mt-4", visual.kicker)}>{tier.stage}</p>
               <h3 className="display mt-3 text-title">{tier.name}</h3>
               <p className="measure mt-5 text-[1.0625rem] leading-relaxed text-muted">
@@ -57,10 +93,13 @@ export function EngagementTiers() {
                 {tier.bestFor}
               </p>
               {last ? (
-                <p className="mt-8 max-w-md text-sm text-muted">
-                  The work does not have to end when the first systems are in
-                  place.
-                </p>
+                <>
+                  <p className="mt-8 max-w-md text-sm text-muted">
+                    The work does not have to end when the first systems are in
+                    place.
+                  </p>
+                  <FlowPath vertical className="top-12 bottom-[-6rem] left-[var(--spacing-gutter)] hidden lg:block" />
+                </>
               ) : null}
             </div>
           </article>

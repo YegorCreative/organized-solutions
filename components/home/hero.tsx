@@ -1,5 +1,7 @@
 import { PrimaryCta } from "@/components/brand/primary-cta";
+import { AlignmentPlanes } from "@/components/visual/alignment-planes";
 import { FrameImage } from "@/components/visual/frame-image";
+import { MeasureMarks } from "@/components/visual/measure-marks";
 import { company } from "@/content/site";
 import { home } from "@/content/copy";
 import { media } from "@/content/media";
@@ -11,29 +13,27 @@ export function Hero() {
         <FrameImage
           src={media.loft.src}
           alt={media.loft.alt}
-          speed="slow"
+          speed="deep"
           className="h-full w-full"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-deep/90 via-blue/50 to-lavender/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-deep/90 via-blue/48 to-lavender/35" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-blue-deep/50 to-transparent" />
       </div>
 
+      <AlignmentPlanes variant="hero" />
+
       <div
         aria-hidden="true"
-        className="plane-drift parallax-color pointer-events-none absolute -left-[12%] top-[18%] h-[58%] w-[42%] rounded-full bg-lavender/45 blur-3xl"
+        className="parallax-fast pointer-events-none absolute top-[4.6rem] bottom-0 left-0 hidden w-[7%] bg-blush/55 lg:block"
       />
       <div
         aria-hidden="true"
-        className="parallax-counter pointer-events-none absolute right-[36%] bottom-[10%] hidden h-44 w-44 bg-blush/70 blur-2xl lg:block"
-      />
-      <div
-        aria-hidden="true"
-        className="parallax-mid pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-canvas via-blush/50 to-transparent"
+        className="parallax-x pointer-events-none absolute right-[42%] top-[22%] hidden h-[46%] w-[9%] bg-blue/25 lg:block"
       />
 
-      <div className="pointer-events-none absolute -right-[6%] top-[4.6rem] hidden h-[calc(100%-4.6rem)] w-[46%] lg:block">
-        <div className="parallax-mid relative h-full w-full overflow-hidden shadow-[0_30px_80px_rgba(58,134,255,0.28)]">
+      <div className="pointer-events-none absolute -right-[8%] top-[4.6rem] hidden h-[calc(100%-4.6rem)] w-[50%] lg:block">
+        <div className="parallax-mid relative h-full w-full overflow-hidden">
           <FrameImage
             src={media.atrium.src}
             alt={media.atrium.alt}
@@ -41,9 +41,14 @@ export function Hero() {
             className="h-full w-full"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-lavender/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-lavender/20 via-transparent to-blue/20" />
         </div>
       </div>
+
+      <MeasureMarks
+        tone="on-blue"
+        className="right-[8%] bottom-[16%] hidden w-[min(24rem,28vw)] lg:block"
+      />
 
       <div className="shell relative z-10 grid min-h-[calc(100svh-4.5rem)] grid-cols-1 items-end gap-10 py-10 lg:grid-cols-12 lg:pb-20 lg:pt-8">
         <div className="reveal max-w-3xl lg:col-span-7">

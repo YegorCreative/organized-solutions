@@ -1,4 +1,5 @@
 import { PrimaryCta } from "@/components/brand/primary-cta";
+import { FlowPath } from "@/components/visual/flow-path";
 import { FrameImage } from "@/components/visual/frame-image";
 import { company } from "@/content/site";
 import { home } from "@/content/copy";
@@ -7,9 +8,10 @@ import { media } from "@/content/media";
 export function Invitation() {
   return (
     <section className="relative isolate overflow-hidden bg-blush text-ink">
+      <FlowPath className="top-0 left-0 w-full" />
       <div
         aria-hidden="true"
-        className="plane-drift pointer-events-none absolute -right-[8%] -top-[10%] h-72 w-72 rounded-full bg-lavender/50 blur-3xl"
+        className="parallax-slow pointer-events-none absolute -right-[10%] top-[8%] h-[55%] w-[30%] bg-lavender/45"
       />
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[22rem] lg:min-h-[36rem]">
@@ -21,8 +23,8 @@ export function Invitation() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-blush/40" />
         </div>
-        <div className="px-[var(--spacing-gutter)] py-section">
-          <h2 className="display max-w-xl text-display-sm text-ink">
+        <div className="relative px-[var(--spacing-gutter)] py-section">
+          <h2 className="display type-drift max-w-xl text-display-sm text-ink">
             {home.invitation.headline}
           </h2>
           <p className="measure mt-6 text-lead text-muted">

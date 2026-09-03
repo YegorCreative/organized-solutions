@@ -21,8 +21,12 @@ export default function ContactPage() {
         title={contactPage.title}
         lede={contactPage.lede}
       />
-      <section className="bg-canvas py-section-tight pb-section">
-        <div className="shell grid gap-16 lg:grid-cols-12">
+      <section className="relative overflow-hidden bg-canvas py-section-tight pb-section">
+        <div
+          aria-hidden="true"
+          className="parallax-counter pointer-events-none absolute top-10 right-[6%] h-32 w-[20%] bg-blush/60"
+        />
+        <div className="shell relative grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <ContactForm />
           </div>

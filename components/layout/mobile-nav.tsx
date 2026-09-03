@@ -98,7 +98,11 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
           />
           <div
             aria-hidden="true"
-            className="plane-drift pointer-events-none absolute -right-[20%] top-[20%] h-80 w-80 rounded-full bg-blue/30 blur-3xl"
+            className="pointer-events-none absolute top-[22%] right-[8%] h-[40%] w-[28%] bg-blue/25"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-[12%] left-[10%] h-20 w-[36%] bg-blush/70"
           />
           <div className="relative z-10 h-[2px] bg-blue" />
           <div className="shell relative z-10 flex h-[4.35rem] items-center justify-between border-b border-line">
