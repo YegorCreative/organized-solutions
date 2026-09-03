@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { PrimaryCta } from "@/components/brand/primary-cta";
-import { Wordmark } from "@/components/brand/wordmark";
-import { cta, navigation } from "@/content/site";
-import { cx } from "@/lib/cx";
+import { BrandLogo } from "@/components/brand/wordmark";
+import { company, cta, navigation } from "@/content/site";
 
-export function MobileNav({ onField = false }: { onField?: boolean }) {
+export function MobileNav() {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const openButtonRef = useRef<HTMLButtonElement>(null);
@@ -72,10 +72,7 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
       <button
         ref={openButtonRef}
         type="button"
-        className={cx(
-          "inline-flex min-h-11 min-w-11 items-center justify-end text-sm",
-          onField ? "text-on-field" : "text-ink",
-        )}
+        className="inline-flex min-h-11 min-w-11 items-center justify-end text-sm text-ink"
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen(true)}
@@ -83,14 +80,15 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
         Menu
       </button>
 
-      {open ? (
+      {open
+        ? createPortal(
         <div
           ref={panelRef}
           id={panelId}
           role="dialog"
           aria-modal="true"
           aria-label="Navigation"
-          className="fixed inset-0 z-[80] flex flex-col overflow-hidden bg-canvas text-ink"
+          className="fixed inset-0 z-[100] flex flex-col overflow-hidden bg-canvas text-ink"
         >
           <div
             aria-hidden="true"
@@ -99,14 +97,18 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
           <div
             aria-hidden="true"
             className="pointer-events-none absolute top-[22%] right-[8%] h-[40%] w-[28%] bg-navy/10"
-          />
+          >
+            <span className="gold-edge gold-edge-left" />
+          </div>
           <div
             aria-hidden="true"
             className="pointer-events-none absolute bottom-[12%] left-[10%] h-20 w-[36%] bg-champagne/70"
-          />
-          <div className="relative z-10 h-[2px] bg-accent" />
-          <div className="shell relative z-10 flex h-[4.35rem] items-center justify-between border-b border-line">
-            <Wordmark />
+          >
+            <span className="gold-edge gold-edge-top" />
+          </div>
+          <div className="gold-rule relative z-10" />
+          <div className="shell relative z-10 flex h-[4.75rem] items-center justify-between border-b border-line">
+            <BrandLogo size="nav" />
             <button
               ref={closeButtonRef}
               type="button"
@@ -147,9 +149,18 @@ export function MobileNav({ onField = false }: { onField?: boolean }) {
 
           <div className="shell relative z-10 border-t border-line py-8">
             <PrimaryCta />
+            <a
+              href={`mailto:${company.email}`}
+              className="mt-5 block text-sm text-muted"
+              onClick={() => setOpen(false)}
+            >
+              {company.email}
+            </a>
           </div>
-        </div>
-      ) : null}
+        </div>,
+        document.body,
+      )
+        : null}
     </div>
   );
 }

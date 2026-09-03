@@ -46,6 +46,7 @@ export function EngagementTiers() {
               "relative grid overflow-hidden lg:grid-cols-12",
               last && "overflow-visible",
               visual.tone,
+              index === 0 && "border-t border-accent/40",
             )}
           >
             <div
@@ -73,7 +74,10 @@ export function EngagementTiers() {
                 <div
                   aria-hidden="true"
                   className="parallax-fast absolute bottom-8 right-8 h-16 w-16 bg-navy"
-                />
+                >
+                  <span className="gold-edge gold-edge-left" />
+                  <span className="gold-edge gold-edge-top" />
+                </div>
               ) : null}
               {last ? (
                 <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-stone to-transparent" />
@@ -99,7 +103,11 @@ export function EngagementTiers() {
                     course-correction, and hands-on availability as the business
                     evolves.
                   </p>
-                  <FlowPath vertical className="top-12 bottom-[-6rem] left-[var(--spacing-gutter)] hidden lg:block" />
+                  <FlowPath
+                    vertical
+                    tone="gold"
+                    className="top-12 bottom-[-6rem] left-[var(--spacing-gutter)] hidden lg:block"
+                  />
                 </>
               ) : null}
             </div>

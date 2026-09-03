@@ -9,6 +9,7 @@ export function JsonLd() {
     slogan: company.tagline,
     description: seo.description,
     url: getSiteUrl(),
+    email: company.email,
     knowsAbout: [
       "Fractional COO",
       "Fractional operations leadership",

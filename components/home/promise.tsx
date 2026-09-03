@@ -18,7 +18,10 @@ export function PromiseSection() {
             speed="slow"
             className="aspect-[4/5] w-full"
           />
-          <div className="absolute -bottom-6 -right-6 hidden h-28 w-28 bg-navy lg:block" />
+          <div className="absolute -bottom-6 -right-6 hidden h-28 w-28 bg-navy lg:block">
+            <span className="gold-edge gold-edge-left" />
+            <span className="gold-edge gold-edge-top" />
+          </div>
           <div
             aria-hidden="true"
             className="parallax-counter absolute -top-8 -left-8 hidden h-20 w-20 bg-champagne lg:block"

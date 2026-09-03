@@ -1,24 +1,32 @@
 import Link from "next/link";
-import { Wordmark } from "@/components/brand/wordmark";
+import { BrandLogo } from "@/components/brand/wordmark";
 import { company, footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-stone text-ink">
-      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[3px] bg-accent" />
+      <div aria-hidden="true" className="gold-rule absolute inset-x-0 top-0 h-[3px]" />
       <div
         aria-hidden="true"
-        className="parallax-slow pointer-events-none absolute -left-[4%] bottom-0 h-[70%] w-[22%] bg-champagne/55"
-      />
+        className="parallax-slow pointer-events-none absolute right-0 bottom-0 hidden h-[42%] w-[8%] bg-champagne/45 md:block"
+      >
+        <span className="gold-edge gold-edge-left" />
+      </div>
       <div className="shell relative grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
         <div>
-          <Wordmark />
+          <BrandLogo size="footer" />
           <p className="mt-5 measure text-[1.05rem] text-muted">
             {company.tagline}
           </p>
           <p className="mt-3 measure text-sm text-muted">
             {company.supportingMessage}
           </p>
+          <a
+            href={`mailto:${company.email}`}
+            className="nav-link mt-5 inline-block w-fit text-[0.9375rem] text-ink"
+          >
+            {company.email}
+          </a>
         </div>
         <nav
           aria-label="Footer"

@@ -1,5 +1,6 @@
 export const company = {
   name: "Organized Solutions",
+  email: "admin@organizedsolutionsgroup.com",
   tagline: "Sustainable systems. Real results.",
   supportingMessage:
     "We help businesses across every industry build operations that run smoothly — and keep running.",

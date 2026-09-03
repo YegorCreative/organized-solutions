@@ -26,7 +26,7 @@ export function Solution() {
           <p className="kicker mb-8">Operating methodology</p>
           <ol className="relative">
             <span
-              className="absolute top-4 bottom-6 left-[0.7rem] w-px origin-top bg-navy/40 path-extend-y"
+              className="absolute top-4 bottom-6 left-[0.7rem] w-px origin-top bg-accent/70 path-extend-y"
               aria-hidden="true"
             />
             {company.operatingIdea.map((step, index) => (

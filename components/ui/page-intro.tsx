@@ -1,3 +1,4 @@
+import { DepthPlanes } from "@/components/visual/depth-planes";
 import { FrameImage } from "@/components/visual/frame-image";
 import { cx } from "@/lib/cx";
 
@@ -24,7 +25,7 @@ export function PageIntro({
     <header
       className={cx(
         "relative overflow-hidden",
-        tone === "navy" && "bg-navy text-on-field",
+        tone === "navy" && "bg-navy-deep text-on-field",
         tone === "stone" && "bg-stone text-ink",
         tone === "champagne" && "bg-champagne text-ink",
         tone === "canvas" && "bg-canvas text-ink",
@@ -44,7 +45,7 @@ export function PageIntro({
             className={cx(
               "absolute inset-0",
               tone === "navy" &&
-                "bg-gradient-to-r from-navy/88 via-navy/55 to-champagne/20",
+                "bg-gradient-to-r from-navy-deep/90 via-navy/55 to-champagne/20",
               tone === "stone" &&
                 "bg-gradient-to-r from-stone via-stone/80 to-stone/30",
               tone === "champagne" &&
@@ -55,10 +56,13 @@ export function PageIntro({
           />
         </div>
       ) : null}
+      <DepthPlanes variant="intro" />
       <div
         aria-hidden="true"
         className="parallax-fast pointer-events-none absolute top-[18%] right-[8%] h-[42%] w-[16%] bg-champagne/40"
-      />
+      >
+        <span className="gold-edge gold-edge-left" />
+      </div>
       <div
         aria-hidden="true"
         className="parallax-counter pointer-events-none absolute bottom-0 left-[12%] h-20 w-[28%] bg-navy/10"
@@ -78,7 +82,7 @@ export function PageIntro({
         <div
           className={cx(
             "draw-rule mt-8 h-px w-40",
-            onField ? "bg-accent" : "bg-navy/40",
+            onField ? "bg-accent" : "bg-accent/80",
           )}
         />
         <p

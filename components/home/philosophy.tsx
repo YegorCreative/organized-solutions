@@ -23,17 +23,21 @@ export function Philosophy() {
           speed="none"
           className="h-full w-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/55 via-champagne/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/58 via-champagne/15 to-transparent" />
       </div>
 
       <div
         aria-hidden="true"
-        className="parallax-x pointer-events-none absolute inset-y-0 left-0 w-[18%] bg-navy/30 md:w-[22%]"
-      />
+        className="parallax-x pointer-events-none absolute inset-y-0 left-0 w-[18%] bg-navy-deep/40 md:w-[22%]"
+      >
+        <span className="gold-edge gold-edge-right" />
+      </div>
       <div
         aria-hidden="true"
         className="parallax-fast pointer-events-none absolute top-[4.5rem] right-0 h-[38%] w-[12%] bg-champagne/50"
-      />
+      >
+        <span className="gold-edge gold-edge-left" />
+      </div>
 
       <MeasureMarks
         tone="on-field"

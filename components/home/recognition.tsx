@@ -19,7 +19,8 @@ export function Recognition() {
             className="absolute inset-0 h-full w-full"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-stone/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-stone/50" />
-          <FlowPath className="bottom-10 left-0 w-2/3" />
+          <span className="gold-edge gold-edge-right hidden lg:block" />
+          <FlowPath tone="gold" className="bottom-10 left-0 w-2/3" />
         </div>
         <div className="relative px-[var(--spacing-gutter)] py-section">
           <p className="kicker">{home.recognition.eyebrow}</p>

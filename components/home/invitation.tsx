@@ -8,11 +8,13 @@ import { media } from "@/content/media";
 export function Invitation() {
   return (
     <section className="relative isolate overflow-hidden bg-champagne text-ink">
-      <FlowPath className="top-0 left-0 w-full" />
+      <FlowPath tone="gold" className="top-0 left-0 w-full" />
       <div
         aria-hidden="true"
         className="parallax-slow pointer-events-none absolute -right-[10%] top-[8%] h-[55%] w-[30%] bg-stone/70"
-      />
+      >
+        <span className="gold-edge gold-edge-left hidden lg:block" />
+      </div>
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[22rem] lg:min-h-[36rem]">
           <FrameImage
@@ -22,6 +24,7 @@ export function Invitation() {
             className="absolute inset-0 h-full w-full"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-champagne/40" />
+          <span className="gold-edge gold-edge-right hidden lg:block" />
         </div>
         <div className="relative px-[var(--spacing-gutter)] py-section">
           <h2 className="display type-drift max-w-xl text-display-sm text-ink">

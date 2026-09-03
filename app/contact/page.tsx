@@ -25,7 +25,9 @@ export default function ContactPage() {
         <div
           aria-hidden="true"
           className="parallax-counter pointer-events-none absolute top-10 right-[6%] h-32 w-[20%] bg-stone"
-        />
+        >
+          <span className="gold-edge gold-edge-left" />
+        </div>
         <div className="shell relative grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <ContactForm />
@@ -37,6 +39,13 @@ export default function ContactPage() {
               appears to be a fit, we will say so. If it does not, we will say
               that too.
             </p>
+            <p className="kicker mt-10">Email</p>
+            <a
+              href={`mailto:${company.email}`}
+              className="nav-link mt-3 inline-block w-fit text-[1.05rem] text-ink"
+            >
+              {company.email}
+            </a>
             <ul className="mt-10 border-t border-line">
               {company.promises.map((promise) => (
                 <li

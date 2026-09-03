@@ -6,7 +6,9 @@ export function Faq() {
       <div
         aria-hidden="true"
         className="parallax-slow pointer-events-none absolute right-0 top-10 h-[50%] w-[16%] bg-champagne/45"
-      />
+      >
+        <span className="gold-edge gold-edge-left" />
+      </div>
       <div className="shell relative max-w-4xl">
         <p className="kicker">{faq.eyebrow}</p>
         <h2 className="display mt-5 text-display-sm text-ink">{faq.title}</h2>

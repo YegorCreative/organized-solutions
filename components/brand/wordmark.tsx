@@ -1,52 +1,46 @@
+import Image from "next/image";
 import Link from "next/link";
+import { lockup } from "@/content/brand";
 import { company } from "@/content/site";
 import { cx } from "@/lib/cx";
+import { withBasePath } from "@/lib/site-url";
 
-export function Mark({
+type Size = "nav" | "footer" | "feature";
+
+/**
+ * Explicit boxes from the lockup ratio 1421×748, so the raster
+ * cannot expand to its intrinsic width and overflow the header.
+ */
+const sizeClass: Record<Size, string> = {
+  nav: "h-[2.85rem] w-[5.42rem] md:h-[3.2rem] md:w-[6.08rem]",
+  footer: "h-[3.6rem] w-[6.84rem] md:h-[4.35rem] md:w-[8.26rem]",
+  feature: "h-[5.25rem] w-[10rem] md:h-[6.75rem] md:w-[12.82rem]",
+};
+
+export function BrandLogo({
   className,
-  onField = false,
+  size = "nav",
+  priority = false,
 }: {
   className?: string;
-  onField?: boolean;
-}) {
-  return (
-    <span
-      aria-hidden="true"
-      className={cx(
-        "inline-block size-[0.85rem] shrink-0 border relative",
-        onField ? "border-on-field" : "border-ink",
-        className,
-      )}
-    >
-      <span
-        className={cx(
-          "absolute inset-x-[2px] bottom-[3px] h-px",
-          "bg-accent",
-        )}
-      />
-    </span>
-  );
-}
-
-export function Wordmark({
-  className,
-  onField = false,
-}: {
-  className?: string;
-  onField?: boolean;
+  size?: Size;
+  priority?: boolean;
 }) {
   return (
     <Link
       href="/"
-      className={cx(
-        "inline-flex items-center gap-2.5 no-underline",
-        onField ? "text-on-field" : "text-ink",
-        className,
-      )}
+      className={cx("inline-flex shrink-0 items-center no-underline", className)}
+      aria-label={`${company.name} home`}
     >
-      <Mark onField={onField} />
-      <span className="text-[0.95rem] font-medium tracking-[0.01em]">
-        {company.name}
+      <span className={cx("relative block overflow-hidden", sizeClass[size])}>
+        <Image
+          src={withBasePath(lockup.src)}
+          alt=""
+          fill
+          className="object-contain object-left"
+          sizes="(min-width: 768px) 132px, 87px"
+          priority={priority}
+        />
       </span>
     </Link>
   );

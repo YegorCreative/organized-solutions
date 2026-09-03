@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PrimaryCta } from "@/components/brand/primary-cta";
-import { Wordmark } from "@/components/brand/wordmark";
+import { BrandLogo } from "@/components/brand/wordmark";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { navigation } from "@/content/site";
 import { cx } from "@/lib/cx";
@@ -20,7 +20,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const home = normalize(pathname) === "/";
-  const overlay = home && !scrolled;
+  const overHero = home && !scrolled;
 
   useEffect(() => {
     function onScroll() {
@@ -35,21 +35,21 @@ export function SiteHeader() {
   return (
     <header
       className={cx(
-        "sticky top-0 z-[80] isolate transition-colors duration-500",
-        overlay
-          ? "bg-gradient-to-b from-navy/50 to-transparent text-on-field"
-          : "bg-canvas/90 text-ink backdrop-blur-sm",
+        "sticky top-0 z-[80] isolate text-ink transition-colors duration-500",
+        overHero
+          ? "bg-canvas/80 backdrop-blur-md"
+          : "bg-canvas/94 backdrop-blur-sm",
       )}
       style={{ zIndex: 80 }}
     >
-      <div className="h-[2px] bg-accent" />
+      <div className="gold-rule" />
       <div
         className={cx(
-          "shell flex h-[4.35rem] items-center justify-between",
-          overlay ? "border-b border-transparent" : "border-b border-line",
+          "shell flex h-[4.75rem] items-center justify-between",
+          overHero ? "border-b border-transparent" : "border-b border-line",
         )}
       >
-        <Wordmark onField={overlay} />
+        <BrandLogo size="nav" priority />
         <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
           {navigation.map((item) => {
             const current = normalize(pathname) === normalize(item.href);
@@ -66,7 +66,7 @@ export function SiteHeader() {
           })}
           <PrimaryCta variant="header" />
         </nav>
-        <MobileNav onField={overlay} />
+        <MobileNav />
       </div>
     </header>
   );

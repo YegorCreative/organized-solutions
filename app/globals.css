@@ -5,19 +5,35 @@
     sans-serif;
   --font-display: var(--font-newsreader), "Newsreader", ui-serif, Georgia, serif;
 
-  --color-canvas: #f7f5f1;
-  --color-stone: #e4e0d8;
-  --color-champagne: #d9c9a8;
-  --color-navy: #232a31;
-  --color-ink: #1c1c1e;
-  --color-muted: #5c6169;
+  /* Approved palette — do not remove */
+  --color-canvas: #f7f5f1; /* Warm Off-White */
+  --color-stone: #e4e0d8; /* Soft Stone */
+  --color-champagne: #d9c9a8; /* Pale Champagne */
+  --color-navy: #232a31; /* Navy-Charcoal — mid navy */
+  --color-ink: #1c1c1e; /* Charcoal Ink */
+  --color-muted: #5c6169; /* Slate Gray */
   --color-faint: color-mix(in srgb, #5c6169 72%, #e4e0d8);
-  --color-accent: #b08d57;
+  --color-accent: #b08d57; /* Muted Gold */
   --color-on-field: #f7f5f1;
   --color-on-field-muted: color-mix(in srgb, #f7f5f1 78%, #d9c9a8);
   --color-line: color-mix(in srgb, #1c1c1e 12%, transparent);
   --color-line-strong: color-mix(in srgb, #1c1c1e 24%, transparent);
   --color-line-on-field: color-mix(in srgb, #f7f5f1 28%, transparent);
+
+  /*
+   * Derived navy from #232A31 — same hue relationship (B > G > R).
+   * Used for depth, not as a new colour family.
+   */
+  --color-navy-deep: #161a1e; /* deep background depth */
+  --color-navy-lit: #2e3842; /* illuminated navy */
+  --color-navy-veil: color-mix(in srgb, #232a31 58%, transparent);
+
+  /*
+   * Derived gold from #B08D57, with champagne #D9C9A8 as the
+   * light-catch neighbour. Metallic highlight / shadow only.
+   */
+  --color-gold-lit: #c2a87b;
+  --color-gold-deep: #8d744e;
 
   --spacing-gutter: clamp(1.25rem, 5vw, 5.5rem);
   --spacing-section: clamp(4.75rem, 13vw, 10rem);
@@ -50,7 +66,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    scroll-padding-top: 4.75rem;
+    scroll-padding-top: 5rem;
     overflow-x: clip;
   }
 
@@ -144,7 +160,9 @@
   .cta-primary {
     color: var(--color-on-field);
     background: var(--color-navy);
-    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-navy) 22%, transparent);
+    box-shadow:
+      inset 2px 0 0 var(--color-accent),
+      0 14px 36px color-mix(in srgb, var(--color-navy) 22%, transparent);
   }
 
   .cta-primary::before {
@@ -159,7 +177,9 @@
   .cta-on-field {
     color: var(--color-ink);
     background: var(--color-canvas);
-    box-shadow: 0 14px 36px color-mix(in srgb, var(--color-navy) 12%, transparent);
+    box-shadow:
+      inset 2px 0 0 var(--color-accent),
+      0 14px 36px color-mix(in srgb, var(--color-navy) 12%, transparent);
   }
 
   .cta-on-field::before {
@@ -260,7 +280,9 @@
 
   .cta:hover,
   .cta:focus-visible {
-    box-shadow: 0 18px 44px color-mix(in srgb, var(--color-navy) 28%, transparent);
+    box-shadow:
+      inset 2px 0 0 var(--color-gold-lit),
+      0 18px 44px color-mix(in srgb, var(--color-navy) 28%, transparent);
   }
 
   .align-plane {
@@ -276,9 +298,89 @@
 
   .flow-stroke {
     fill: none;
-    stroke: var(--color-blue);
+    stroke: var(--color-accent);
     stroke-width: 1.15;
     stroke-linecap: square;
+  }
+
+  .gold-rule {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--color-gold-deep),
+      var(--color-gold-lit) 18%,
+      var(--color-accent) 50%,
+      var(--color-gold-lit) 82%,
+      var(--color-gold-deep)
+    );
+  }
+
+  .gold-sheen {
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      var(--color-gold-lit),
+      var(--color-accent) 46%,
+      var(--color-gold-deep)
+    );
+    box-shadow: 0 0 18px color-mix(in srgb, var(--color-accent) 35%, transparent);
+  }
+
+  .gold-edge {
+    position: absolute;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      var(--color-gold-lit),
+      var(--color-accent) 42%,
+      var(--color-gold-deep)
+    );
+  }
+
+  .gold-edge-right {
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+  }
+
+  .gold-edge-left {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      var(--color-gold-deep),
+      var(--color-accent) 42%,
+      var(--color-gold-lit)
+    );
+  }
+
+  .gold-edge-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--color-gold-deep),
+      var(--color-gold-lit) 30%,
+      var(--color-accent)
+    );
+  }
+
+  .gold-edge-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--color-accent),
+      var(--color-gold-lit) 60%,
+      var(--color-gold-deep)
+    );
   }
 
   .veil {
@@ -526,7 +628,8 @@
   .draw-rule,
   .mask-uncover,
   .mask-uncover-center,
-  .mask-type {
+  .mask-type,
+  .gold-sheen {
     animation: none !important;
     transform: none !important;
     clip-path: none !important;

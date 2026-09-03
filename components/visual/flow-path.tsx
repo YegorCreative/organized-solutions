@@ -7,16 +7,21 @@ import { cx } from "@/lib/cx";
 export function FlowPath({
   className,
   vertical = false,
+  tone = "navy",
 }: {
   className?: string;
   vertical?: boolean;
+  tone?: "navy" | "gold";
 }) {
+  const color = tone === "gold" ? "bg-accent" : "bg-navy";
+
   if (vertical) {
     return (
       <span
         aria-hidden="true"
         className={cx(
-          "pointer-events-none absolute w-px origin-top bg-navy path-extend-y",
+          "pointer-events-none absolute w-px origin-top path-extend-y",
+          color,
           className,
         )}
       />
@@ -27,7 +32,8 @@ export function FlowPath({
     <span
       aria-hidden="true"
       className={cx(
-        "pointer-events-none absolute h-px origin-left bg-navy path-extend",
+        "pointer-events-none absolute h-px origin-left path-extend",
+        color,
         className,
       )}
     />

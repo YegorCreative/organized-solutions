@@ -192,7 +192,7 @@ export const contactPage = {
     submit: "Send the note",
     sending: "Sending",
     pendingChannel:
-      "The form is prepared. Delivery will be connected once an approved receiving service is in place. Please keep a copy of your note until then.",
+      "The form is prepared. Delivery will be connected once an approved receiving service is in place. Until then, write to admin@organizedsolutionsgroup.com and keep a copy of your note.",
     unconfigured:
       "The note was not sent. Delivery is not connected yet. Please keep a copy of what you wrote.",
     success: "Thank you. Your note was received.",
