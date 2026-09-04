@@ -63,7 +63,7 @@ export function PageIntro({
         </div>
         <div className="parallax-counter absolute bottom-0 left-[12%] h-20 w-[28%] bg-navy/10" />
       </div>
-      <div className="content-front shell py-20 md:py-28">
+      <div className="content-front shell py-16 md:py-20 lg:py-28">
         <p className={cx("kicker", onField ? "text-champagne" : undefined)}>
           {eyebrow}
         </p>

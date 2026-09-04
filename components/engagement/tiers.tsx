@@ -10,28 +10,28 @@ const visuals = [
     tone: "bg-canvas text-ink",
     kicker: "text-muted",
     speed: "slow" as const,
-    photoMin: "min-h-[16rem] lg:min-h-[26rem]",
+    photoMin: "min-h-[19rem] md:min-h-[22rem] lg:min-h-[26rem]",
   },
   {
     image: media.desk,
     tone: "bg-stone text-ink",
     kicker: "text-muted",
     speed: "slow" as const,
-    photoMin: "min-h-[18rem] lg:min-h-[30rem]",
+    photoMin: "min-h-[19rem] md:min-h-[24rem] lg:min-h-[30rem]",
   },
   {
     image: media.loft,
     tone: "bg-champagne text-ink",
     kicker: "text-muted",
     speed: "mid" as const,
-    photoMin: "min-h-[20rem] lg:min-h-[34rem]",
+    photoMin: "min-h-[20rem] md:min-h-[26rem] lg:min-h-[34rem]",
   },
   {
     image: media.course,
     tone: "bg-navy-deep text-on-field",
     kicker: "text-champagne",
     speed: "fast" as const,
-    photoMin: "min-h-[22rem] lg:min-h-[36rem]",
+    photoMin: "min-h-[20rem] md:min-h-[26rem] lg:min-h-[36rem]",
   },
 ] as const;
 
@@ -52,8 +52,7 @@ export function EngagementTiers() {
           <article
             key={tier.index}
             className={cx(
-              "relative grid lg:grid-cols-12",
-              last ? "overflow-visible" : "overflow-hidden",
+              "relative grid overflow-visible lg:grid-cols-12",
               visual.tone,
               index === 0 && "border-t border-accent/50",
             )}
@@ -113,10 +112,10 @@ export function EngagementTiers() {
                 </>
               ) : null}
             </div>
-            <div className="relative px-[var(--spacing-gutter)] py-12 lg:col-span-7 lg:py-20">
+            <div className="relative px-[var(--spacing-gutter)] py-10 md:py-12 lg:col-span-7 lg:py-20">
               <p
                 className={cx(
-                  "display text-display-sm",
+                  "display text-title md:text-display-sm",
                   onField ? "text-champagne" : "text-navy",
                 )}
               >
@@ -125,7 +124,7 @@ export function EngagementTiers() {
               <p className={cx("kicker mt-4", visual.kicker)}>{tier.stage}</p>
               <h3
                 className={cx(
-                  "display mt-3 text-title",
+                  "display mt-3 text-display-sm md:text-title",
                   onField && "text-on-field",
                 )}
               >

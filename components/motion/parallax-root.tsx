@@ -23,7 +23,7 @@ const ALIGN: Record<string, { x: number; y: number; r: number }> = {
 function viewportFactor() {
   const w = window.innerWidth;
   if (w < 768) {
-    return 0.52;
+    return 0.62;
   }
   if (w < 1024) {
     return 0.72;
@@ -100,8 +100,9 @@ export function ParallaxRoot() {
         const xAlign = align ? align.x * rest : 0;
         const yAlign = align ? align.y * rest : 0;
         const rAlign = align ? align.r * rest : 0;
-        const xMove = kind === "x" ? y : xAlign;
-        const yMove = kind === "x" ? yAlign : y + yAlign;
+        const allowX = window.innerWidth >= 768;
+        const xMove = kind === "x" ? (allowX ? y : 0) : xAlign;
+        const yMove = kind === "x" ? (allowX ? yAlign : y) : y + yAlign;
         const rotate = rAlign ? ` rotate(${rAlign.toFixed(2)}deg)` : "";
         const scaled = scale !== 1 ? ` scale(${scale})` : "";
 

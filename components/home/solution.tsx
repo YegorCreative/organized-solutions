@@ -18,7 +18,7 @@ export function Solution() {
             {home.solution.headline}
           </h2>
           <p className="measure mt-8 text-lead text-muted">{home.solution.body}</p>
-          <div className="mt-10 hidden aspect-[5/3] overflow-hidden lg:block">
+          <div className="mt-10 aspect-[16/10] overflow-hidden lg:aspect-[5/3]">
             <FrameImage
               src={media.desk.src}
               alt={media.desk.alt}

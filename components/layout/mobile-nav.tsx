@@ -88,7 +88,7 @@ export function MobileNav() {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation"
-          className="fixed inset-0 z-[100] flex flex-col overflow-hidden bg-canvas text-ink"
+          className="fixed inset-0 z-[100] flex flex-col overflow-hidden bg-canvas pt-[var(--safe-top)] text-ink"
         >
           <div
             aria-hidden="true"
@@ -107,7 +107,7 @@ export function MobileNav() {
             <span className="gold-edge gold-edge-top" />
           </div>
           <div className="gold-rule relative z-10" />
-          <div className="shell relative z-10 flex h-[4.85rem] items-center justify-between border-b border-line">
+          <div className="shell relative z-10 flex h-[var(--header-h)] items-center justify-between border-b border-line">
             <BrandLogo size="nav" />
             <button
               ref={closeButtonRef}
@@ -119,7 +119,7 @@ export function MobileNav() {
             </button>
           </div>
 
-          <nav className="shell relative z-10 flex flex-1 flex-col justify-center gap-1 py-10">
+          <nav className="shell relative z-10 flex min-h-0 flex-1 flex-col justify-center gap-2 overflow-y-auto py-8">
             {navigation.map((item, index) => (
               <Link
                 key={item.href}
@@ -145,7 +145,7 @@ export function MobileNav() {
             </Link>
           </nav>
 
-          <div className="shell relative z-10 border-t border-line py-8">
+          <div className="shell relative z-10 border-t border-line py-6 pb-[max(1.5rem,calc(var(--safe-bottom)+1rem))]">
             <PrimaryCta />
             <a
               href={inquiryMailto.href}

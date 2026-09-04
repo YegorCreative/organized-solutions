@@ -20,7 +20,7 @@ export function Recognition() {
         className="gold-sheen pointer-events-none absolute bottom-[-4.5rem] left-[var(--spacing-gutter)] z-20 hidden h-[9rem] w-[3px] lg:block"
       />
       <div className="content-front grid lg:grid-cols-2">
-        <div className="relative min-h-[22rem] overflow-hidden lg:min-h-[38rem]">
+        <div className="relative min-h-[18rem] overflow-hidden md:min-h-[22rem] lg:min-h-[38rem]">
           <FrameImage
             src={media.colonnade.src}
             alt={media.colonnade.alt}
@@ -31,7 +31,7 @@ export function Recognition() {
           <span className="gold-edge gold-edge-right hidden lg:block" />
           <FlowPath tone="gold" className="bottom-10 left-0 w-2/3" />
         </div>
-        <div className="relative px-[var(--spacing-gutter)] py-section">
+        <div className="relative px-[var(--spacing-gutter)] py-12 md:py-section">
           <p className="kicker">{home.recognition.eyebrow}</p>
           <h2 className="display mt-5 text-display-sm text-ink">
             {home.recognition.headline}

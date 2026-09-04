@@ -32,7 +32,7 @@ export default function ContactPage() {
         </div>
         <div className="shell content-front grid gap-16 lg:grid-cols-12">
           <div className="relative bg-canvas lg:col-span-6">
-            <a href={inquiryMailto.href} className="cta cta-primary">
+            <a href={inquiryMailto.href} className="cta cta-primary w-full max-w-[22rem] sm:w-auto">
               <span>{contactPage.cta}</span>
               <Arrow className="cta-arrow" />
             </a>

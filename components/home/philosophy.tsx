@@ -6,10 +6,10 @@ import { MeasureMarks } from "@/components/visual/measure-marks";
 export function Philosophy() {
   return (
     <section className="relative isolate bg-stone text-ink">
-      <div className="stage-run relative h-[165svh] md:h-[180svh]">
+      <div className="stage-run relative h-[132svh] md:h-[165svh] lg:h-[180svh]">
         <div
           data-stage
-          className="sticky top-[4.85rem] h-[calc(100svh-4.85rem)] bg-stone"
+          className="sticky top-[var(--header-offset)] h-[calc(100dvh-var(--header-offset))] bg-stone"
         >
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0">
@@ -56,8 +56,8 @@ export function Philosophy() {
             />
           </div>
 
-          <div className="content-front shell relative z-10 flex h-full items-end overflow-visible py-section">
-            <div className="max-w-4xl pb-6">
+          <div className="content-front shell relative z-10 flex h-full items-end overflow-visible py-10 md:py-section">
+            <div className="max-w-4xl pb-[max(1.25rem,var(--safe-bottom))]">
               <p className="kicker text-champagne">{home.philosophy.kicker}</p>
               <h2 className="display mt-6 text-display text-on-field">
                 <span className="block">{home.philosophy.lead}</span>

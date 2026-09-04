@@ -35,7 +35,7 @@ export function SiteHeader() {
   return (
     <header
       className={cx(
-        "sticky top-0 z-[80] isolate text-ink transition-colors duration-500",
+        "sticky top-0 z-[80] isolate pt-[var(--safe-top)] text-ink transition-colors duration-500",
         overHero
           ? "bg-canvas/80 backdrop-blur-md"
           : "bg-canvas/94 backdrop-blur-sm",
@@ -45,7 +45,7 @@ export function SiteHeader() {
       <div className="gold-rule" />
       <div
         className={cx(
-          "shell flex h-[4.85rem] items-center justify-between gap-6",
+          "shell flex h-[var(--header-h)] items-center justify-between gap-6",
           overHero ? "border-b border-transparent" : "border-b border-line",
         )}
       >

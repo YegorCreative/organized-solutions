@@ -12,10 +12,10 @@ export function Complexity() {
       className="relative bg-navy-deep"
       aria-label="Visual of momentum finding operational alignment"
     >
-      <div className="stage-run relative h-[175svh] md:h-[200svh]">
+      <div className="stage-run relative h-[142svh] md:h-[175svh] lg:h-[200svh]">
         <div
           data-stage
-          className="sticky top-[4.85rem] h-[calc(100svh-4.85rem)] bg-navy-deep"
+          className="sticky top-[var(--header-offset)] h-[calc(100dvh-var(--header-offset))] bg-navy-deep"
         >
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0">
@@ -24,6 +24,7 @@ export function Complexity() {
                 alt=""
                 speed="deep"
                 className="h-full w-full"
+                imgClassName="object-[center_42%] md:object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/30 via-transparent to-canvas/80" />
             </div>

@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="relative bg-stone text-ink">
       <div aria-hidden="true" className="gold-rule relative z-10 h-[3px]" />
-      <div className="content-front shell grid gap-12 py-16 md:grid-cols-[1.2fr_1fr] md:items-start">
+      <div className="content-front shell grid gap-10 py-12 md:grid-cols-[1.2fr_1fr] md:items-start md:gap-12 md:py-16">
         <div>
           <BrandLogo size="footer" />
           <p className="mt-5 measure text-[1.05rem] text-muted">
@@ -37,7 +37,7 @@ export function SiteFooter() {
           ))}
         </nav>
       </div>
-      <div className="content-front shell flex flex-col gap-3 border-t border-line py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="content-front shell flex flex-col gap-3 border-t border-line py-6 pb-[max(1.5rem,calc(var(--safe-bottom)+0.75rem))] text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {company.name}
         </p>

@@ -5,7 +5,7 @@ import { media } from "@/content/media";
 
 export function PromiseSection() {
   return (
-    <section className="relative -mt-12 bg-canvas pt-24 pb-section">
+    <section className="relative -mt-8 bg-canvas pt-16 pb-section md:-mt-12 md:pt-24">
       <div className="art-back">
         <div
           data-parallax="slow"
@@ -20,11 +20,12 @@ export function PromiseSection() {
             src={media.studio.src}
             alt={media.studio.alt}
             speed="slow"
-            className="aspect-[4/5] w-full"
+            className="aspect-[5/4] w-full md:aspect-[4/5]"
+            imgClassName="object-[center_42%] md:object-center"
           />
           <div
             data-parallax="fast"
-            className="absolute -bottom-6 -right-6 hidden h-28 w-28 bg-navy lg:block"
+            className="absolute -bottom-4 -right-3 h-16 w-16 bg-navy md:-bottom-6 md:-right-6 md:h-28 md:w-28 lg:block"
           >
             <span className="gold-edge gold-edge-left" />
             <span className="gold-edge gold-edge-top" />

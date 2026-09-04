@@ -18,7 +18,7 @@ export function Invitation() {
         </div>
       </div>
       <div className="content-front grid lg:grid-cols-2">
-        <div className="relative min-h-[24rem] overflow-hidden lg:min-h-[44rem]">
+        <div className="relative min-h-[18rem] overflow-hidden md:min-h-[24rem] lg:min-h-[44rem]">
           <FrameImage
             src={media.table.src}
             alt={media.table.alt}
@@ -39,9 +39,11 @@ export function Invitation() {
             className="gold-sheen absolute top-[12%] left-[22%] hidden h-[70%] w-[3px] lg:block"
           />
         </div>
-        <div className="relative px-[var(--spacing-gutter)] py-section">
+        <div className="relative px-[var(--spacing-gutter)] py-12 md:py-section">
           <h2 className="display max-w-xl text-display-sm text-ink">
-            {home.invitation.headline}
+            If this is the season to strengthen the operations behind the
+            work,{" "}
+            <span className="whitespace-nowrap">we should talk.</span>
           </h2>
           <p className="measure mt-6 text-lead text-muted">
             {home.invitation.body}

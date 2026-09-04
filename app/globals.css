@@ -61,12 +61,16 @@
 
 @layer base {
   html {
+    --header-h: 4.85rem;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --header-offset: calc(var(--header-h) + var(--safe-top));
     background: var(--color-canvas);
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    scroll-padding-top: 5.25rem;
+    scroll-padding-top: var(--header-offset);
     overflow-x: clip;
   }
 
@@ -703,7 +707,8 @@
   width: 100%;
   max-width: var(--max-width-shell);
   margin-inline: auto;
-  padding-inline: var(--spacing-gutter);
+  padding-inline: max(var(--spacing-gutter), env(safe-area-inset-left, 0px))
+    max(var(--spacing-gutter), env(safe-area-inset-right, 0px));
 }
 
 @utility measure {
