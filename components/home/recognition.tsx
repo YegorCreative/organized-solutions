@@ -17,7 +17,7 @@ export function Recognition() {
       <div
         data-parallax="fast"
         aria-hidden="true"
-        className="gold-sheen pointer-events-none absolute bottom-[-4.5rem] left-[var(--spacing-gutter)] z-20 hidden h-[9rem] w-[3px] lg:block"
+        className="gold-rail gold-sheen bottom-[-4.5rem] hidden h-[9rem] lg:block"
       />
       <div className="content-front grid lg:grid-cols-2">
         <div className="relative min-h-[18rem] overflow-hidden md:min-h-[22rem] lg:min-h-[38rem]">

@@ -11,7 +11,7 @@ export function Solution() {
           <span className="gold-edge gold-edge-left" />
         </div>
       </div>
-      <div className="content-front shell grid items-start gap-14 lg:grid-cols-12">
+      <div className="content-front shell relative z-10 grid items-start gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <p className="kicker">{home.solution.eyebrow}</p>
           <h2 className="display mt-5 max-w-2xl text-display-sm text-ink">

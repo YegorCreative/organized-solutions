@@ -8,7 +8,7 @@ export function Engagement() {
       <div className="art-back">
         <FlowPath
           tone="gold"
-          className="top-24 left-[var(--spacing-gutter)] hidden w-[42%] lg:block"
+          className="top-24 left-[var(--spacing-rail)] hidden w-[42%] lg:block"
         />
       </div>
       <div className="content-front shell relative mb-8 max-w-3xl lg:mb-4">

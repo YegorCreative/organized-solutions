@@ -36,6 +36,8 @@
   --color-gold-deep: #8d744e;
 
   --spacing-gutter: clamp(1.25rem, 5vw, 5.5rem);
+  /* Rail sits in the gutter, left of type — never on the first glyph. */
+  --spacing-rail: max(0.75rem, calc(var(--spacing-gutter) - 1.15rem));
   --spacing-section: clamp(4.75rem, 13vw, 10rem);
   --spacing-section-tight: clamp(3.25rem, 8vw, 6.5rem);
 
@@ -345,6 +347,15 @@
       var(--color-gold-deep)
     );
     box-shadow: 0 0 18px color-mix(in srgb, var(--color-accent) 35%, transparent);
+  }
+
+  /* Decorative vertical axis. Lives in the margin, under the content layer. */
+  .gold-rail {
+    position: absolute;
+    left: var(--spacing-rail);
+    z-index: 1;
+    width: 3px;
+    pointer-events: none;
   }
 
   .gold-edge {

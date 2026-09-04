@@ -41,7 +41,7 @@ export function EngagementTiers() {
       <div
         data-parallax="hold"
         aria-hidden="true"
-        className="gold-sheen pointer-events-none absolute top-0 bottom-[-6rem] left-[var(--spacing-gutter)] z-20 hidden w-[3px] lg:block"
+        className="gold-rail gold-sheen top-0 bottom-[-6rem] hidden lg:block"
       />
       {tiers.map((tier, index) => {
         const visual = visuals[index];
@@ -112,7 +112,7 @@ export function EngagementTiers() {
                 </>
               ) : null}
             </div>
-            <div className="relative px-[var(--spacing-gutter)] py-10 md:py-12 lg:col-span-7 lg:py-20">
+            <div className="relative z-10 px-[var(--spacing-gutter)] py-10 md:py-12 lg:col-span-7 lg:py-20">
               <p
                 className={cx(
                   "display text-title md:text-display-sm",
@@ -153,7 +153,7 @@ export function EngagementTiers() {
                 <div
                   data-parallax="hold"
                   aria-hidden="true"
-                  className="gold-sheen absolute top-12 bottom-[-8rem] left-[var(--spacing-gutter)] hidden w-[3px] lg:block"
+                  className="gold-rail gold-sheen top-12 bottom-[-8rem] hidden lg:block"
                 />
               ) : null}
             </div>
