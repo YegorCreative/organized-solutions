@@ -3,7 +3,7 @@ export const home = {
     eyebrow: "Fractional COO services",
     headline: "The operational problems growth creates.",
     accent: "We help solve them.",
-    lede: "You’ve built something valuable. Growth naturally brings new operational challenges — even in capable organizations. We partner with owners and leadership teams to solve them, working alongside your team or taking substantial ownership of the work, and to elevate what comes next.",
+    lede: "We work with company leadership to solve the operational challenges that come with growth.",
   },
   promise: {
     eyebrow: "Organized Solutions",
@@ -12,7 +12,7 @@ export const home = {
   },
   recognition: {
     eyebrow: "A familiar chapter",
-    headline: "Growth creates operational questions even in capable organizations.",
+    headline: "Growth creates operational questions even in established organizations.",
     items: [
       "Growth has outpaced structure.",
       "Responsibilities are unclear.",
@@ -24,7 +24,7 @@ export const home = {
       "Growth increasingly feels chaotic.",
     ],
     bridge:
-      "These situations can emerge as capable organizations grow. They are signals that the operational structure may need to evolve with the business — and that is where experienced operational leadership can help.",
+      "These situations can emerge as established organizations grow. They are signals that the operational structure may need to evolve with the business — and that is where experienced operational leadership can help.",
     close: "These are not character problems. They are operational ones.",
   },
   solution: {
@@ -42,7 +42,7 @@ export const home = {
   engagement: {
     eyebrow: "How the work deepens",
     headline: "Partnership, at the depth the work requires.",
-    lede: "You choose the level of support that fits. These are not a required sequence, and you are not pushed through all four. Begin with assessment, add a roadmap, bring us into implementation, or continue with ongoing advisory — and expand if the work calls for it. The work inside the selected engagement is tailored to your industry, size, goals, and circumstances.",
+    lede: "Choose the level of support that fits your needs today — Assessment, Assessment + Recommendation, Assessment + Recommendation + Implementation, or Ongoing Advisory. You do not need to begin at Tier 1 or move through every tier. If your needs expand, additional support can be added as the work evolves. Within whichever engagement you choose, the work is tailored to your organization, goals, size, industry, and circumstances.",
   },
   difference: {
     eyebrow: "How we work",

@@ -16,7 +16,7 @@ export function Engagement() {
         <h2 className="display mt-5 text-display-sm text-ink">
           {home.engagement.headline}
         </h2>
-        <p className="measure mt-6 text-lead text-muted">
+        <p className="measure-wide mt-6 text-lead text-muted">
           {home.engagement.lede}
         </p>
       </div>
