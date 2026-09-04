@@ -7,7 +7,7 @@ import { media } from "@/content/media";
 
 export function Invitation() {
   return (
-    <section className="relative isolate overflow-hidden bg-champagne text-ink">
+    <section className="relative isolate bg-champagne text-ink">
       <div className="art-back">
         <FlowPath tone="gold" className="top-0 left-0 w-full" />
         <div

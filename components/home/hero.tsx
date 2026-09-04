@@ -6,7 +6,7 @@ import { media } from "@/content/media";
 
 export function Hero() {
   return (
-    <section className="relative isolate -mt-[4.85rem] min-h-[100svh] overflow-hidden bg-navy-deep pt-[4.85rem] text-on-field">
+    <section className="relative isolate -mt-[4.85rem] min-h-[100svh] bg-navy-deep pt-[4.85rem] text-on-field">
       <div className="art-back">
         <FrameImage
           src={media.loft.src}

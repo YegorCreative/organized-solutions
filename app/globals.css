@@ -609,24 +609,6 @@
   }
 }
 
-@keyframes uncover-center {
-  from {
-    clip-path: inset(12% 42% 12% 42%);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes uncover-type {
-  from {
-    clip-path: inset(0 0 92% 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
 @keyframes align-a {
   from {
     transform: translate3d(-7%, 6%, 0) rotate(-3deg);
@@ -745,4 +727,6 @@
   font-family: var(--font-display);
   font-optical-sizing: auto;
   font-weight: 400;
+  overflow: visible;
+  padding-block: 0.12em;
 }

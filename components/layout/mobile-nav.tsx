@@ -124,8 +124,7 @@ export function MobileNav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="menu-link reveal display text-display-sm text-ink"
-                style={{ animationDelay: `${index * 70}ms` }}
+                className="menu-link display text-display-sm text-ink"
                 onClick={() => setOpen(false)}
               >
                 <span className="display text-sm text-accent">
@@ -136,8 +135,7 @@ export function MobileNav() {
             ))}
             <Link
               href={cta.href}
-              className="menu-link reveal display text-display-sm text-ink"
-              style={{ animationDelay: `${navigation.length * 70}ms` }}
+              className="menu-link display text-display-sm text-ink"
               onClick={() => setOpen(false)}
             >
               <span className="display text-sm text-accent">
