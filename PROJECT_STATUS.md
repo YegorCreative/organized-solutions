@@ -95,9 +95,9 @@ Insights is architected without invented articles.
 
 ### Contact
 
-The form UI exists. Delivery is isolated in `lib/contact/` and is **not connected**.
+The form UI exists. Delivery is isolated in `lib/contact/` and uses **Formspree** via `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`.
 
-GitHub Pages cannot run a server-side form. An external static-compatible provider may be added later **only with explicit owner approval**. Until then, the form does not pretend a note was sent.
+The real Formspree form ID has not been supplied yet. Until it is set as a GitHub Actions variable (and locally in `.env.local`), the form stays unconfigured and does not pretend a note was sent. Direct email `admin@organizedsolutionsgroup.com` remains the fallback.
 
 ### SEO / accessibility
 
@@ -141,7 +141,7 @@ Run locally on 2026-09-02:
 ## Known placeholders
 
 - Approved photography (site is designed to stand without it)
-- Contact delivery provider
+- Contact Formspree form ID (`NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`) — architecture is ready; endpoint not yet supplied
 - Insights essays
 - Proof (clients, case studies, testimonials) — none until real
 - Production domain / custom domain
@@ -152,7 +152,7 @@ Run locally on 2026-09-02:
 ## Pending business-owner decisions
 
 1. Confirm or change the primary CTA wording (**Start a conversation** is working copy).
-2. Approve a static-compatible contact form provider, or an alternative contact channel. Do not invent an email address.
+2. Create the Formspree form for `admin@organizedsolutionsgroup.com` and set `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`. Review the Privacy page for third-party form delivery before marking contact complete.
 3. Enable GitHub Pages: **Settings → Pages → Source: GitHub Actions**.
 4. Confirm whether the live URL is `https://<user>.github.io/organized-solutions/` or a custom domain.
 5. Supply approved photography when available.
@@ -164,7 +164,7 @@ Run locally on 2026-09-02:
 
 ## What does not yet meet the quality bar
 
-- Contact cannot actually receive notes until a provider is approved.
+- Contact cannot actually receive notes until the Formspree endpoint is supplied.
 - Insights is an honest empty archive, not a publishing system.
 - Secondary pages are complete as foundations; they are lighter than the homepage by design.
 - No photography. That is correct for now, but the site will deepen when observational photography exists.

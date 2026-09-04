@@ -28,8 +28,8 @@ export default function ContactPage() {
         >
           <span className="gold-edge gold-edge-left" />
         </div>
-        <div className="shell relative grid gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-6">
+        <div className="shell content-front grid gap-16 lg:grid-cols-12">
+          <div className="relative bg-canvas lg:col-span-6">
             <ContactForm />
           </div>
           <aside className="lg:col-span-4 lg:col-start-9">
@@ -42,7 +42,7 @@ export default function ContactPage() {
             <p className="kicker mt-10">Email</p>
             <a
               href={`mailto:${company.email}`}
-              className="nav-link mt-3 inline-block w-fit text-[1.05rem] text-ink"
+              className="nav-link mt-3 inline-block w-fit max-w-full break-all text-[1.05rem] text-ink"
             >
               {company.email}
             </a>

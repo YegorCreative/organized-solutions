@@ -197,12 +197,21 @@ export const contactPage = {
       "A few sentences is enough. Growth, a next chapter, unclear roles, systems that need to go further — whatever is true.",
     submit: "Send the note",
     sending: "Sending",
+    another: "Send another note",
     pendingChannel:
-      "The form is prepared. Delivery will be connected once an approved receiving service is in place. Until then, write to admin@organizedsolutionsgroup.com and keep a copy of your note.",
+      "The form is prepared. Until delivery is connected, write to admin@organizedsolutionsgroup.com.",
     unconfigured:
-      "The note was not sent. Delivery is not connected yet. Please keep a copy of what you wrote.",
-    success: "Thank you. Your note was received.",
-    error: "Something went wrong sending the note. Please try again.",
+      "The note was not sent. Please write to admin@organizedsolutionsgroup.com, and keep a copy of what you wrote.",
+    successTitle: "Thank you.",
+    success:
+      "Your message has been received. Someone from Organized Solutions will be in touch.",
+    error:
+      "We couldn’t send your message right now. Your information is still here. Please try again or email us directly.",
+    errors: {
+      name: "Please enter your name.",
+      email: "Please enter a valid email address.",
+      seeing: "Please tell us a little about what you’d like help with.",
+    },
   },
 } as const;
 

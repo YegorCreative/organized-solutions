@@ -1,12 +1,13 @@
 import { contactPage } from "@/content/copy";
-import { getContactEndpoint } from "@/lib/contact/config";
+import {
+  CONTACT_NOTIFICATION_SUBJECT,
+  getContactEndpoint,
+} from "@/lib/contact/config";
 
 /**
  * Isolated contact-action implementation.
  *
- * This is the only module that should know how a note is delivered.
- * When an owner-approved static-compatible service is chosen, adapt
- * the request here. Do not add a Next.js server action or API route.
+ * Browser POST to Formspree. No Next.js server action or API route.
  */
 
 export type ContactPayload = {
@@ -14,6 +15,7 @@ export type ContactPayload = {
   email: string;
   organization: string;
   seeing: string;
+  gotcha?: string;
 };
 
 export type ContactField = "name" | "email" | "seeing";
@@ -27,17 +29,16 @@ export type ContactResult = {
 export function validateContact(payload: ContactPayload): ContactResult | null {
   const fieldErrors: ContactResult["fieldErrors"] = {};
 
-  if (payload.name.trim().length < 2) {
-    fieldErrors.name = "Please include your name.";
+  if (payload.name.trim().length < 1) {
+    fieldErrors.name = contactPage.form.errors.name;
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email.trim())) {
-    fieldErrors.email = "Please include a valid email.";
+    fieldErrors.email = contactPage.form.errors.email;
   }
 
-  if (payload.seeing.trim().length < 10) {
-    fieldErrors.seeing =
-      "A few sentences will help us understand what you’re seeing.";
+  if (payload.seeing.trim().length < 1) {
+    fieldErrors.seeing = contactPage.form.errors.seeing;
   }
 
   if (Object.keys(fieldErrors).length > 0) {
@@ -59,6 +60,14 @@ export async function submitContact(
     return invalid;
   }
 
+  if (payload.gotcha?.trim()) {
+    return {
+      status: "success",
+      message: contactPage.form.success,
+      fieldErrors: {},
+    };
+  }
+
   const endpoint = getContactEndpoint();
   if (!endpoint) {
     return {
@@ -67,6 +76,9 @@ export async function submitContact(
       fieldErrors: {},
     };
   }
+
+  const email = payload.email.trim();
+  const organization = payload.organization.trim();
 
   try {
     const response = await fetch(endpoint, {
@@ -77,9 +89,13 @@ export async function submitContact(
       },
       body: JSON.stringify({
         name: payload.name.trim(),
-        email: payload.email.trim(),
-        organization: payload.organization.trim(),
-        seeing: payload.seeing.trim(),
+        email,
+        _replyto: email,
+        ...(organization ? { organization } : {}),
+        message: payload.seeing.trim(),
+        subject: CONTACT_NOTIFICATION_SUBJECT,
+        _subject: CONTACT_NOTIFICATION_SUBJECT,
+        _gotcha: payload.gotcha ?? "",
       }),
     });
 

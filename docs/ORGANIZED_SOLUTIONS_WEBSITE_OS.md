@@ -419,9 +419,9 @@ Because GitHub Pages is static, contact delivery cannot be a Next.js server acti
 
 The form UI lives in `components/contact/contact-form.tsx`.
 
-The only delivery implementation lives in `lib/contact/`. It currently has **no provider**. An external static-compatible form service may be connected later **only with explicit owner approval**, via `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`.
+The only delivery implementation lives in `lib/contact/`. The approved provider is **Formspree**. The browser POSTs JSON to `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` (`https://formspree.io/f/{form_id}`). Do not hardcode a form ID. Do not add a Next.js server action or API route.
 
-Do not invent an email address. Do not pretend a note was sent if delivery is not connected.
+Until that variable is set, the form must not pretend a note was sent. Direct email `admin@organizedsolutionsgroup.com` remains available as a fallback.
 
 ### Key implementation locations
 
