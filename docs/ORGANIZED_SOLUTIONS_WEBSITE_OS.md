@@ -415,13 +415,7 @@ Do not add infrastructure that defeats this model.
 
 ### Contact
 
-Because GitHub Pages is static, contact delivery cannot be a Next.js server action.
-
-The form UI lives in `components/contact/contact-form.tsx`.
-
-The only delivery implementation lives in `lib/contact/`. The approved provider is **Formspree**. The browser POSTs JSON to `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` (`https://formspree.io/f/{form_id}`). Do not hardcode a form ID. Do not add a Next.js server action or API route.
-
-Until that variable is set, the form must not pretend a note was sent. Direct email `admin@organizedsolutionsgroup.com` remains available as a fallback.
+Contact is direct email. The Contact page and site chrome use `mailto:admin@organizedsolutionsgroup.com` with the subject `Organized Solutions Inquiry`. There is no contact form, no form-delivery provider, and no Next.js server action or API route.
 
 ### Key implementation locations
 
@@ -438,7 +432,7 @@ Until that variable is set, the form must not pretend a note was sent. Direct em
 | Motion / parallax | CSS in `app/globals.css` |
 | Site URL for SEO | `NEXT_PUBLIC_SITE_URL` |
 | GitHub Pages subpath | `NEXT_PUBLIC_BASE_PATH` |
-| Contact delivery (isolated) | `lib/contact/` |
+| Contact | Direct `mailto` to `admin@organizedsolutionsgroup.com` |
 | Pages deployment | `.github/workflows/pages.yml` |
 
 ---

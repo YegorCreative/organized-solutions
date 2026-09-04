@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand/wordmark";
-import { company, footerNav } from "@/content/site";
+import { company, footerNav, inquiryMailto } from "@/content/site";
 
 export function SiteFooter() {
   return (
@@ -16,8 +16,8 @@ export function SiteFooter() {
             {company.supportingMessage}
           </p>
           <a
-            href={`mailto:${company.email}`}
-            className="nav-link mt-5 inline-block w-fit text-[0.9375rem] text-ink"
+            href={inquiryMailto.href}
+            className="nav-link mt-5 inline-block w-fit max-w-full break-all text-[0.9375rem] text-ink"
           >
             {company.email}
           </a>

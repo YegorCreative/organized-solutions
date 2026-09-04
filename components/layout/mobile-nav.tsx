@@ -5,7 +5,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { PrimaryCta } from "@/components/brand/primary-cta";
 import { BrandLogo } from "@/components/brand/wordmark";
-import { company, cta, navigation } from "@/content/site";
+import { company, cta, inquiryMailto, navigation } from "@/content/site";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -150,8 +150,8 @@ export function MobileNav() {
           <div className="shell relative z-10 border-t border-line py-8">
             <PrimaryCta />
             <a
-              href={`mailto:${company.email}`}
-              className="mt-5 block text-sm text-muted"
+              href={inquiryMailto.href}
+              className="mt-5 block max-w-full break-all text-sm text-muted"
               onClick={() => setOpen(false)}
             >
               {company.email}

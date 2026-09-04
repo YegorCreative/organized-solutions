@@ -185,34 +185,12 @@ export const insightsPage = {
 
 export const contactPage = {
   eyebrow: "Contact",
-  title: "Tell us what you are seeing.",
-  lede: "We will listen first. Share as much or as little as you like about the organization and what you want operationally. The purpose of this conversation is understanding, not a pitch.",
-  form: {
-    name: "Name",
-    email: "Email",
-    organization: "Organization",
-    organizationOptional: "Optional",
-    seeing: "What are you seeing?",
-    seeingHint:
-      "A few sentences is enough. Growth, a next chapter, unclear roles, systems that need to go further — whatever is true.",
-    submit: "Send the note",
-    sending: "Sending",
-    another: "Send another note",
-    pendingChannel:
-      "The form is prepared. Until delivery is connected, write to admin@organizedsolutionsgroup.com.",
-    unconfigured:
-      "The note was not sent. Please write to admin@organizedsolutionsgroup.com, and keep a copy of what you wrote.",
-    successTitle: "Thank you.",
-    success:
-      "Your message has been received. Someone from Organized Solutions will be in touch.",
-    error:
-      "We couldn’t send your message right now. Your information is still here. Please try again or email us directly.",
-    errors: {
-      name: "Please enter your name.",
-      email: "Please enter a valid email address.",
-      seeing: "Please tell us a little about what you’d like help with.",
-    },
-  },
+  title: "Let’s start a conversation.",
+  lede: "Reach out about the operational challenges or support you are looking for. We will listen first.",
+  cta: "Email Organized Solutions",
+  emailKicker: "Email",
+  noteKicker: "A note on this conversation",
+  note: "There is no intake quiz and no automated proposal. If the work appears to be a fit, we will say so. If it does not, we will say that too.",
 } as const;
 
 export const privacyPage = {
@@ -227,11 +205,11 @@ export const privacyPage = {
     },
     {
       title: "What this site collects",
-      body: "This is a static website. Browsing the public pages does not require an account. We do not run advertising pixels on this site, and we do not currently use analytics that identify you. Until a receiving service is connected, the contact form does not transmit what you type. When delivery is connected, it will collect only the information you choose to submit: name, email, organization if provided, and the contents of your note.",
+      body: "This is a static website. Browsing the public pages does not require an account. We do not run advertising pixels on this site, and we do not currently use analytics that identify you. There is no contact form on this website, and the site does not collect or transmit inquiry information. If you email Organized Solutions, that correspondence takes place through your email application — not through a form on this site.",
     },
     {
       title: "How contact information is used",
-      body: "Information submitted through the contact form is used only to understand your inquiry and respond. It is not sold, and it is not used for unrelated marketing lists.",
+      body: "If you write to us by email, we use that correspondence to understand your inquiry and respond. It is not sold, and it is not used for unrelated marketing lists.",
     },
     {
       title: "How long we keep it",

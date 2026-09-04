@@ -18,6 +18,11 @@ export const company = {
     "To help organizations strengthen the operations behind the work they have already built, and to put in place practical, sustainable systems that support stronger businesses, stronger leaders, and lasting growth.",
 } as const;
 
+export const inquiryMailto = {
+  subject: "Organized Solutions Inquiry",
+  href: `mailto:${company.email}?subject=${encodeURIComponent("Organized Solutions Inquiry")}`,
+} as const;
+
 /**
  * Working primary CTA. Wording is centralized so it can change
  * without a design pass. Not yet permanently approved.

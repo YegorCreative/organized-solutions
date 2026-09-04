@@ -50,28 +50,10 @@ Copy `.env.example` to `.env.local` if you need to override defaults.
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Canonical public URL for metadata, sitemap, and Open Graph. Defaults to `http://localhost:3000`. |
 | `NEXT_PUBLIC_BASE_PATH` | Subpath for GitHub project Pages. Empty locally and for a custom-domain root. |
-| `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` | Formspree form URL (`https://formspree.io/f/{form_id}`). Empty until the owner-created form is connected. Public in the client bundle — not a private API secret. |
 
-Do not commit secrets, account passwords, or Formspree API tokens.
+Do not commit secrets.
 
-### Contact form (Formspree)
-
-The contact page posts from the browser to Formspree. There is no server or API route.
-
-Until `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` is set, the form stays in an honest unconfigured state and does not pretend a note was sent. Direct email `admin@organizedsolutionsgroup.com` remains the fallback.
-
-**Owner setup**
-
-1. Create a Formspree account at [formspree.io](https://formspree.io/).
-2. Create a form whose notification email is `admin@organizedsolutionsgroup.com`.
-3. Confirm the Formspree address from that inbox if asked.
-4. Copy the form endpoint (`https://formspree.io/f/{form_id}`).
-5. Local: put it in `.env.local` as `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`.
-6. Production: GitHub → repository **Settings → Secrets and variables → Actions → Variables** → `NEXT_PUBLIC_CONTACT_FORM_ENDPOINT`. Then redeploy.
-7. In Formspree form Settings, disable visible reCAPTCHA so AJAX submissions are not blocked. Keep Formspree’s built-in spam filtering. The site already sends the `_gotcha` honeypot.
-8. After a successful production test, optionally set Formspree **Restrict to Domain** to `yegorcreative.github.io` (the current GitHub Pages host). Do not enable this until the live test works — it will block `localhost`. Do not guess a future custom domain.
-
-The notification subject is `New Organized Solutions Website Inquiry`. Reply-To uses the visitor’s email.
+Contact is direct email to `admin@organizedsolutionsgroup.com` (`mailto` with subject `Organized Solutions Inquiry`). There is no contact form and no form-delivery service.
 
 ## Hosting
 
@@ -93,11 +75,10 @@ components/
   brand/             Wordmark and primary CTA
   layout/            Header, mobile navigation, footer, skip link
   home/              Homepage narrative sections
-  engagement/        Three-tier partnership storytelling
-  contact/           Contact form
+  engagement/        Four-tier partnership storytelling
   seo/               JSON-LD
 content/             Business copy, navigation, CTA, tiers, values
-lib/                 Metadata, URLs, isolated contact delivery
+lib/                 Metadata, URLs
 docs/                Governing brand and website operating system
 .github/workflows/   GitHub Pages deployment
 ```

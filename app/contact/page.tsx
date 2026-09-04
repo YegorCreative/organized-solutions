@@ -1,13 +1,13 @@
-import { ContactForm } from "@/components/contact/contact-form";
+import { Arrow } from "@/components/brand/arrow";
 import { PageIntro } from "@/components/ui/page-intro";
 import { contactPage } from "@/content/copy";
-import { company } from "@/content/site";
+import { company, inquiryMailto } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Start a conversation with Organized Solutions. Tell us what you are seeing in the organization. We will listen first.",
+    "Start a conversation with Organized Solutions. Email us about the operational challenges or support you are looking for.",
   path: "/contact",
 });
 
@@ -21,31 +21,32 @@ export default function ContactPage() {
         title={contactPage.title}
         lede={contactPage.lede}
       />
-      <section className="relative overflow-hidden bg-canvas py-section-tight pb-section">
-        <div
-          aria-hidden="true"
-          className="parallax-counter pointer-events-none absolute top-10 right-[6%] h-32 w-[20%] bg-stone"
-        >
-          <span className="gold-edge gold-edge-left" />
+      <section className="relative overflow-hidden bg-canvas py-section">
+        <div className="art-back">
+          <div
+            aria-hidden="true"
+            className="parallax-counter pointer-events-none absolute top-10 right-[6%] h-32 w-[20%] bg-stone"
+          >
+            <span className="gold-edge gold-edge-left" />
+          </div>
         </div>
         <div className="shell content-front grid gap-16 lg:grid-cols-12">
           <div className="relative bg-canvas lg:col-span-6">
-            <ContactForm />
-          </div>
-          <aside className="lg:col-span-4 lg:col-start-9">
-            <p className="kicker">A note on this conversation</p>
-            <p className="mt-5 text-muted">
-              There is no intake quiz and no automated proposal. If the work
-              appears to be a fit, we will say so. If it does not, we will say
-              that too.
-            </p>
-            <p className="kicker mt-10">Email</p>
+            <a href={inquiryMailto.href} className="cta cta-primary">
+              <span>{contactPage.cta}</span>
+              <Arrow className="cta-arrow" />
+            </a>
+            <p className="kicker mt-12">{contactPage.emailKicker}</p>
             <a
-              href={`mailto:${company.email}`}
+              href={inquiryMailto.href}
               className="nav-link mt-3 inline-block w-fit max-w-full break-all text-[1.05rem] text-ink"
             >
               {company.email}
             </a>
+          </div>
+          <aside className="relative bg-canvas lg:col-span-4 lg:col-start-9">
+            <p className="kicker">{contactPage.noteKicker}</p>
+            <p className="mt-5 text-muted">{contactPage.note}</p>
             <ul className="mt-10 border-t border-line">
               {company.promises.map((promise) => (
                 <li
