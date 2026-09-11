@@ -17,12 +17,14 @@ export function Faq() {
       </div>
       <div className="content-front shell relative max-w-4xl">
         <p className="kicker">{faq.eyebrow}</p>
-        <h2 className="display mt-5 text-display-sm text-ink">{faq.title}</h2>
-        <dl className="mt-12 border-t border-line">
+        <h2 className="display mt-4 text-display-sm text-ink text-balance md:mt-5">
+          {faq.title}
+        </h2>
+        <dl className="mt-10 border-t border-line md:mt-12">
           {faq.items.map((item) => (
             <div
               key={item.question}
-              className="grid gap-3 border-b border-line py-8 md:grid-cols-12 md:py-10"
+              className="grid gap-3 border-b border-line py-7 md:grid-cols-12 md:py-10"
             >
               <dt className="display text-title text-ink md:col-span-5">
                 {item.question}

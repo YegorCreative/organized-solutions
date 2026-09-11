@@ -30,12 +30,14 @@ export default function InsightsPage() {
             </p>
           </div>
           <div className="lg:col-span-5">
-            <FrameImage
-              src={media.library.src}
-              alt={media.library.alt}
-              speed="slow"
-              className="aspect-[3/4] w-full"
-            />
+            <div className="media-shell elevate-soft">
+              <FrameImage
+                src={media.library.src}
+                alt={media.library.alt}
+                speed="slow"
+                className="media-frame aspect-[3/4] w-full"
+              />
+            </div>
           </div>
         </div>
       </section>

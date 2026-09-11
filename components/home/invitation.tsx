@@ -40,18 +40,18 @@ export function Invitation() {
           />
         </div>
         <div className="relative px-[var(--spacing-gutter)] py-12 md:py-section">
-          <h2 className="display max-w-xl text-display-sm text-ink">
+          <h2 className="display max-w-xl text-display-sm text-ink text-balance">
             If this is the season to strengthen the operations behind the
             work,{" "}
-            <span className="whitespace-nowrap">we should talk.</span>
+            <span className="md:whitespace-nowrap">we should talk.</span>
           </h2>
-          <p className="measure mt-6 text-lead text-muted">
+          <p className="measure mt-5 text-lead text-muted md:mt-6">
             {home.invitation.body}
           </p>
-          <div className="mt-10">
+          <div className="mt-8 md:mt-10">
             <PrimaryCta />
           </div>
-          <ul className="mt-12 max-w-md">
+          <ul className="mt-10 max-w-md md:mt-12">
             {company.promises.map((promise) => (
               <li
                 key={promise}

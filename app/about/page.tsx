@@ -28,21 +28,23 @@ export default function AboutPage() {
       />
 
       <section className="relative bg-canvas py-section">
-        <div className="shell grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="shell grid items-start gap-8 md:gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="relative lg:col-span-5">
-            <div className="photo-grade relative aspect-[2/3] w-full overflow-hidden">
-              <Image
-                src={withBasePath(media.roberta.src)}
-                alt={media.roberta.alt}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-[center_18%]"
-              />
+            <div className="media-shell elevate-lift">
+              <div className="photo-grade media-frame relative aspect-[2/3] w-full">
+                <Image
+                  src={withBasePath(media.roberta.src)}
+                  alt={media.roberta.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-[center_18%]"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              className="absolute -bottom-4 -right-3 h-16 w-16 bg-champagne md:-bottom-6 md:-right-6 md:h-24 md:w-24"
+              className="absolute -bottom-3 -right-2 h-14 w-14 bg-champagne md:-bottom-6 md:-right-6 md:h-24 md:w-24"
             >
               <span className="gold-edge gold-edge-left" />
               <span className="gold-edge gold-edge-top" />
@@ -53,7 +55,7 @@ export default function AboutPage() {
             <h2 className="display mt-5 text-display-sm text-ink">
               {aboutPage.founder.name}
             </h2>
-            <div className="measure mt-8 space-y-6 text-lead text-muted">
+            <div className="measure mt-6 space-y-5 text-lead text-muted md:mt-8 md:space-y-6">
               {aboutPage.founder.paragraphs.map((paragraph) => (
                 <p key={paragraph.slice(0, 48)}>{paragraph}</p>
               ))}

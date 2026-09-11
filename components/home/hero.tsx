@@ -72,19 +72,19 @@ export function Hero() {
         />
       </div>
 
-      <div className="content-front shell grid min-h-[calc(100dvh-var(--header-offset))] grid-cols-1 items-end gap-10 pb-[max(2.25rem,calc(var(--safe-bottom)+1.25rem))] pt-10 md:py-12 lg:grid-cols-12 lg:pb-20 lg:pt-8">
+      <div className="content-front shell grid min-h-[calc(100svh-var(--header-offset))] grid-cols-1 items-end gap-8 pb-[max(2rem,calc(var(--safe-bottom)+1.25rem))] pt-8 md:min-h-[calc(100dvh-var(--header-offset))] md:gap-10 md:py-12 lg:grid-cols-12 lg:pb-20 lg:pt-8">
         <div className="reveal max-w-3xl lg:col-span-6">
           <p className="kicker text-champagne">{home.hero.eyebrow}</p>
-          <h1 className="display mt-5 text-display text-on-field">
+          <h1 className="display mt-4 text-display text-on-field md:mt-5">
             <span className="text-balance">{home.hero.headline}</span>
-            <span className="mt-2 block italic text-champagne">
+            <span className="mt-2 block italic text-champagne text-balance">
               {home.hero.accent}
             </span>
           </h1>
-          <p className="measure mt-6 text-lead text-on-field md:mt-8">
+          <p className="measure mt-5 text-lead text-on-field md:mt-8">
             {home.hero.lede}
           </p>
-          <div className="mt-8 md:mt-10">
+          <div className="mt-7 md:mt-10">
             <PrimaryCta variant="on-field" />
           </div>
         </div>

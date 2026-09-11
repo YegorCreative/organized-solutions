@@ -16,13 +16,15 @@ export function Difference() {
       <div className="content-front shell grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <p className="kicker">{home.difference.eyebrow}</p>
-          <div className="relative mt-8 max-w-sm">
-            <FrameImage
-              src={media.material.src}
-              alt={media.material.alt}
-              speed="slow"
-              className="aspect-square w-full"
-            />
+          <div className="relative mt-6 max-w-sm md:mt-8">
+            <div className="media-shell-surface elevate-soft">
+              <FrameImage
+                src={media.material.src}
+                alt={media.material.alt}
+                speed="slow"
+                className="media-frame aspect-square w-full"
+              />
+            </div>
             <div
               data-parallax="fast"
               className="absolute -bottom-5 -right-5 hidden h-20 w-20 bg-navy-deep lg:block"

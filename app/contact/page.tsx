@@ -30,24 +30,24 @@ export default function ContactPage() {
             <span className="gold-edge gold-edge-left" />
           </div>
         </div>
-        <div className="shell content-front grid gap-16 lg:grid-cols-12">
+        <div className="shell content-front grid gap-12 md:gap-16 lg:grid-cols-12">
           <div className="relative bg-canvas lg:col-span-6">
             <a href={inquiryMailto.href} className="cta cta-primary w-full max-w-[22rem] sm:w-auto">
               <span>{contactPage.cta}</span>
               <Arrow className="cta-arrow" />
             </a>
-            <p className="kicker mt-12">{contactPage.emailKicker}</p>
+            <p className="kicker mt-10 md:mt-12">{contactPage.emailKicker}</p>
             <a
               href={inquiryMailto.href}
-              className="nav-link mt-3 inline-block w-fit max-w-full break-all text-[1.05rem] text-ink"
+              className="nav-link mt-3 inline-block min-h-11 w-fit max-w-full break-all py-2 text-[1.05rem] text-ink"
             >
               {company.email}
             </a>
           </div>
           <aside className="relative bg-canvas lg:col-span-4 lg:col-start-9">
             <p className="kicker">{contactPage.noteKicker}</p>
-            <p className="mt-5 text-muted">{contactPage.note}</p>
-            <ul className="mt-10 border-t border-line">
+            <p className="mt-4 text-muted md:mt-5">{contactPage.note}</p>
+            <ul className="mt-8 border-t border-line md:mt-10">
               {company.promises.map((promise) => (
                 <li
                   key={promise}

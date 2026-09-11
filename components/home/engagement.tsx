@@ -11,12 +11,12 @@ export function Engagement() {
           className="top-24 left-[var(--spacing-rail)] hidden w-[42%] lg:block"
         />
       </div>
-      <div className="content-front shell relative mb-8 max-w-3xl lg:mb-4">
+      <div className="content-front shell relative mb-6 max-w-3xl md:mb-8 lg:mb-4">
         <p className="kicker">{home.engagement.eyebrow}</p>
-        <h2 className="display mt-5 text-display-sm text-ink">
+        <h2 className="display mt-4 text-display-sm text-ink text-balance md:mt-5">
           {home.engagement.headline}
         </h2>
-        <p className="measure-wide mt-6 text-lead text-muted">
+        <p className="measure-wide mt-5 text-lead text-muted md:mt-6">
           {home.engagement.lede}
         </p>
       </div>

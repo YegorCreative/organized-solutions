@@ -31,25 +31,25 @@ export function Recognition() {
           <span className="gold-edge gold-edge-right hidden lg:block" />
           <FlowPath tone="gold" className="bottom-10 left-0 w-2/3" />
         </div>
-        <div className="relative px-[var(--spacing-gutter)] py-12 md:py-section">
+        <div className="relative px-[var(--spacing-gutter)] py-10 md:py-section">
           <p className="kicker">{home.recognition.eyebrow}</p>
-          <h2 className="display mt-5 text-display-sm text-ink">
+          <h2 className="display mt-4 text-display-sm text-ink text-balance md:mt-5">
             {home.recognition.headline}
           </h2>
-          <p className="measure mt-6 text-lead text-muted">
+          <p className="measure mt-5 text-lead text-muted md:mt-6">
             {home.recognition.bridge}
           </p>
-          <ul className="mt-10 space-y-4">
+          <ul className="mt-8 space-y-3.5 md:mt-10 md:space-y-4">
             {home.recognition.items.map((item) => (
               <li
                 key={item}
-                className="border-b border-ink/15 pb-4 text-[1.12rem] leading-snug text-ink"
+                className="border-b border-ink/15 pb-3.5 text-[1.06rem] leading-snug text-ink md:pb-4 md:text-[1.12rem]"
               >
                 {item}
               </li>
             ))}
           </ul>
-          <p className="mt-10 max-w-md text-lead text-muted">
+          <p className="mt-8 max-w-md text-lead text-muted md:mt-10">
             {home.recognition.close}
           </p>
         </div>

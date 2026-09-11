@@ -59,6 +59,21 @@
   --max-width-shell: 94rem;
   --max-width-measure: 38rem;
   --max-width-measure-wide: 46rem;
+
+  /*
+   * Restrained corner + depth tokens.
+   * Subtle → moderate only. Not a floating-card system.
+   */
+  --radius-soft: 0.5rem; /* 8px — small UI */
+  --radius-surface: 0.75rem; /* 12px — inset surfaces */
+  --radius-frame: 1rem; /* 16px — featured imagery */
+
+  --shadow-soft:
+    0 1px 0 color-mix(in srgb, var(--color-ink) 4%, transparent),
+    0 10px 28px color-mix(in srgb, var(--color-navy-deep) 7%, transparent);
+  --shadow-lift:
+    0 1px 0 color-mix(in srgb, var(--color-ink) 5%, transparent),
+    0 16px 40px color-mix(in srgb, var(--color-navy-deep) 10%, transparent);
 }
 
 @layer base {
@@ -458,6 +473,46 @@
     inset: 0;
     pointer-events: none;
     background: color-mix(in srgb, var(--color-champagne) 32%, transparent);
+  }
+
+  /*
+   * Inset media frames — radius on the clipped surface,
+   * soft elevation on the outer shell so overflow:hidden
+   * does not swallow the shadow.
+   */
+  .media-shell {
+    border-radius: var(--radius-frame);
+  }
+
+  .media-shell-surface {
+    border-radius: var(--radius-surface);
+  }
+
+  .media-frame {
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  .elevate-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .elevate-lift {
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    --header-h: 4.25rem;
+    --spacing-section: clamp(3.75rem, 14vw, 7.5rem);
+    --spacing-section-tight: clamp(2.75rem, 10vw, 5rem);
+    --shadow-soft:
+      0 1px 0 color-mix(in srgb, var(--color-ink) 3%, transparent),
+      0 6px 18px color-mix(in srgb, var(--color-navy-deep) 6%, transparent);
+    --shadow-lift:
+      0 1px 0 color-mix(in srgb, var(--color-ink) 4%, transparent),
+      0 10px 26px color-mix(in srgb, var(--color-navy-deep) 8%, transparent);
   }
 }
 

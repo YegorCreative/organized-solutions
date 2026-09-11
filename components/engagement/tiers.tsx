@@ -112,7 +112,7 @@ export function EngagementTiers() {
                 </>
               ) : null}
             </div>
-            <div className="relative z-10 px-[var(--spacing-gutter)] py-10 md:py-12 lg:col-span-7 lg:py-20">
+            <div className="relative z-10 px-[var(--spacing-gutter)] py-9 md:py-12 lg:col-span-7 lg:py-20">
               <p
                 className={cx(
                   "display text-title md:text-display-sm",

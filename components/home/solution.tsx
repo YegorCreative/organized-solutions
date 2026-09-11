@@ -18,13 +18,15 @@ export function Solution() {
             {home.solution.headline}
           </h2>
           <p className="measure mt-8 text-lead text-muted">{home.solution.body}</p>
-          <div className="mt-10 aspect-[16/10] overflow-hidden lg:aspect-[5/3]">
-            <FrameImage
-              src={media.desk.src}
-              alt={media.desk.alt}
-              speed="slow"
-              className="h-full w-full"
-            />
+          <div className="media-shell-surface elevate-soft mt-8 md:mt-10">
+            <div className="media-frame aspect-[16/10] lg:aspect-[5/3]">
+              <FrameImage
+                src={media.desk.src}
+                alt={media.desk.alt}
+                speed="slow"
+                className="h-full w-full"
+              />
+            </div>
           </div>
         </div>
         <div className="relative lg:col-span-6 lg:col-start-7">

@@ -56,17 +56,17 @@ export function Philosophy() {
             />
           </div>
 
-          <div className="content-front shell relative z-10 flex h-full items-end overflow-visible py-10 md:py-section">
+          <div className="content-front shell relative z-10 flex h-full items-end overflow-visible py-8 md:py-section">
             <div className="max-w-4xl pb-[max(1.25rem,var(--safe-bottom))]">
               <p className="kicker text-champagne">{home.philosophy.kicker}</p>
-              <h2 className="display mt-6 text-display text-on-field">
-                <span className="block">{home.philosophy.lead}</span>
-                <span className="mt-1 block italic text-champagne">
+              <h2 className="display mt-4 text-display text-on-field md:mt-6">
+                <span className="block text-balance">{home.philosophy.lead}</span>
+                <span className="mt-1 block italic text-champagne text-balance">
                   {home.philosophy.accent}
                 </span>
               </h2>
-              <div className="draw-rule mt-10 h-px w-full max-w-md bg-accent" />
-              <p className="measure mt-10 text-lead text-on-field">
+              <div className="draw-rule mt-7 h-px w-full max-w-md bg-accent md:mt-10" />
+              <p className="measure mt-7 text-lead text-on-field md:mt-10">
                 {home.philosophy.body}
               </p>
             </div>

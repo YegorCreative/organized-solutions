@@ -63,13 +63,13 @@ export function PageIntro({
         </div>
         <div className="parallax-counter absolute bottom-0 left-[12%] h-20 w-[28%] bg-navy/10" />
       </div>
-      <div className="content-front shell py-16 md:py-20 lg:py-28">
+      <div className="content-front shell py-12 md:py-20 lg:py-28">
         <p className={cx("kicker", onField ? "text-champagne" : undefined)}>
           {eyebrow}
         </p>
         <h1
           className={cx(
-            "display mt-5 max-w-4xl text-display-sm",
+            "display mt-4 max-w-4xl text-display-sm text-balance md:mt-5",
             onField ? "text-on-field" : "text-ink",
           )}
         >
@@ -77,13 +77,13 @@ export function PageIntro({
         </h1>
         <div
           className={cx(
-            "draw-rule mt-8 h-px w-40",
+            "draw-rule mt-6 h-px w-40 md:mt-8",
             onField ? "bg-accent" : "bg-accent/80",
           )}
         />
         <p
           className={cx(
-            "measure-wide mt-8 text-lead",
+            "measure-wide mt-6 text-lead md:mt-8",
             onField ? "text-on-field" : "text-muted",
           )}
         >
