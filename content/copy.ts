@@ -1,18 +1,18 @@
 export const home = {
   hero: {
     eyebrow: "Fractional COO services",
-    headline: "The operational problems growth creates.",
+    headline: "The operational problems.",
     accent: "We help solve them.",
-    lede: "We work with company leadership to solve the operational challenges that come with growth.",
+    lede: "We work with company leadership to solve operational challenges.",
   },
   promise: {
     eyebrow: "Organized Solutions",
     headline: "Clarity and operational leadership — without a full-time COO hire.",
-    body: "We join organizations that are ready for experienced operational leadership. We look closely at what is actually happening. Then we help build the structure, systems, and execution to support where the business is going next.",
+    body: "We work alongside organizations to understand what is happening beneath the surface. We look closely at how the business operates today, where friction exists, and what needs attention. Then we help build the structure, systems, and execution to support where the business is going next.",
   },
   recognition: {
     eyebrow: "A familiar chapter",
-    headline: "Growth creates operational questions even in established organizations.",
+    headline: "Operational challenges can surface at any stage.",
     items: [
       "Growth has outpaced structure.",
       "Responsibilities are unclear.",
@@ -24,7 +24,7 @@ export const home = {
       "Growth increasingly feels chaotic.",
     ],
     bridge:
-      "These situations can emerge as established organizations grow. They are signals that the operational structure may need to evolve with the business — and that is where experienced operational leadership can help.",
+      "These situations can appear for many reasons. They are signals that the operational structure may need to evolve with the business — and that is where experienced operational leadership can help.",
     close: "These are not character problems. They are operational ones.",
   },
   solution: {
@@ -42,7 +42,7 @@ export const home = {
   engagement: {
     eyebrow: "How the work deepens",
     headline: "Partnership, at the depth the work requires.",
-    lede: "Choose the level of support that fits your needs today — Assessment, Assessment + Recommendation, Assessment + Recommendation + Implementation, or Ongoing Advisory. You do not need to begin at Tier 1 or move through every tier. If your needs expand, additional support can be added as the work evolves. Within whichever engagement you choose, the work is tailored to your organization, goals, size, industry, and circumstances.",
+    lede: "Choose the tier of support that fits your needs today — Assessment, Assessment + Recommendation, Assessment + Recommendation + Implementation, or Ongoing Advisory. You do not need to begin at Tier 1 or move through every tier. If your needs expand, additional support can be added as the work evolves. Within whichever engagement you choose, the work is tailored to your organization, goals, size, industry, and circumstances.",
   },
   difference: {
     eyebrow: "How we work",
@@ -161,6 +161,16 @@ export const aboutPage = {
   eyebrow: "About",
   title: "Operations shape outcomes.",
   lede: "Organized Solutions exists because excellent operational leadership should not only be available to organizations large enough to maintain a full executive operations team.",
+  founder: {
+    eyebrow: "Founder",
+    name: "Roberta Snead",
+    paragraphs: [
+      "Roberta Snead is the founder of Organized Solutions, a fractional COO practice helping organizations across industries — including healthcare, legal, and beyond — solve operational problems and build systems that scale. She brings a rare, multidimensional lens to her work: two decades in healthcare, where she continues to practice as a nurse practitioner, and a director role at a medical device company, in addition to her consulting practice. She is passionate about problem solving — bringing sustainable, practical solutions to organizations that are relevant to where they stand now and built to carry them forward.",
+      "A Doctor of Nursing Practice, Roberta is double board certified in Family Practice and Adult-Gerontology Acute Care, with her Adult-Gerontology Acute Care Nurse Practitioner training completed through the University of Pennsylvania. She has built a clinical career grounded in patient-centered, evidence-based care and later moved into medical device leadership, where she now serves as a Business Unit Director carrying P&L responsibility and leading cross-functional teams through growth and international expansion.",
+      "Roberta serves on the committee for the Surfaces in Biomaterials Foundation (SIBF), and in 2026 earned her Six Sigma Black Belt certification alongside operations management training through Cornell University’s Jeb E. Brooks School of Public Policy.",
+      "Roberta lives in Minnesota with her husband and two sons, whom she adores.",
+    ],
+  },
   origin: {
     title: "Origin",
     body: "Organized Solutions originated from experience in healthcare. The founder saw firsthand that operations are not a background function. The effectiveness of people, processes, accountability, systems, and leadership can dramatically influence whether organizations succeed or struggle. That principle proved applicable beyond healthcare.",

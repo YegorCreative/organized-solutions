@@ -1,8 +1,11 @@
+import Image from "next/image";
 import { PrimaryCta } from "@/components/brand/primary-cta";
 import { PageIntro } from "@/components/ui/page-intro";
 import { aboutPage } from "@/content/copy";
+import { media } from "@/content/media";
 import { company } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
+import { withBasePath } from "@/lib/site-url";
 
 export const metadata = pageMetadata({
   title: "About",
@@ -23,6 +26,41 @@ export default function AboutPage() {
         title={aboutPage.title}
         lede={aboutPage.lede}
       />
+
+      <section className="relative bg-canvas py-section">
+        <div className="shell grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="relative lg:col-span-5">
+            <div className="photo-grade relative aspect-[2/3] w-full overflow-hidden">
+              <Image
+                src={withBasePath(media.roberta.src)}
+                alt={media.roberta.alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-[center_18%]"
+              />
+            </div>
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-4 -right-3 h-16 w-16 bg-champagne md:-bottom-6 md:-right-6 md:h-24 md:w-24"
+            >
+              <span className="gold-edge gold-edge-left" />
+              <span className="gold-edge gold-edge-top" />
+            </div>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <p className="kicker">{aboutPage.founder.eyebrow}</p>
+            <h2 className="display mt-5 text-display-sm text-ink">
+              {aboutPage.founder.name}
+            </h2>
+            <div className="measure mt-8 space-y-6 text-lead text-muted">
+              {aboutPage.founder.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-canvas">
         <div className="shell">

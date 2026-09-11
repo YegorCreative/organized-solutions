@@ -1,8 +1,12 @@
 # Media credits
 
-All files in this folder are original environmental images generated for the Organized Solutions website (xAI Imagine, 2026).
+Most files in this folder are original environmental images generated for the Organized Solutions website (xAI Imagine, 2026).
 
-They depict architecture, materials, and workspaces. They do **not** depict Organized Solutions staff, clients, offices, or real engagements.
+Those generated frames depict architecture, materials, and workspaces. They do **not** depict Organized Solutions staff, clients, offices, or real engagements.
+
+Founder photography:
+
+- `roberta-snead.jpg` — professional portrait of Roberta Snead, supplied by the client for the About page.
 
 Additional purpose-built frames (2026):
 

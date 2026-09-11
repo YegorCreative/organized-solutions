@@ -1,9 +1,12 @@
 /**
- * Original environmental imagery generated for this project.
- * Not photographs of Organized Solutions staff, clients, or offices.
+ * Environmental imagery generated for this project, plus founder photography.
  * See public/media/CREDITS.md.
  */
 export const media = {
+  roberta: {
+    src: "/media/roberta-snead.jpg",
+    alt: "Roberta Snead, founder of Organized Solutions",
+  },
   atrium: {
     src: "/media/atrium.jpg",
     alt: "A pale limestone stair hall with cool blue daylight and a satin rail",
