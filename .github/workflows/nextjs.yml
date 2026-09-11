@@ -33,9 +33,11 @@ jobs:
 
       - name: Print Pages paths
         run: |
-          echo "base_path=${{ steps.pages.outputs.base_path }}"
-          echo "base_url=${{ steps.pages.outputs.base_url }}"
-          echo "origin=${{ steps.pages.outputs.origin }}"
+          echo "configure-pages base_path=${{ steps.pages.outputs.base_path }}"
+          echo "configure-pages base_url=${{ steps.pages.outputs.base_url }}"
+          echo "configure-pages origin=${{ steps.pages.outputs.origin }}"
+          echo "production BASE_PATH=(empty — custom domain root)"
+          echo "production SITE_URL=https://organizedsolutionsgroup.com"
 
       - name: Install
         run: npm ci
@@ -46,11 +48,14 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      # Production is served at https://organizedsolutionsgroup.com (site root).
+      # actions/configure-pages still emits /organized-solutions for this project
+      # site; that prefix 404s on the custom domain. Force root deployment values.
       - name: Build static export
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://organizedsolutionsgroup.com
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
